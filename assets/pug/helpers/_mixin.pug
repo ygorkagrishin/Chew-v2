@@ -1,0 +1,23 @@
+//- add social list
+mixin social(array)
+  .social
+    ul
+      each key in array
+        li
+          a(href=key.href)
+            svg
+              use(xlink:href=key.icon)
+
+//- Page hero mixin
+mixin hero(subtitle, title)
+  .page__hero
+    include ../modules/_header
+
+    h2.page__headline 
+      span= subtitle 
+      <br> 
+      = title
+
+    .page__inf.page__inf_align_center
+      p.page__phone quick reservation: <span>+212 342 67382</span>
+      +social(social)

@@ -1,0 +1,25 @@
+include ../helpers/_var
+include ../helpers/_mixin
+
+doctype
+
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(content="IE=edge" http-equiv="X-UA-Compatible")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+
+    block title
+
+    block styles
+
+    link(rel="stylesheet", href="normalize.css")    
+    link(rel="stylesheet", href="styles.min.css")
+
+    block scripts
+
+  body.page 
+    block content
+
+    //- script(src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js")
+    script(src="common.min.js")
