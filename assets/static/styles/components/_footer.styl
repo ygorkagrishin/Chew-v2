@@ -1,11 +1,18 @@
 .footer
+  position relative
+  z-index $z-index1
+
+  padding 100px 50px 95px 50px
+  
+  background-color rgba(blackColor,.7)
+
+  &::after
+    @extend .page__hero::after
+    background-color rgba(blackColor,.8)
+
+.footer__inner
   display flex
   justify-content space-between
-
-  flex 1
-  padding 100px 50px 95px 50px
-
-  background-color rgba(blackColor,.7)
 
 .footer__logo
   logo()

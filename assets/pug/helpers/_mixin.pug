@@ -13,7 +13,7 @@ mixin hero(subtitle, title)
   .page__hero
     include ../modules/_header
 
-    h2.page__headline 
+    h2.page__caption 
       span= subtitle 
       <br> 
       = title
@@ -21,3 +21,11 @@ mixin hero(subtitle, title)
     .page__inf.page__inf_align_center
       p.page__phone quick reservation: <span>+212 342 67382</span>
       +social(social)
+
+mixin heading(subtitle, title, text)
+  .page__heading
+    span.page__subtitle= subtitle
+    h3.page__title= title
+
+    if (text)
+      p= text

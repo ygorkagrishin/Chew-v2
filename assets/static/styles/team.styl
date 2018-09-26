@@ -1,51 +1,22 @@
 .page__team
   .page__hero
-    position relative
-    z-index $z-index1
-
     background greyColor url('img/content/team/joshua-rodriguez-422768-unsplash_1920px.png') no-repeat top center / cover
-    &::after
-      content ''
 
-      position absolute 
-      top 0
-      left 0
-      z-index -1 
-
-      width 100%
-      height 100%
-
-      background-color rgba(blackColor,.3)
   footer 
-    position relative
-    z-index $z-index1
-   
     background greyColor url('img/content/team/joshua-rodriguez-422768-unsplash_1920px.png') no-repeat bottom center / cover
     &::after
-      @extend .page__team .page__hero::after
       background-color rgba(blackColor,.8)
-
-.team
-  padding 150px 0
-
-.team__top
-  margin-bottom 50px
-  text-align center
-
-.team__caption
-  margin-bottom 36px
-  text-transform uppercase
 
 .team__tabs
   display flex
-  align-items center
   justify-content center
+
+  padding 24px 0 50px 0
 
 .team__tab
   position relative
-  z-index $z-index
-  &:not(:last-child)
-    margin-right 26px
+  z-index $z-index1
+
   &_state_active
     color blackColor
     &::after
@@ -61,3 +32,98 @@
       height 5px
 
       background-color yellowColor
+
+  &:not(:last-child)
+    margin-right 24px
+
+.team__members
+  display flex
+  flex-wrap wrap
+
+  margin-bottom 50px
+
+.team__member
+  flex 1 0 370px
+
+  text-align center
+
+  border 1px solid greyColor
+  @media (min-width 1024px)
+    &:nth-child(-n+3)
+      margin-bottom 30px
+    &:not(:nth-child(3n))
+      margin-right 30px
+
+.team-member__ava-container
+  position relative
+  z-index $z-index1
+
+  padding-top 300px
+
+  background-color greyColor
+  overflow hidden
+
+.team-member__ava
+  position absolute
+  top -25%
+  left 0
+  z-index $z-index1
+
+  width 100%
+
+.team-member__cont
+  padding 30px 0
+
+.team-member__desc
+  margin-bottom 16px
+
+.team-member__name
+  margin-bottom 12px
+
+  font 18px / 1 baseFont2
+  color blackColor 
+
+.team-member__pos
+  font-size 12px  
+
+.team__paginator
+  width 175px
+  margin 0 auto
+
+  text-align center
+
+.team__paginator::after
+  content ''
+  display table
+  clear both
+
+.team__paginator a
+  float left
+  width 40px
+  height 40px
+
+  font 14px / 1 baseFont2
+  text-align center
+  line-height 40px
+
+  border 1px solid greyColor 
+  border-radius 50%
+
+.team__paginator .active
+  color blackColor
+
+  background-color yellowColor
+  
+  border-color yellowColor
+
+.team__paginator a:not(:last-child)
+  margin-right 5px
+
+.team__back svg,
+.team__forward svg 
+  width 14px !important
+  fill greyColor
+
+.team__back:hover svg,
+.team__forward:hover svg
+  fill blackColor
