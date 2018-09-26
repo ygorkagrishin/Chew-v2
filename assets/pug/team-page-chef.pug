@@ -1,0 +1,39 @@
+extends layout/_layout
+
+block title 
+  title chew
+
+block content
+  .page__team
+    +hero('meet', 'our team')
+
+    main.page__main.team
+      .container
+        +heading('meet our staff', 'we love our customers')
+        
+        ul.team__tabs
+          li.team__tab
+            a(href="team-page-all.html") All
+
+          li.team__tab.team__tab_state_active
+            a(href="javascript:void(0);") Chef
+          
+          li.team__tab
+            a(href="team-page-waiter.html") Waiter
+
+          li.team__tab
+            a(href="team-page-manager.html") Manager
+
+        //- team members
+        .team__members
+          figure.team__member.team-member
+            .team-member__ava-container
+              img(src= chef.avatar, alt="avatar").team-member__ava
+            figcaption.team-member__cont
+              .team-member__desc
+                h3.team-member__name= chef.name
+                p.team-member__pos= chef.position
+              +social(chef.social)
+        //- team members end
+
+    include modules/_footer

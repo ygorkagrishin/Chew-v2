@@ -1,0 +1,52 @@
+extends layout/_layout
+
+block title 
+  title chew
+
+block content
+  .page__team
+    +hero('meet', 'our team')
+
+    main.page__main.team
+      .container
+        +heading('meet our staff', 'we love our customers')
+        
+        ul.team__tabs
+          li.team__tab.team__tab_state_active
+            a(href="javascript:void(0);") All
+
+          li.team__tab
+            a(href="team-page-chef.html") Chef
+          
+          li.team__tab
+            a(href="team-page-waiter.html") Waiter
+
+          li.team__tab
+            a(href="team-page-manager.html") Manager
+
+        //- team members
+        .team__members 
+          each member in membersPage1
+            figure.team__member.team-member
+              .team-member__ava-container
+                img(src= member.avatar, alt="avatar").team-member__ava
+              figcaption.team-member__cont
+                .team-member__desc
+                  h3.team-member__name= member.name
+                  p.team-member__pos= member.position
+                +social(member.social)
+        //- team members end
+
+        .team__paginator 
+          a(href="javascript:void(0);").team__back
+            svg
+              use(xlink:href="sprite-svg.svg#arrow-round-back")
+          a(href="javascript:void(0);").active.
+            1 
+          a(href="team-page-all-second.html").
+            2
+          a(href="team-page-all-second.html").team__forward
+            svg
+              use(xlink:href="sprite-svg.svg#arrow-round-forward")
+
+    include modules/_footer

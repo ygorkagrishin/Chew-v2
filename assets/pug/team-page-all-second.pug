@@ -16,17 +16,17 @@ block content
             a(href="javascript:void(0);") All
 
           li.team__tab
-            a(href="javascript:void(0);") Chef
+            a(href="team-page-chef.html") Chef
           
           li.team__tab
-            a(href="javascript:void(0);") Waiter
+            a(href="team-page-waiter.html") Waiter
 
           li.team__tab
-            a(href="javascript:void(0);") Manager
+            a(href="team-page-manager.html") Manager
 
         //- team members
         .team__members 
-          each member in team
+          each member in membersPage1
             figure.team__member.team-member
               .team-member__ava-container
                 img(src= member.avatar, alt="avatar").team-member__ava
@@ -38,12 +38,12 @@ block content
         //- team members end
 
         .team__paginator 
-          a(href="javascript:void(0);").team__back
+          a(href="team-page-all.html").team__back
             svg
               use(xlink:href="sprite-svg.svg#arrow-round-back")
-          a(href="javascript:void(0);").active.
+          a(href="team-page-all.html").
             1 
-          a(href="javascript:void(0);").
+          a(href="javascript:void(0);").active.
             2
           a(href="javascript:void(0);").team__forward
             svg
