@@ -26,15 +26,12 @@ block content
 
         //- team members
         .team__members 
-          each waiter in waiters
-            figure.team__member.team-member
-              .team-member__ava-container
-                img(src= waiter.avatar, alt="avatar").team-member__ava
-              figcaption.team-member__cont
-                .team-member__desc
-                  h3.team-member__name= waiter.name
-                  p.team-member__pos= waiter.position
-                +social(waiter.social)
+          if (waiters.length > 0 && Array.isArray(waiters))
+            each waiter in waiters
+              +memberOfTheTeam(waiter.avatar, waiter.name, waiter.position, waiter.social)
+          else
+            - var waiter = waiters
+            +memberOfTheTeam(waiter.avatar, waiter.name, waiter.position, waiter.social)
         //- team members end
 
     include modules/_footer

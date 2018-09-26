@@ -29,3 +29,14 @@ mixin heading(subtitle, title, text)
 
     if (text)
       p= text
+
+//- members of the team in team pages
+mixin memberOfTheTeam(avatar, name, position, social)
+  figure.team__member.team-member
+    .team-member__ava-container
+      img(src= avatar, alt="avatar").team-member__ava
+    figcaption.team-member__cont
+      .team-member__desc
+        h3.team-member__name= name
+        p.team-member__pos= position
+      +social(social)

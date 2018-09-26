@@ -26,14 +26,7 @@ block content
 
         //- team members
         .team__members
-          figure.team__member.team-member
-            .team-member__ava-container
-              img(src= chef.avatar, alt="avatar").team-member__ava
-            figcaption.team-member__cont
-              .team-member__desc
-                h3.team-member__name= chef.name
-                p.team-member__pos= chef.position
-              +social(chef.social)
+          +memberOfTheTeam(chef.avatar, chef.name, chef.position, chef.social)
         //- team members end
 
     include modules/_footer

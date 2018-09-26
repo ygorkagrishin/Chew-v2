@@ -26,15 +26,12 @@ block content
 
         //- team members
         .team__members 
-          each member in membersPage1
-            figure.team__member.team-member
-              .team-member__ava-container
-                img(src= member.avatar, alt="avatar").team-member__ava
-              figcaption.team-member__cont
-                .team-member__desc
-                  h3.team-member__name= member.name
-                  p.team-member__pos= member.position
-                +social(member.social)
+          if (membersPage2.length > 0 && Array.isArray(membersPage))
+            each member in membersPage2
+              +memberOfTheTeam(member.avatar, member.name, member.position, member.social)
+          else
+            - var member = membersPage2
+            +memberOfTheTeam(member.avatar, member.name, member.position, member.social)
         //- team members end
 
         .team__paginator 
