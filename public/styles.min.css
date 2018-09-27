@@ -261,7 +261,7 @@ svg {
   overflow: hidden;
 }
 body {
-  font: 14px/1 "lora-regular", sans-serif, arial;
+  font: 14px/24px "lora-regular", sans-serif, arial;
   color: #797979;
 }
 .container {
@@ -336,13 +336,16 @@ h6 {
   height: 100%;
   background-color: rgba(0,0,0,0.3);
 }
-.page__caption {
+.page__caption,
+.our-menu-item__title {
   font-size: 72px;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
 }
-.page__caption span {
+.page__caption span,
+.our-menu-item__title span,
+.our-menu-item__subtitle {
   display: inline-block;
   margin-bottom: -6px;
   font: 120px/1 "great-vibes-regular", sans-serif, arial;
@@ -401,6 +404,8 @@ h6 {
   padding: 150px 0;
 }
 .page__heading {
+  max-width: 770px;
+  margin: 0 auto;
   text-align: center;
 }
 .page__subtitle {
@@ -415,6 +420,57 @@ h6 {
   line-height: 1;
   text-transform: uppercase;
   color: #000;
+}
+.page__title + p {
+  margin-top: 34px;
+}
+.our-menu .page__heading {
+  margin-bottom: 50px;
+}
+.our-menu-item__hero {
+  margin-bottom: 44px;
+  padding: 158px 0;
+  text-align: center;
+  background-color: #797979;
+}
+.our-menu__item:not(:last-child) {
+  margin-bottom: 50px;
+}
+.our-menu-item__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.our-menu-item__dish {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+@supports (display: flex) {
+  .our-menu-item__dish:nth-child(odd) {
+    padding-right: 30px;
+  }
+}
+.our-menu-item__dish:not(:nth-last-child(-n+2)) {
+  margin-bottom: 32px;
+}
+.our-menu-item__name-and-price {
+  margin-bottom: 8px;
+  font: 18px/1 "antonio-regular", sans-serif, arial;
+}
+.our-menu-item__name-and-price::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.our-menu-item__name {
+  float: left;
+  color: #000;
+}
+.our-menu-item__price {
+  float: right;
+  color: #797979;
 }
 .page__team .page__hero {
   background: #797979 url("img/content/team/joshua-rodriguez-422768-unsplash_1920px.png") no-repeat top center/cover;

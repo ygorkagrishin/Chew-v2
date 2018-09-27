@@ -1,0 +1,53 @@
+.our-menu .page__heading
+  margin-bottom 50px
+
+.our-menu-item__hero
+  margin-bottom 44px 
+  padding 158px 0
+
+  text-align center
+ 
+  background-color greyColor
+
+.our-menu-item__subtitle 
+  @extend .page__caption span 
+
+.our-menu-item__title
+  @extend .page__caption
+
+.our-menu__item:not(:last-child)
+  margin-bottom 50px
+
+.our-menu-item__cont
+  display flex
+  flex-wrap wrap
+
+.our-menu-item__dish
+  flex-basis 50%
+
+.our-menu-item__dish:nth-child(odd)
+  @supports(display flex)
+    padding-right 30px
+
+.our-menu-item__dish:not(:nth-last-child(-n+2))
+  margin-bottom 32px
+
+.our-menu-item__name-and-price
+  margin-bottom 8px
+
+  font 18px / 1 baseFont2
+
+.our-menu-item__name-and-price::after
+  content ''
+  display table
+  clear both
+
+.our-menu-item__name 
+  float left
+
+  color blackColor
+
+.our-menu-item__price
+  float right
+
+  color greyColor 

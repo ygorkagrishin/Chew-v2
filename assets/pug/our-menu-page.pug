@@ -1,0 +1,22 @@
+extends layout/_layout
+
+block title
+  title Chew menu
+
+block content 
+  .page__our-menu
+    +hero('taste', 'our menus')
+
+    main.page__main.our-menu
+      .container
+
+        +contentHeader('Menu set', 'Explore our fantastic menus', contentHeaderText)
+
+        .our-menu__items
+          - const arrayObjects = [breakFast, lunch, dinner]
+
+          each obj in arrayObjects
+            +buildMenuItem(obj)
+            
+
+    include modules/_footer

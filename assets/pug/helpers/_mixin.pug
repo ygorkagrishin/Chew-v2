@@ -22,21 +22,10 @@ mixin hero(subtitle, title)
       p.page__phone quick reservation: <span>+212 342 67382</span>
       +social(social)
 
-mixin heading(subtitle, title, text)
+mixin contentHeader(subtitle, title, text)
   .page__heading
     span.page__subtitle= subtitle
     h3.page__title= title
 
     if (text)
       p= text
-
-//- members of the team in team pages
-mixin memberOfTheTeam(avatar, name, position, social)
-  figure.team__member.team-member
-    .team-member__ava-container
-      img(src= avatar, alt="avatar").team-member__ava
-    figcaption.team-member__cont
-      .team-member__desc
-        h3.team-member__name= name
-        p.team-member__pos= position
-      +social(social)
