@@ -326,6 +326,7 @@ h6 {
   background-color: rgba(0,0,0,0.7);
 }
 .page__hero::after,
+.our-menu-item__hero::after,
 .footer::after {
   content: '';
   position: absolute;
@@ -424,10 +425,15 @@ h6 {
 .page__title + p {
   margin-top: 34px;
 }
+.page__our-menu .page__hero {
+  background: url("img/content/our-menu-list/andersen-jensen-637701-unsplash_2000px.png") no-repeat top/cover;
+}
 .our-menu .page__heading {
   margin-bottom: 50px;
 }
 .our-menu-item__hero {
+  position: relative;
+  z-index: 1;
   margin-bottom: 44px;
   padding: 158px 0;
   text-align: center;
@@ -471,6 +477,9 @@ h6 {
 .our-menu-item__price {
   float: right;
   color: #797979;
+}
+.page__our-menu footer {
+  background: url("img/content/our-menu-list/andersen-jensen-637701-unsplash_2000px.png") no-repeat bottom/cover;
 }
 .page__team .page__hero {
   background: #797979 url("img/content/team/joshua-rodriguez-422768-unsplash_1920px.png") no-repeat top center/cover;

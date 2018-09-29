@@ -3,7 +3,7 @@ mixin buildMenuItem(obj)
   article.our-menu__item.our-menu-item
     - const headerItem = obj.header
 
-    .our-menu-item__hero
+    .our-menu-item__hero(style=`background: url(${headerItem.img}) no-repeat center / cover`)
       span.our-menu-item__subtitle= headerItem.subtitle
       h3.our-menu-item__title= headerItem.title
     

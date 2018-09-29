@@ -1,13 +1,22 @@
+.page__our-menu .page__hero
+  background url('img/content/our-menu-list/andersen-jensen-637701-unsplash_2000px.png') no-repeat top / cover
+
 .our-menu .page__heading
   margin-bottom 50px
 
 .our-menu-item__hero
+  position relative
+  z-index $z-index1
+
   margin-bottom 44px 
   padding 158px 0
 
   text-align center
  
   background-color greyColor
+
+.our-menu-item__hero::after
+  @extend .page__hero::after
 
 .our-menu-item__subtitle 
   @extend .page__caption span 
@@ -51,3 +60,6 @@
   float right
 
   color greyColor 
+
+.page__our-menu footer 
+  background url('img/content/our-menu-list/andersen-jensen-637701-unsplash_2000px.png') no-repeat bottom / cover
