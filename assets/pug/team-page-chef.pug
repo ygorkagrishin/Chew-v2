@@ -7,26 +7,27 @@ block content
   .page__team
     +hero('meet', 'our team')
 
-    main.page__main.team
-      .container
-        +contentHeader('meet our staff', 'we love our customers')
-        
-        ul.team__tabs
-          li.team__tab
-            a(href="team-page-all.html") All
-
-          li.team__tab.team__tab_state_active
-            a(href="javascript:void(0);") Chef
+    main
+      .page__main.team
+        .container
+          +contentHeader('meet our staff', 'we love our customers')
           
-          li.team__tab
-            a(href="team-page-waiter.html") Waiter
+          ul.team__tabs
+            li.team__tab
+              a(href="team-page-all.html") All
 
-          li.team__tab
-            a(href="team-page-manager.html") Manager
+            li.team__tab.team__tab_state_active
+              a(href="javascript:void(0);") Chef
+            
+            li.team__tab
+              a(href="team-page-waiter.html") Waiter
 
-        //- team members
-        .team__members
-          +memberOfTheTeam(chef.avatar, chef.name, chef.position, chef.social)
-        //- team members end
+            li.team__tab
+              a(href="team-page-manager.html") Manager
+
+          //- team members
+          .team__members
+            +memberOfTheTeam(chef.avatar, chef.name, chef.position, chef.social)
+          //- team members end
 
     include modules/_footer

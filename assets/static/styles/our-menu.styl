@@ -2,14 +2,14 @@
   background url('img/content/our-menu-list/andersen-jensen-637701-unsplash_2000px.png') no-repeat top / cover
 
 .our-menu .page__heading
-  margin-bottom 50px
+  margin-bottom 45px
 
 .our-menu-item__hero
   position relative
   z-index $z-index1
 
-  margin-bottom 44px 
-  padding 158px 0
+  margin-bottom 52px 
+  padding 157px 0
 
   text-align center
  
@@ -25,7 +25,7 @@
   @extend .page__caption
 
 .our-menu__item:not(:last-child)
-  margin-bottom 50px
+  margin-bottom 45px
 
 .our-menu-item__cont
   display flex
@@ -36,10 +36,14 @@
 
 .our-menu-item__dish:nth-child(odd)
   @supports(display flex)
-    padding-right 30px
+    padding-right 15px
+
+.our-menu-item__dish:nth-child(even)
+  @supports(display flex)
+    padding-left 15px
 
 .our-menu-item__dish:not(:nth-last-child(-n+2))
-  margin-bottom 32px
+  margin-bottom 40px
 
 .our-menu-item__name-and-price
   margin-bottom 8px

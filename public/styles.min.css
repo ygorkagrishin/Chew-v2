@@ -423,24 +423,24 @@ h6 {
   color: #000;
 }
 .page__title + p {
-  margin-top: 34px;
+  margin-top: 18px;
 }
 .page__our-menu .page__hero {
   background: url("img/content/our-menu-list/andersen-jensen-637701-unsplash_2000px.png") no-repeat top/cover;
 }
 .our-menu .page__heading {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 .our-menu-item__hero {
   position: relative;
   z-index: 1;
-  margin-bottom: 44px;
-  padding: 158px 0;
+  margin-bottom: 52px;
+  padding: 157px 0;
   text-align: center;
   background-color: #797979;
 }
 .our-menu__item:not(:last-child) {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 .our-menu-item__cont {
   display: -webkit-box;
@@ -455,11 +455,16 @@ h6 {
 }
 @supports (display: flex) {
   .our-menu-item__dish:nth-child(odd) {
-    padding-right: 30px;
+    padding-right: 15px;
+  }
+}
+@supports (display: flex) {
+  .our-menu-item__dish:nth-child(even) {
+    padding-left: 15px;
   }
 }
 .our-menu-item__dish:not(:nth-last-child(-n+2)) {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 .our-menu-item__name-and-price {
   margin-bottom: 8px;
@@ -691,6 +696,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 18px;
 }
 .footer__item {
   -ms-flex-preferred-size: 150px;
@@ -701,14 +707,11 @@ h6 {
 .footer__item p {
   font-size: 12px;
 }
-.footer__item p:not(:last-child) {
-  margin-bottom: 12px;
-}
 .footer__item:not(:last-child) {
   margin-right: 150px;
 }
 .footer__caption {
-  margin-bottom: 26px;
+  margin-bottom: 18px;
   font-size: 12px;
   text-transform: uppercase;
   color: #797979;
