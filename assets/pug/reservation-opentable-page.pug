@@ -1,0 +1,47 @@
+extends layout/_layout
+
+block title
+  title Chew reservation
+
+block content
+  .page__reserv
+    +hero('make', 'reservation')
+
+    main
+      .page__main
+        section
+          .reserv
+            .container
+              +contentHeader('Powered by open table', 'Booking a table')
+            
+              .reserv__row
+                //- Form
+                .reserv__col.reserv__form-container
+                  form(action="").reserv__form.reserv-form#reservation-table-form
+                    p.reserv-form__nb.
+                      Welcome to Chew Restaurant! 
+                      Please use the form below to book a table online. This is powered by <span>OpenTable.</span>
+
+                    .reserv-form__rows
+                      .reserv-form__row
+                        .reserv-form__col.reserv-form__col_size_md
+                          label(for="reserv-form-date").reserv-form__label Date
+                          input(type="text", name="date", placeholder="Jul 14th, 2018").reserv-form__input#reserv-form-date
+                        .reserv-form__col.reserv-form__col_size_md
+                          label(for="reserv-form-time").reserv-form__label Time
+                          input(type="text", name="time", placeholder="4:30PM").reserv-form__input#reserv-form-time
+                      .reserv-form__row
+                        .reserv-form__col.reserv-form__col_size_lg
+                          label(for="reserv-form-message").reserv-form__label I want to book a table for
+                          input(type="text", name="guest", placeholder="-- Chose the number of guest --").reserv-form__input#reserv-form-guest
+
+                    .reserv-form__btn-container
+                      button(type="submit").reserv-form__btn-submit.btn.btn_color_orange Book now
+                //- Form end
+
+                //- location
+                .reserv__col.reserv__location
+                  img(src="img/general/locate.png", alt="location").reserv__map
+                //- location end
+    
+    include modules/_footer

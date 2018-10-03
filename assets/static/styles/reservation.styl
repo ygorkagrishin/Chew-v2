@@ -1,0 +1,92 @@
+.page__reserv .page__hero
+  background url('img/content/reservation/florencia-viadana_2000px.png') no-repeat center / cover
+
+.reserv__row
+  position relative
+  z-index $z-index1
+
+  display flex
+  margin-top 39px
+  padding 0 70px
+
+  background url('img/content/reservation/david-clarke_1200px.png') no-repeat center / cover
+
+.reserv__row::after
+  content ''
+
+  position absolute
+  top 0
+  left 0
+  z-index -1
+
+  width 100%
+  height 100%
+
+  background-color rgba(blackColor,.7)
+
+.reserv__form-container
+  padding-right 70px
+
+.reserv__form
+  margin-top 64px
+
+.reserv-form__nb
+  margin-bottom 22px
+  padding-right 50px
+
+  color whiteColor
+
+.reserv-form__nb span 
+  color yellowColor
+
+.reserv-form__rows
+  margin-bottom 30px
+
+.reserv-form__row
+  display flex
+
+.reserv-form__row:not(:last-child)
+  margin-bottom 31px
+
+.reserv-form__col_size_md
+  flex-basis 50%
+
+.reserv-form__col_size_md:nth-child(odd)
+  padding-right 5px
+
+.reserv-form__col_size_md:nth-child(even)
+  padding-left 5px
+
+.reserv-form__col_size_lg
+  flex-basis 100%
+
+.reserv-form__label
+  display block
+  margin-bottom 8px
+
+  font 14px / 1 baseFont2
+  letter-spacing .7px
+  text-transform uppercase
+  color whiteColor
+
+.reserv-form__input
+  width 100%
+  padding 8px 20px 
+
+  font-size 12px
+
+  background-color whiteColor 
+
+.reserv__map
+  width 500px
+  height 420px
+
+  transform translateY(70px)
+
+.reserv-form__btn-submit
+  padding 0 36px
+
+  line-height 44px
+
+.page__reserv footer 
+  background url('img/content/reservation/florencia-viadana_2000px.png') no-repeat bottom / cover

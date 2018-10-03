@@ -1,6 +1,6 @@
 social()
+  display inline-block
   width 110px
-  margin 0 auto
   ul
     display flex
     align-items center
@@ -33,4 +33,10 @@ logo()
     display block
     padding-left 3px
 
-    font-size 10px 
+    font-size 10px
+
+clearfix()
+  &::after
+    content ''
+    display table
+    clear both
