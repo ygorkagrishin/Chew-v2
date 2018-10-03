@@ -10,6 +10,8 @@ block content
     main
       .page__main
         section
+          h3.visually-hidden Reservation
+          
           .reserv
             .container
               +contentHeader('Powered by open table', 'Booking a table')
@@ -32,7 +34,7 @@ block content
                           input(type="text", name="time", placeholder="4:30PM").reserv-form__input#reserv-form-time
                       .reserv-form__row
                         .reserv-form__col.reserv-form__col_size_lg
-                          label(for="reserv-form-message").reserv-form__label I want to book a table for
+                          label(for="reserv-form-guest").reserv-form__label I want to book a table for
                           input(type="text", name="guest", placeholder="-- Chose the number of guest --").reserv-form__input#reserv-form-guest
 
                     .reserv-form__btn-container
