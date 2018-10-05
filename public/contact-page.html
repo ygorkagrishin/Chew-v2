@@ -7,6 +7,7 @@
     <title>Chew contact</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </head>
   <body class="page"> 
     <div class="page__cont">
@@ -16,7 +17,7 @@
             <h1 class="header__logo"><a href="homepage.html">chew <span>restaurant</span></a></h1>
             <nav class="mainnav">
               <ul class="mainnav__list">
-                <li class="mainnav__item"><a class="mainnav__link" href="javasciprt:void(0);">Home </a></li>
+                <li class="mainnav__item"><a class="mainnav__link" href="homepage-page.html">Home </a></li>
                 <li class="mainnav__item"><a class="mainnav__link" href="our-menu-page.html">Menus </a></li>
                 <li class="mainnav__item"><a class="mainnav__link" href="reservation-opentable-page.html">Reservation</a></li>
                 <li class="mainnav__item"><a class="mainnav__link" href="team-page-all.html">Team </a></li>
@@ -47,7 +48,117 @@
           </div>
         </div>
       </div>
-      <main></main>
+      <main>
+        <div class="cont">
+          <section>
+            <div class="cont__conn cont-conn">
+              <div class="container">
+                <div class="cont-conn__row">
+                  <div class="cont-conn__desc">
+                    <h3 class="cont-conn__title">Drop us a line </h3>
+                    <div class="cont-conn__text">
+                      <p>
+                        Pellentesque a massa risus. Cras convallis finibus porta. 
+                        Integer in ligula leo. Cras quis consequat nisl, at malesuada sapien. 
+                        Mauris ultricies nisi eget velit bibendum, sit amet euismod mi gravida.
+                      </p>
+                      <p>
+                        Cum sociis natoque penatibus et magnis dis parturient montes, 
+                        nascetur ridiculus mus. Pellentesque non laoreet risus, 
+                        id elementum purus.
+                      </p>
+                    </div>
+                    <div class="cont-conn__social"><span>Follow us via:</span>
+                      <div class="social">
+                        <ul>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#fb"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#tw"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#fq"></use>
+                              </svg></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <form class="cont-conn__form cont-form" action="" id="contact-connect-form">
+                    <p class="cont-form__nb">*Note: We respect your privacy. Your email will be kept secretly.</p>
+                    <div class="cont-form__rows">
+                      <div class="cont-form__row">
+                        <div class="cont-form__col cont-form__col_size_md">
+                          <label for="cont-conect-user-name">Your name*</label>
+                          <input type="text" name="user-name" placeholder="Enter your name" id="cont-conect-user-name">
+                        </div>
+                        <div class="cont-form__col cont-form__col_size_md">
+                          <label for="cont-conect-user-email">Your email*</label>
+                          <input type="text" name="user-email" placeholder="Enter your email" id="cont-conect-user-email">
+                        </div>
+                      </div>
+                      <div class="cont-form__row">
+                        <div class="cont-form__col cont-form__col_size_lg">
+                          <label for="cont-conect-user-message">Your message*</label>
+                          <textarea name="user-message" rows="8" placeholder="Your message goes here" id="cont-conect-user-message"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cont-form__btn-container"> 
+                      <button class="cont-form__submit btn btn_color_orange" type="submit">Send us</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3 class="visually-hidden">Information about us</h3>
+            <div class="cont__info cont-info">
+              <div class="container">
+                <div class="cont-info__row">
+                  <div class="cont-info__col">
+                    <div>
+                      <div class="cont-info__pic">
+                        <svg>
+                          <use xlink:href="sprite-svg.svg#pin"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <p>
+                      16/8 W 19th St, Chelsea <br>
+                      Manhattan, NY 10001
+                    </p>
+                  </div>
+                  <div class="cont-info__col">
+                    <div>
+                      <div class="cont-info__pic">
+                        <svg>
+                          <use xlink:href="sprite-svg.svg#call"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <p>212-342-67382</p>
+                  </div>
+                  <div class="cont-info__col">
+                    <div>
+                      <div class="cont-info__pic">
+                        <svg>
+                          <use xlink:href="sprite-svg.svg#mail"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <p>reservation@chew.com info@chew.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
       <footer class="footer">
         <div class="footer__inner">
           <h5 class="footer__logo"><a href="homepage.html">chew <span>restaurant</span></a></h5>
