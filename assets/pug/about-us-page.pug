@@ -1,0 +1,40 @@
+extends layout/_layout
+
+block title 
+  title chew about us
+
+block content
+  .page-about
+    +hero('learn', 'about us')
+
+    main.page-about-main.page__main
+      //- who are we
+      section
+        .about-us-section
+          .container
+            +contentHeader('Welcome to chew restaurant', 'where all dreams came true', textHeaderAboutUsSection)
+
+            .about-us-row
+              .about-us-col.about-us-col-size-md
+                img(src='img/content/team/jakob-owens-224343-unsplash_500px.png', alt='about us pic')
+              .about-us-col.about-us-col-size-lg
+                img(src='img/content/team/ryan-holloway-351140-unsplash_500px.png', alt='about us pic')
+              .about-us-col.about-us-col-size-md.about-us-grid
+                .about-us-cell
+                  img(src='img/content/team/nathan-dumlao-486999-unsplash_500px.png', alt='about us pic')
+                .about-us-cell
+                  img(src='img/content/team/sage-kirk-485982-unsplash_500px.png', alt='about us pic')
+              .about-us-col.about-us-col-size-md
+                img(src='img/content/team/rawpixel-660724-unsplash_500px.png', alt='about us pic')
+      //- who are we end
+
+      //- about our food section
+      section
+        .about-food-section
+          .container
+            +contentHeader('know', 'your food', textHeaderAboutFoodSection)
+
+            a(href="our-menu-page.html").about-food-our-menu.btn.btn_color_transparent Explore our menu
+      //- about our food section end
+    
+    include modules/_footer

@@ -334,6 +334,7 @@ h6 {
 }
 .page__hero::after,
 .our-menu-item__hero::after,
+.about-food-section::after,
 .footer::after {
   content: '';
   position: absolute;
@@ -345,7 +346,8 @@ h6 {
   background-color: rgba(0,0,0,0.3);
 }
 .page__caption,
-.our-menu-item__title {
+.our-menu-item__title,
+.about-food-section .page__title {
   font-size: 72px;
   text-align: center;
   text-transform: uppercase;
@@ -353,7 +355,9 @@ h6 {
 }
 .page__caption span,
 .our-menu-item__title span,
-.our-menu-item__subtitle {
+.about-food-section .page__title span,
+.our-menu-item__subtitle,
+.about-food-section .page__subtitle {
   display: inline-block;
   margin-bottom: -6px;
   font: 120px/1 "great-vibes-regular", sans-serif, arial;
@@ -1148,6 +1152,81 @@ textarea {
 }
 .page__homepage footer {
   background: url("img/content/homepage/annie-spratt-464747-unsplash_2000px.png") no-repeat bottom/cover;
+}
+.page-about .page__hero {
+  background: url("img/content/about/simon-rae-471376-unsplash_2000px.png") no-repeat center/cover;
+}
+.page-about .page__main {
+  padding-bottom: 0;
+}
+.page-about-main section:not(:last-child) {
+  margin-bottom: 150px;
+}
+.page-about-main .page__heading {
+  padding-bottom: 50px;
+}
+.about-us-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.about-us-col:not(.about-us-grid) {
+  position: relative;
+  z-index: 1;
+  padding-top: 355px;
+  background-color: #797979;
+  overflow: hidden;
+}
+.about-us-col:not(:last-child) {
+  margin-right: 5px;
+}
+.about-us-col-size-md {
+  -ms-flex-preferred-size: 240px;
+      flex-basis: 240px;
+}
+.about-us-col-size-lg {
+  -ms-flex-preferred-size: 435px;
+      flex-basis: 435px;
+}
+.about-us-cell {
+  position: relative;
+  z-index: 1;
+  padding-top: 175px;
+  background-color: #797979;
+  overflow: hidden;
+}
+.about-us-cell:not(:last-child) {
+  margin-bottom: 5px;
+}
+.about-us-col img,
+.about-us-cell img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+.about-food-section {
+  position: relative;
+  z-index: 1;
+  background: url("img/content/about/toa-heftiba-296458-unsplash_2000px.png") no-repeat center/cover;
+}
+.about-food-section::after {
+  background-color: rgba(0,0,0,0.7);
+}
+.about-food-section {
+  padding: 140px 0;
+  text-align: center;
+}
+.about-food-section .page__heading {
+  padding-bottom: 60px;
+}
+.about-food-section .page__heading p {
+  font: 18px/30px 'lora-italic', sans-serif, arial;
+  opacity: 0.7;
+}
+.page-about footer {
+  background: url("img/content/about/simon-rae-471376-unsplash_2000px.png") no-repeat bottom/cover;
 }
 .header {
   padding: 0 46px;

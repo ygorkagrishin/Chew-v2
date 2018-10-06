@@ -1,0 +1,84 @@
+.page-about .page__hero
+  background url('img/content/about/simon-rae-471376-unsplash_2000px.png') no-repeat center / cover
+
+.page-about .page__main
+  padding-bottom 0
+
+.page-about-main section:not(:last-child)
+  margin-bottom 150px
+
+.page-about-main .page__heading
+  padding-bottom 50px
+
+.about-us-row
+  display flex
+
+.about-us-col:not(.about-us-grid)
+  position relative
+  z-index $z-index1
+
+  padding-top 355px
+
+  background-color greyColor
+  overflow hidden
+
+.about-us-col:not(:last-child)
+  margin-right 5px
+
+.about-us-col-size-md
+  flex-basis 240px
+
+.about-us-col-size-lg
+  flex-basis 435px
+
+.about-us-cell
+  position relative
+  z-index $z-index1
+
+  padding-top 175px
+
+  background-color greyColor
+  overflow hidden
+
+.about-us-cell:not(:last-child)
+  margin-bottom 5px
+
+.about-us-col img,
+.about-us-cell img 
+  position absolute
+  top 0
+  left 0
+  z-index -1
+
+  width 100%
+
+.about-food-section
+  position relative
+  z-index $z-index1
+
+  background url('img/content/about/toa-heftiba-296458-unsplash_2000px.png') no-repeat center / cover
+
+.about-food-section::after
+  @extend .page__hero::after
+  background-color rgba(blackColor,.7)
+
+.about-food-section
+  padding 140px 0
+  text-align center
+
+.about-food-section .page__heading
+  padding-bottom 60px
+
+.about-food-section .page__subtitle
+  @extend .page__caption span 
+
+.about-food-section .page__title
+  @extend .page__caption
+
+.about-food-section .page__heading p
+  font 18px / 30px italicFont
+  opacity .7
+
+.page-about footer 
+  background url('img/content/about/simon-rae-471376-unsplash_2000px.png') no-repeat bottom / cover
+
