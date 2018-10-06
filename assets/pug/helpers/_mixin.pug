@@ -9,7 +9,7 @@ mixin social(array)
               use(xlink:href=key.icon)
 
 //- Page hero mixin
-mixin hero(subtitle, title)
+mixin hero(subtitle, title, scroll)
   .page__hero
     include ../modules/_header
 
@@ -18,9 +18,19 @@ mixin hero(subtitle, title)
       <br> 
       = title
 
-    .page__inf.page__inf_align_center
-      p.page__phone quick reservation: <span>+212 342 67382</span>
-      +social(social)
+    if (scroll)
+      .page__inf
+        p.page__phone quick reservation: <span>+212 342 67382</span>
+        +social(social)
+      .icon-scroll
+    else
+      .page__inf.page__inf_align_center
+        p.page__phone quick reservation: <span>+212 342 67382</span>
+        +social(social)
+
+    //- .page__inf.page__inf_align_center
+    //-   p.page__phone quick reservation: <span>+212 342 67382</span>
+    //-   +social(social)
 
 mixin contentHeader(subtitle, title, text)
   .page__heading
@@ -29,3 +39,35 @@ mixin contentHeader(subtitle, title, text)
 
     if (text)
       p= text
+
+//- Стили для формы назодятся в reservation.styl
+mixin reservationForm(formId, action)
+  .reserv.reserv__row
+    //- Form
+    .reserv__col.reserv__form-container
+      form(action= action, id= formId).reserv__form.reserv-form
+        p.reserv-form__nb.
+          Welcome to Chew Restaurant! 
+          Please use the form below to book a table online. This is powered by <span>OpenTable.</span>
+
+        .reserv-form__rows
+          .reserv-form__row
+            .reserv-form__col.reserv-form__col_size_md
+              label(for="reserv-form-date") Date
+              input(type="text", name="date", placeholder="Jul 14th, 2018")#reserv-form-date
+            .reserv-form__col.reserv-form__col_size_md
+              label(for="reserv-form-time") Time
+              input(type="text", name="time", placeholder="4:30PM")#reserv-form-time
+          .reserv-form__row
+            .reserv-form__col.reserv-form__col_size_lg
+              label(for="reserv-form-guest") I want to book a table for
+              input(type="text", name="guest", placeholder="-- Chose the number of guest --")#reserv-form-guest
+
+        .reserv-form__btn-container
+          button(type="submit").reserv-form__btn-submit.btn.btn_color_orange Book now
+    //- Form end
+
+    //- location
+    .reserv__col.reserv__location
+      img(src="img/general/locate.png", alt="location").reserv__map
+    //- location end

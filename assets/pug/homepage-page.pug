@@ -4,78 +4,88 @@ block title
   title chew homepage
 
 block content
-  +hero('welcome to', 'chew restaurant')
+  .page__homepage
+    +hero('welcome to', 'chew restaurant', true)
 
-  main  
-    .page__main.homepage
-      //- Section homepage about
-      section
-        .homepage__about.homepage-about
-          .container
-            .homepage-about__row
-              .homepage-about__col.homepage-about__about
-                +contentHeader('about us', 'where all dreams came true')
+    main  
+      .page__main.homepage
+        //- Section homepage about
+        section
+          .homepage__about.homepage-about
+            .container
+              .homepage-about__row
+                .homepage-about__col.homepage-about__about
+                  +contentHeader('about us', 'where all dreams came true')
 
-                p.
-                  Morbi mattis, lorem sit amet gravida eleifend, 
-                  nisl felis tincidunt dui, nec porta turpis ligula eu nisl. 
-                  Donec lacus dolor, facilisis at tortor ac, congue vulputate ligula. 
-                  Quisque eleifend volutpat orci nec fermentum. Curabitur quis dignissim nibh.
-                p.
-                  Praesent venenatis ultricies erat. Nunc fringilla eros vitae nisl posuere, 
-                  ut consectetur nulla feugiat. Nullam ut mauris vitae tortor sodales efficitur. 
-                  Quisque ac orci ante. Proin sit amet turpis lobortis, imperdiet nisi ut, 
-                  viverra lorem. 
-                p.
-                  Nullam ex massa, euismod vel metus non, pellentesque tincidunt neque. 
-                  Mauris suscipit ut purus id congue. Etiam ornare condimentum massa et scelerisque.
+                  .homepage-about__text-container
+                    p.
+                      Morbi mattis, lorem sit amet gravida eleifend, 
+                      nisl felis tincidunt dui, nec porta turpis ligula eu nisl. 
+                      Donec lacus dolor, facilisis at tortor ac, congue vulputate ligula. 
+                      Quisque eleifend volutpat orci nec fermentum. Curabitur quis dignissim nibh.
+                    p.
+                      Praesent venenatis ultricies erat. Nunc fringilla eros vitae nisl posuere, 
+                      ut consectetur nulla feugiat. Nullam ut mauris vitae tortor sodales efficitur. 
+                      Quisque ac orci ante. Proin sit amet turpis lobortis, imperdiet nisi ut, 
+                      viverra lorem. 
+                    p.
+                      Nullam ex massa, euismod vel metus non, pellentesque tincidunt neque. 
+                      Mauris suscipit ut purus id congue. Etiam ornare condimentum massa et scelerisque.
+                  a(href="javascript:void(0);").btn.btn_color_orange Learn More
+                .homepage-about__col.homepage-about__pic-container
+                  .homepage-about__pic-wrap
+                    img(src="img/content/homepage/cayla1-150730-unsplash_700px.png", alt="dish")            
+        //- Section homepage about end
+        
+        //- Section homepage menu
+        section 
+          .homepage__menu.homepage-menu
+            .container
+              +contentHeader('Featured menus', 'discover our popular dishes')
+              
+              ul.homepage-menu__tabs
+                li
+                  a(href='javascript:void(0);').homepage-menu__tab-link_is_active All
+                li
+                  a(href='javascript:void(0);') Breakfast 
+                li
+                  a(href='javascript:void(0);') Lunch 
+                li
+                  a(href='javascript:void(0);') Dinner 
+                li
+                  a(href='javascript:void(0);') Drinks
 
-                a(href="javascript:void(0);").homepage-about__btn.btn.btn_color_orange Learn More
-              .homepage-about__col.homepage-about__img-container
-                .homepage-about__img-wrap
-                  img(src="img/content/homepage/.png", alt="dish").homepage-about__img             
-      //- Section homepage about end
-      
-      //- Section homepage menu
-      section 
-        .homepage__menu.homepage-menu
-          .container
-            +contentHeader('about us', 'where all dreams came true')
-            
-            ul.homepage-menu__tabs
-              li
-                a(href='javascript:void(0);').homepage-menu__tab-link_is_active All
-              li
-                a(href='javascript:void(0);') Breakfast 
-              li
-                a(href='javascript:void(0);') Lunch 
-              li
-                a(href='javascript:void(0);') Dinner 
-              li
-                a(href='javascript:void(0);') Drinks
+              .homepage-menu__row
+                each dish in menu
+                  .homepage-menu__col 
+                    +dish(dish.img, dish.name, dish.composition, dish.price)
+              a(href="our-menu-page.html").homepage__view View all menus
+                svg
+                  use(xlink:href="sprite-svg.svg#arrow-round-forward")
+        //- Section homepage menu end
 
-            .homepage-menu__row
-              each dish in menu
-                .homepage-menu__col 
-                  +dish(dish.img, dish.name, dish.composition, dish.price)
-            a(href="our-menu-page.html").homepage__view View all blog posts
-              svg
-                use(xlink:href="sprite-svg.svg#arrow-round-forward")
-      //- Section homepage menu end
+        //- Section homepage reservation
+        section
+          .homepage__reserv.homepage-reserv
+            .container
+              +contentHeader('Reservation', 'Book a table')
 
-      //- Section homepage blog 
-      section
-        .homepage__blog.homepage-blog
-          .container
-            +contentHeader('From our blog', 'Get our latest news')
+              +reservationForm('homepage-reservation-table-form')      
+        //- Section homepage reservation end
 
-            .homepage-blog__row
-              each post in posts
-                .homepage-blog__col
-                  +post(post.src, post.name, post.text, post.date)      
-            a(href="javascript:void(0);").homepage__view View all blog posts
-              svg
-                use(xlink:href="sprite-svg.svg#arrow-round-forward")
-      //- Section homepage blog end
+        //- Section homepage blog 
+        section
+          .homepage__blog.homepage-blog
+            .container
+              +contentHeader('From our blog', 'Get our latest news')
 
-  include modules/_footer          
+              .homepage-blog__row
+                each post in posts
+                  .homepage-blog__col
+                    +post(post.src, post.name, post.text, post.date)      
+              a(href="javascript:void(0);").homepage__view View all blog posts
+                svg
+                  use(xlink:href="sprite-svg.svg#arrow-round-forward")
+        //- Section homepage blog end
+
+    include modules/_footer          

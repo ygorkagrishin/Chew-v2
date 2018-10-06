@@ -13,7 +13,7 @@
       <div class="page__hero">
         <header class="header">
           <div class="header__inner">
-            <h1 class="header__logo"><a href="homepage.html">chew <span>restaurant</span></a></h1>
+            <h1 class="header__logo"><a href="homepage-page.html">chew <span>restaurant</span></a></h1>
             <nav class="mainnav">
               <ul class="mainnav__list">
                 <li class="mainnav__item"><a class="mainnav__link" href="homepage-page.html">Home </a></li>
@@ -23,7 +23,7 @@
                 <li class="mainnav__item"><a class="mainnav__link" href="contact-page.html">Contact</a></li>
               </ul>
             </nav>
-            <div class="header__btn-container"><a class="header__btn header__btn_color_transparent btn btn_color_transparent" href="javascript:void(0);">make a reservation</a></div>
+            <div class="header__btn-container"><a class="header__btn header__btn_color_transparent btn btn_color_transparent" href="reservation-opentable-page.html">make a reservation</a></div>
           </div>
         </header>
         <h2 class="page__caption"> <span>make</span><br> reservation</h2>
@@ -51,44 +51,42 @@
         <div class="page__main">
           <section>
             <h3 class="visually-hidden">Reservation</h3>
-            <div class="reserv">
-              <div class="container">
-                <div class="page__heading"><span class="page__subtitle">Powered by open table</span>
-                  <h3 class="page__title">Booking a table</h3>
-                </div>
-                <div class="reserv__row">
-                  <div class="reserv__col reserv__form-container">
-                    <form class="reserv__form reserv-form" action="" id="reservation-table-form">
-                      <p class="reserv-form__nb">
-                        Welcome to Chew Restaurant! 
-                        Please use the form below to book a table online. This is powered by <span>OpenTable.</span>
-                        
-                      </p>
-                      <div class="reserv-form__rows">
-                        <div class="reserv-form__row">
-                          <div class="reserv-form__col reserv-form__col_size_md">
-                            <label class="reserv-form__label" for="reserv-form-date">Date</label>
-                            <input class="reserv-form__input" type="text" name="date" placeholder="Jul 14th, 2018" id="reserv-form-date">
-                          </div>
-                          <div class="reserv-form__col reserv-form__col_size_md">
-                            <label class="reserv-form__label" for="reserv-form-time">Time</label>
-                            <input class="reserv-form__input" type="text" name="time" placeholder="4:30PM" id="reserv-form-time">
-                          </div>
+            <div class="container">
+              <div class="page__heading"><span class="page__subtitle">Powered by open table</span>
+                <h3 class="page__title">Booking a table</h3>
+              </div>
+              <div class="reserv reserv__row">
+                <div class="reserv__col reserv__form-container">
+                  <form class="reserv__form reserv-form" id="reserv-reservation-table-form">
+                    <p class="reserv-form__nb">
+                      Welcome to Chew Restaurant! 
+                      Please use the form below to book a table online. This is powered by <span>OpenTable.</span>
+                      
+                    </p>
+                    <div class="reserv-form__rows">
+                      <div class="reserv-form__row">
+                        <div class="reserv-form__col reserv-form__col_size_md">
+                          <label for="reserv-form-date">Date</label>
+                          <input type="text" name="date" placeholder="Jul 14th, 2018" id="reserv-form-date"/>
                         </div>
-                        <div class="reserv-form__row">
-                          <div class="reserv-form__col reserv-form__col_size_lg">
-                            <label class="reserv-form__label" for="reserv-form-guest">I want to book a table for</label>
-                            <input class="reserv-form__input" type="text" name="guest" placeholder="-- Chose the number of guest --" id="reserv-form-guest">
-                          </div>
+                        <div class="reserv-form__col reserv-form__col_size_md">
+                          <label for="reserv-form-time">Time</label>
+                          <input type="text" name="time" placeholder="4:30PM" id="reserv-form-time"/>
                         </div>
                       </div>
-                      <div class="reserv-form__btn-container">
-                        <button class="reserv-form__btn-submit btn btn_color_orange" type="submit">Book now</button>
+                      <div class="reserv-form__row">
+                        <div class="reserv-form__col reserv-form__col_size_lg">
+                          <label for="reserv-form-guest">I want to book a table for</label>
+                          <input type="text" name="guest" placeholder="-- Chose the number of guest --" id="reserv-form-guest"/>
+                        </div>
                       </div>
-                    </form>
-                  </div>
-                  <div class="reserv__col reserv__location"><img class="reserv__map" src="img/general/locate.png" alt="location"></div>
+                    </div>
+                    <div class="reserv-form__btn-container">
+                      <button class="reserv-form__btn-submit btn btn_color_orange" type="submit">Book now</button>
+                    </div>
+                  </form>
                 </div>
+                <div class="reserv__col reserv__location"><img class="reserv__map" src="img/general/locate.png" alt="location"/></div>
               </div>
             </div>
           </section>

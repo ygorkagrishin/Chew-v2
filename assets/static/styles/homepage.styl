@@ -1,14 +1,20 @@
+.page__homepage .page__hero
+  background url('img/content/homepage/annie-spratt-464747-unsplash_2000px.png') no-repeat center / cover
+
+.page__homepage .page__heading
+  max-width 100%
+  margin-bottom 22px
+
+  text-align left
+
 .homepage .container
   position relative
 
 .homepage section:not(:last-child)
   margin-bottom 150px
 
-.homepage .page__heading
-  max-width 100%
-  margin-bottom 28px
-
-  text-align left
+.homepage-about .page__heading
+  margin-bottom 22px 
 
 .homepage-about__row
   display flex
@@ -18,22 +24,21 @@
   padding-right 100px
 
 .homepage-about p:not(:last-child)
-  margin-bottom 32px
+  margin-bottom 24px
 
-.homepage-about p:last-child
-  margin-bottom 40px
+.homepage-about__text-container
+  margin-bottom 33px
 
-.homepage-about__img-container
+.homepage-about .btn_color_orange
+  padding 0 51px
+
+  line-height 45px
+
+.homepage-about__pic-container
+  position relative
   flex-basis 500px
 
-.homepage-about__img-wrap
-  position relative
-  z-index $z-index1
-
-  padding-top 480px
-  background-color greyColor
-
-.homepage-about__img-wrap::before
+.homepage-about__pic-container::before
   content ''
 
   position absolute
@@ -44,14 +49,23 @@
   width 100%
   height 100%
 
-  border 2px solid greyColor
+  border 2px solid rgba(greyColor,.3)
 
-.homepage-about__img-wrap::after
-  @extend .homepage-about__img-wrap::before
+.homepage-about__pic-container::after
+  @extend .homepage-about__pic-container::before
   bottom -23px
   left 23px
 
-.homepage-about__img
+.homepage-about__pic-wrap
+  position relative
+  z-index $z-index1
+
+  padding-top 480px
+  background-color greyColor
+
+  overflow hidden
+
+.homepage-about__pic-container img
   position absolute
   top 0
   left 0
@@ -61,7 +75,7 @@
 
 .homepage-menu__tabs
   display flex
-  margin-bottom 50px
+  margin-bottom 40px
 
 .homepage-menu__tabs a
   position relative
@@ -70,7 +84,7 @@
   display inline-block
 
 .homepage-menu__tabs li:not(:last-child)
-  margin-right 28px
+  margin-right 26px
 
 .homepage-menu__tabs a.homepage-menu__tab-link_is_active
   color blackColor
@@ -108,9 +122,8 @@
 
 .homepage-dish
   display flex
-  align-items center
 
-  border 1px solid greyColor
+  border 1px solid rgba(greyColor,.3)
 
 .homepage-dish:hover
   box-shadow -10px 10px 35px rgba(greyColor,.5)
@@ -139,7 +152,7 @@
 .homepage-dish__name-and-price
   position relative
   
-  padding-bottom 18px
+  padding 30px 0 10px
 
 .homepage-dish__name-and-price::after
   content ''
@@ -156,7 +169,7 @@
   background-color yellowColor
 
 .homepage-dish__name
-  margin-bottom 14px
+  margin-bottom 8px
 
   font-size 18px
 
@@ -166,6 +179,12 @@
 
 .homepage-dish__composition
   margin-top 14px
+
+.homepage-reserv .page__heading
+  margin-bottom 32px
+
+.homepage-reserv .reserv
+  margin 0
 
 .homepage-blog__row
   display flex
@@ -177,14 +196,16 @@
   position relative
   z-index $z-index1
 
-  margin-bottom 30px
+  margin-bottom 23px
   padding-top 270px
 
   background-color greyColor
 
+  overflow hidden
+
 .homepage-post__img-container img 
   position absolute
-  top 0
+  top -25%
   left 0
   
   width 100%
@@ -194,38 +215,51 @@
   line-height 1
 
 .homepage-post__name
-  margin 10px 0 30px
+  margin 9px 0 25px
 
   font-size 18px
   line-height 1
 
 .homepage-post__desc
-  margin-bottom 30px
+  margin-bottom 25px
 
 .homepage-post__continue
   display inline-block
 
-  font 12px / 1 baseFont2
-  color blackColor
+  font 14px / 1 baseFont2
+  letter-spacing .5px
+  text-transform uppercase
+  color rgba(blackColor,.7)
 
 .homepage-post__continue svg 
-  width 10px !important
-  height 10px !important
-  
+  width 18px !important
+  height 18px !important
+  margin-left 2px
+
+  vertical-align -2px
+
+  fill rgba(blackColor,.7)
+
+.homepage-post__continue:hover
+  color blackColor 
+
+.homepage-post__continue:hover svg 
   fill blackColor
 
 .homepage__view
   position absolute 
-  top 0
-  right 15px
+  top 4px
+  right 9px
   z-index $z-index3
 
   display inline-block
   font 14px / 1 italicFont
 
 .homepage__view svg 
-  width 10px !important
-  height 10px !important
+  width 18px !important
+  height 18px !important
+  vertical-align -5px
+  margin-left 0px
 
   fill greyColor
 
@@ -234,3 +268,6 @@
 
 .homepage__view:hover svg 
   fill blackColor
+
+.page__homepage footer
+  background url('img/content/homepage/annie-spratt-464747-unsplash_2000px.png') no-repeat bottom / cover
