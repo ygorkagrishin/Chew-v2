@@ -106,15 +106,10 @@
 .homepage-menu__row
   display flex
   flex-wrap wrap
+  justify-content space-between
 
 .homepage-menu__col
-  flex-basis 50%
-
-.homepage-menu__col:nth-child(odd) > .bug-fix-ie
-  padding-right 15px
-
-.homepage-menu__col:nth-child(even) > .bug-fix-ie
-  padding-left 15px
+  flex-basis 570px
 
 .homepage-menu__col:not(:nth-last-child(-n+2))
   @media (min-width 1024px)
