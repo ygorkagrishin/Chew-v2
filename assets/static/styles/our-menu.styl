@@ -34,13 +34,11 @@
 .our-menu-item__dish
   flex-basis 50%
 
-.our-menu-item__dish:nth-child(odd)
-  @supports(display flex)
-    padding-right 15px
+.our-menu-item__dish:nth-child(odd) > .bug-fix-ie
+  padding-right 15px
 
-.our-menu-item__dish:nth-child(even)
-  @supports(display flex)
-    padding-left 15px
+.our-menu-item__dish:nth-child(even) > .bug-fix-ie
+  padding-left 15px
 
 .our-menu-item__dish:not(:nth-last-child(-n+2))
   margin-bottom 40px

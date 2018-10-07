@@ -25,7 +25,9 @@
             </nav>
             <div class="header__btn-container"><a class="header__btn header__btn_color_transparent btn btn_color_transparent" href="reservation-opentable-page.html">make a reservation</a></div>
           </header>
-          <h2 class="page__caption"> <span>meet</span><br> our team</h2>
+          <div class="bug-fix-ie">
+            <h2 class="page__caption"> <span>meet</span><br> our team</h2>
+          </div>
           <div class="page__inf page__inf_align_center">
             <p class="page__phone">quick reservation: <span>+212 342 67382</span></p>
             <div class="social">
@@ -58,82 +60,88 @@
                 <li class="team__tab"><a href="team-page-waiter.html">Waiter</a></li>
                 <li class="team__tab team__tab_state_active"><a href="javascript:void(0);">Manager</a></li>
               </ul>
-              <div class="team__members"> 
-                <figure class="team__member team-member">
-                  <div class="team-member__ava-container"><img class="team-member__ava" src="img/content/team/ryan-holloway-351140-unsplash_500px.png" alt="avatar"/></div>
-                  <figcaption class="team-member__cont">
-                    <div class="team-member__desc">
-                      <h3 class="team-member__name">Russell Stephens</h3>
-                      <p class="team-member__pos">General manager</p>
-                    </div>
-                    <div class="social">
-                      <ul>
-                        <li><a href="javascript:void(0);">
-                            <svg>
-                              <use xlink:href="sprite-svg.svg#fb"></use>
-                            </svg></a></li>
-                        <li><a href="javascript:void(0);">
-                            <svg>
-                              <use xlink:href="sprite-svg.svg#tw"></use>
-                            </svg></a></li>
-                        <li><a href="javascript:void(0);">
-                            <svg>
-                              <use xlink:href="sprite-svg.svg#inst"></use>
-                            </svg></a></li>
-                      </ul>
-                    </div>
-                  </figcaption>
-                </figure>
-                <figure class="team__member team-member">
-                  <div class="team-member__ava-container"><img class="team-member__ava" src="img/content/team/rawpixel-660724-unsplash_500px.png" alt="avatar"/></div>
-                  <figcaption class="team-member__cont">
-                    <div class="team-member__desc">
-                      <h3 class="team-member__name">Samantha Rogers</h3>
-                      <p class="team-member__pos">Manager</p>
-                    </div>
-                    <div class="social">
-                      <ul>
-                        <li><a href="javascript:void(0);">
-                            <svg>
-                              <use xlink:href="sprite-svg.svg#fb"></use>
-                            </svg></a></li>
-                        <li><a href="javascript:void(0);">
-                            <svg>
-                              <use xlink:href="sprite-svg.svg#tw"></use>
-                            </svg></a></li>
-                        <li><a href="javascript:void(0);">
-                            <svg>
-                              <use xlink:href="sprite-svg.svg#inst"></use>
-                            </svg></a></li>
-                      </ul>
-                    </div>
-                  </figcaption>
-                </figure>
-                <figure class="team__member team-member">
-                  <div class="team-member__ava-container"><img class="team-member__ava" src="img/content/team/sage-kirk-485982-unsplash_500px.png" alt="avatar"/></div>
-                  <figcaption class="team-member__cont">
-                    <div class="team-member__desc">
-                      <h3 class="team-member__name">Gaby Harris</h3>
-                      <p class="team-member__pos">Manager</p>
-                    </div>
-                    <div class="social">
-                      <ul>
-                        <li><a href="javascript:void(0);">
-                            <svg>
-                              <use xlink:href="sprite-svg.svg#fb"></use>
-                            </svg></a></li>
-                        <li><a href="javascript:void(0);">
-                            <svg>
-                              <use xlink:href="sprite-svg.svg#tw"></use>
-                            </svg></a></li>
-                        <li><a href="javascript:void(0);">
-                            <svg>
-                              <use xlink:href="sprite-svg.svg#inst"></use>
-                            </svg></a></li>
-                      </ul>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="team__row">
+                <div class="team__col">
+                  <figure class="team__member team-member">
+                    <div class="team-member__ava-container"><img class="team-member__ava" src="img/content/team/ryan-holloway-351140-unsplash_500px.png" alt="avatar"/></div>
+                    <figcaption class="team-member__cont">
+                      <div class="team-member__desc">
+                        <h3 class="team-member__name">Russell Stephens</h3>
+                        <p class="team-member__pos">General manager</p>
+                      </div>
+                      <div class="social">
+                        <ul>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#fb"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#tw"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#inst"></use>
+                              </svg></a></li>
+                        </ul>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="team__col">
+                  <figure class="team__member team-member">
+                    <div class="team-member__ava-container"><img class="team-member__ava" src="img/content/team/rawpixel-660724-unsplash_500px.png" alt="avatar"/></div>
+                    <figcaption class="team-member__cont">
+                      <div class="team-member__desc">
+                        <h3 class="team-member__name">Samantha Rogers</h3>
+                        <p class="team-member__pos">Manager</p>
+                      </div>
+                      <div class="social">
+                        <ul>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#fb"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#tw"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#inst"></use>
+                              </svg></a></li>
+                        </ul>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="team__col">
+                  <figure class="team__member team-member">
+                    <div class="team-member__ava-container"><img class="team-member__ava" src="img/content/team/sage-kirk-485982-unsplash_500px.png" alt="avatar"/></div>
+                    <figcaption class="team-member__cont">
+                      <div class="team-member__desc">
+                        <h3 class="team-member__name">Gaby Harris</h3>
+                        <p class="team-member__pos">Manager</p>
+                      </div>
+                      <div class="social">
+                        <ul>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#fb"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#tw"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#inst"></use>
+                              </svg></a></li>
+                        </ul>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
           </div>

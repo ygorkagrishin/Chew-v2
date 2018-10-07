@@ -358,6 +358,20 @@ h6 {
   height: 100%;
   background-color: rgba(0,0,0,0.3);
 }
+.page__hero > .bug-fix-ie {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .page__caption,
 .our-menu-item__title,
 .about-food-section .page__title {
@@ -511,15 +525,11 @@ h6 {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
-@supports (display: flex) {
-  .our-menu-item__dish:nth-child(odd) {
-    padding-right: 15px;
-  }
+.our-menu-item__dish:nth-child(odd) > .bug-fix-ie {
+  padding-right: 15px;
 }
-@supports (display: flex) {
-  .our-menu-item__dish:nth-child(even) {
-    padding-left: 15px;
-  }
+.our-menu-item__dish:nth-child(even) > .bug-fix-ie {
+  padding-left: 15px;
 }
 .our-menu-item__dish:not(:nth-last-child(-n+2)) {
   margin-bottom: 40px;
@@ -583,27 +593,29 @@ h6 {
 .team__tab:not(:last-child) {
   margin-right: 28px;
 }
-.team__members {
+.team__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 50px;
 }
-.team__member {
+.team__col {
   -ms-flex-preferred-size: 370px;
       flex-basis: 370px;
   text-align: center;
-  border: 1px solid #797979;
 }
 @media (min-width: 1024px) {
-  .team__member:nth-child(-n+3) {
+  .team__col:nth-child(-n+3) {
     margin-bottom: 30px;
   }
-  .team__member:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
+}
+.team__member {
+  border: 1px solid #797979;
 }
 .team-member__ava-container {
   position: relative;
@@ -1011,14 +1023,13 @@ textarea {
       flex-wrap: wrap;
 }
 .homepage-menu__col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 50%;
-          flex: 1 0 50%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
-.homepage-menu__col:nth-child(odd) {
+.homepage-menu__col:nth-child(odd) > .bug-fix-ie {
   padding-right: 15px;
 }
-.homepage-menu__col:nth-child(even) {
+.homepage-menu__col:nth-child(even) > .bug-fix-ie {
   padding-left: 15px;
 }
 @media (min-width: 1024px) {
@@ -1092,6 +1103,11 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.homepage-blog__col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .homepage-blog__col:not(:last-child) {
   margin-right: 30px;

@@ -13,10 +13,11 @@ mixin hero(subtitle, title, scroll)
   .page__hero
     include ../modules/_header
 
-    h2.page__caption 
-      span= subtitle 
-      <br> 
-      = title
+    .bug-fix-ie
+      h2.page__caption 
+        span= subtitle 
+        <br> 
+        = title
 
     if (scroll)
       .page__inf

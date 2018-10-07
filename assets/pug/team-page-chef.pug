@@ -26,8 +26,9 @@ block content
               a(href="team-page-manager.html") Manager
 
           //- team members
-          .team__members
-            +memberOfTheTeam(chef.avatar, chef.name, chef.position, chef.social)
+          .team__row
+            .team__col 
+              +memberOfTheTeam(chef.avatar, chef.name, chef.position, chef.social)
           //- team members end
 
     include modules/_footer

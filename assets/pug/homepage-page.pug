@@ -58,7 +58,8 @@ block content
               .homepage-menu__row
                 each dish in menu
                   .homepage-menu__col 
-                    +dish(dish.img, dish.name, dish.composition, dish.price)
+                    .bug-fix-ie
+                      +dish(dish.img, dish.name, dish.composition, dish.price)
               a(href="our-menu-page.html").homepage__view View all menus
                 svg
                   use(xlink:href="sprite-svg.svg#arrow-round-forward")

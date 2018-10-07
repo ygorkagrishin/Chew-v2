@@ -108,12 +108,12 @@
   flex-wrap wrap
 
 .homepage-menu__col
-  flex 1 0 50%
+  flex-basis 50%
 
-.homepage-menu__col:nth-child(odd)
+.homepage-menu__col:nth-child(odd) > .bug-fix-ie
   padding-right 15px
 
-.homepage-menu__col:nth-child(even)
+.homepage-menu__col:nth-child(even) > .bug-fix-ie
   padding-left 15px
 
 .homepage-menu__col:not(:nth-last-child(-n+2))
@@ -122,7 +122,6 @@
 
 .homepage-dish
   display flex
-
   border 1px solid rgba(greyColor,.3)
 
 .homepage-dish:hover
@@ -188,6 +187,9 @@
 
 .homepage-blog__row
   display flex
+
+.homepage-blog__col
+  flex 1
 
 .homepage-blog__col:not(:last-child)
   margin-right 30px

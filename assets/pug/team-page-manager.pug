@@ -26,13 +26,15 @@ block content
               a(href="javascript:void(0);") Manager
 
           //- team members
-          .team__members 
+          .team__row
             if (managers.length > 0 && Array.isArray(managers))
               each manager in managers
-                +memberOfTheTeam(manager.avatar, manager.name, manager.position, manager.social)
+                .team__col
+                  +memberOfTheTeam(manager.avatar, manager.name, manager.position, manager.social)
             else
               - var manager = managers
-              +memberOfTheTeam(manager.avatar, manager.name, manager.position, manager.social)
+              .team__col 
+                +memberOfTheTeam(manager.avatar, manager.name, manager.position, manager.social)
           //- team members end
 
     include modules/_footer

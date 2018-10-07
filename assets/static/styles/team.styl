@@ -36,23 +36,23 @@
   &:not(:last-child)
     margin-right 28px
 
-.team__members
+.team__row
   display flex
   flex-wrap wrap
+  justify-content space-between
 
   margin-bottom 50px
 
-.team__member
+.team__col
   flex-basis 370px
-
   text-align center
 
-  border 1px solid greyColor
+.team__col:nth-child(-n+3)
   @media (min-width 1024px)
-    &:nth-child(-n+3)
-      margin-bottom 30px
-    &:not(:nth-child(3n))
-      margin-right 30px
+    margin-bottom 30px
+
+.team__member
+  border 1px solid greyColor
 
 .team-member__ava-container
   position relative

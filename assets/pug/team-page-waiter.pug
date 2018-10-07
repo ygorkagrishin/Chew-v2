@@ -26,13 +26,15 @@ block content
               a(href="team-page-manager.html") Manager
 
           //- team members
-          .team__members 
+          .team__row 
             if (waiters.length > 0 && Array.isArray(waiters))
               each waiter in waiters
-                +memberOfTheTeam(waiter.avatar, waiter.name, waiter.position, waiter.social)
+                .team__col
+                  +memberOfTheTeam(waiter.avatar, waiter.name, waiter.position, waiter.social)
             else
               - var waiter = waiters
-              +memberOfTheTeam(waiter.avatar, waiter.name, waiter.position, waiter.social)
+              .team__col 
+                +memberOfTheTeam(waiter.avatar, waiter.name, waiter.position, waiter.social)
           //- team members end
 
     include modules/_footer

@@ -26,13 +26,15 @@ block content
               a(href="team-page-manager.html") Manager
 
           //- team members
-          .team__members
+          .team__row
             if (membersPage.length > 0 && Array.isArray(membersPage))
               each member in membersPage
-                +memberOfTheTeam(member.avatar, member.name, member.position, member.social)
+                .team__col 
+                  +memberOfTheTeam(member.avatar, member.name, member.position, member.social)
             else
               - var member = membersPage
-              +memberOfTheTeam(member.avatar, member.name, member.position, member.social)
+              .team__col  
+                +memberOfTheTeam(member.avatar, member.name, member.position, member.social)
           //- team members end
 
           .team__paginator 
