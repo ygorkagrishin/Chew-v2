@@ -6,6 +6,22 @@
 
 @import 'components/_buttons.styl'
 
+.logo
+  subTitleFont = "lora-regular"
+
+  display inline-block
+
+  font 38px / 1 logoFont
+  font-size 38px
+  line-height 1
+  text-transform uppercase
+  color whiteColor
+  span 
+    display block
+    padding-left 3px
+
+    font-size 10px
+
 .page__hero
   position relative
   z-index $z-index1
@@ -63,15 +79,36 @@
     color yellowColor
 
 .social
-  social()
+  display inline-block
+  width 110px
+  ul
+    display flex
+    align-items center
+    justify-content space-between
+  a
+    display block
+    width 30px
+    height 30px
 
-.icon-scroll,
-.icon-scroll:before
+    text-align center
+
+    background-color greyColor
+    border-radius 50%
+    svg 
+      width 45%
+      fill whiteColor
+    &:hover
+      background-color yellowColor 
+      svg 
+        fill blackColor
+
+.btn-scroll,
+.btn-scroll:before
   position absolute
   left 50%
   z-index $z-index9
 
-.icon-scroll
+.btn-scroll
   bottom 6%
 
   width 26px
@@ -82,7 +119,7 @@
   box-shadow inset 0 0 0 1px #fff
   border-radius 25px
 
-.icon-scroll:before
+.btn-scroll:before
   content ''
   
   top 8px

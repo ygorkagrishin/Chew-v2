@@ -315,6 +315,19 @@ h6 {
   color: #000;
   background-color: #efba39;
 }
+.logo {
+  display: inline-block;
+  font: 38px/1 "antonio-regular", sans-serif, arial;
+  font-size: 38px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+.logo span {
+  display: block;
+  padding-left: 3px;
+  font-size: 10px;
+}
 .page__hero {
   position: relative;
   z-index: 1;
@@ -415,13 +428,13 @@ h6 {
 .social a:hover svg {
   fill: #000;
 }
-.icon-scroll,
-.icon-scroll:before {
+.btn-scroll,
+.btn-scroll:before {
   position: absolute;
   left: 50%;
   z-index: 111111111;
 }
-.icon-scroll {
+.btn-scroll {
   bottom: 6%;
   width: 26px;
   height: 45px;
@@ -431,7 +444,7 @@ h6 {
           box-shadow: inset 0 0 0 1px #fff;
   border-radius: 25px;
 }
-.icon-scroll:before {
+.btn-scroll:before {
   content: '';
   top: 8px;
   width: 3px;
@@ -1228,10 +1241,7 @@ textarea {
 .page-about footer {
   background: url("img/content/about/simon-rae-471376-unsplash_2000px.png") no-repeat bottom/cover;
 }
-.header {
-  padding: 0 46px;
-}
-.header__inner {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1241,22 +1251,14 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 46px;
 }
 .header__logo {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  font-size: 38px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #fff;
 }
-.header__logo span {
-  display: block;
-  padding-left: 3px;
-  font-size: 10px;
-}
-.mainnav__list {
+.nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1268,62 +1270,49 @@ textarea {
           justify-content: space-between;
   margin-right: 42px;
 }
-.mainnav__item:not(:last-child) {
+.nav li:not(:last-child) {
   margin-right: 42px;
 }
-.mainnav__link {
+.nav a {
   font: 14px/1 "antonio-regular", sans-serif, arial;
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: #fff;
 }
-.mainnav__link:hover {
+.nav a:hover {
   color: #efba39;
 }
 .footer {
   position: relative;
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 100px 50px 95px 50px;
   background-color: rgba(0,0,0,0.7);
 }
 .footer::after {
   background-color: rgba(0,0,0,0.8);
 }
-.footer__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.footer__logo {
-  font-size: 38px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #fff;
-}
-.footer__logo span {
-  display: block;
-  padding-left: 3px;
-  font-size: 10px;
-}
-.footer__list-inf {
+.footer__inf {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0 18px;
 }
-.footer__item {
+.footer__inf li {
   -ms-flex-preferred-size: 150px;
       flex-basis: 150px;
   font-size: 12px;
   color: #fff;
 }
-.footer__item p {
+.footer__inf li p {
   font-size: 12px;
 }
-.footer__item:not(:last-child) {
+.footer__inf li:not(:last-child) {
   margin-right: 150px;
 }
 .footer__caption {
