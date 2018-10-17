@@ -1,10 +1,10 @@
-.page__our-menu .page__hero
+.page__menu .hero
   background url('img/content/our-menu-list/andersen-jensen-637701-unsplash_2000px.png') no-repeat top / cover
 
-.our-menu .page__heading
+.our-menu .heading
   margin-bottom 45px
 
-.our-menu-item__hero
+.our-menu-hero
   position relative
   z-index $z-index1
 
@@ -14,49 +14,63 @@
   text-align center
  
   background-color greyColor
+  @media (orientation portrait) and (max-width 1024px)
+    padding 15% 0
 
-.our-menu-item__hero::after
-  @extend .page__hero::after
+.our-menu-hero::after
+  @extend .hero::after
 
-.our-menu-item__subtitle 
-  @extend .page__caption span 
+.our-menu-subtitle 
+  @extend .hero__title span 
 
-.our-menu-item__title
-  @extend .page__caption
+.our-menu-title
+  @extend .hero__title
 
-.our-menu__item:not(:last-child)
-  margin-bottom 45px
-
-.our-menu-item__cont
+.our-menu-cont
   display flex
   flex-wrap wrap
   justify-content space-between
 
-.our-menu-item__dish
+.our-menu-dish
   flex-basis 570px
-
-.our-menu-item__dish:not(:nth-last-child(-n+2))
+  @media (orientation portrait) and (max-width 1024px)
+    flex-basis 48%
+  @media (orientation portrait) and (max-width 768px)
+    flex-basis 100%
+ 
+.our-menu-dish:not(:nth-last-child(-n+2))
   margin-bottom 40px
+  @media (orientation portrait) and (max-width 768px)
+    margin-bottom 0
 
-.our-menu-item__name-and-price
+.our-menu-dish:not(:last-child)
+  @media (orientation portrait) and (max-width 768px)
+    margin-bottom 30px
+
+.our-menu-name-and-price
   margin-bottom 8px
 
   font 18px / 1 baseFont2
 
-.our-menu-item__name-and-price::after
+.our-menu-name-and-price::after
   content ''
   display table
   clear both
 
-.our-menu-item__name 
+.our-menu-name 
   float left
 
   color blackColor
 
-.our-menu-item__price
+.our-menu-price
   float right
 
   color greyColor 
+
+.our-menu-item:not(:last-child)
+  margin-bottom 45px
+  @media (orientation portrait) and (max-width 768px)
+    margin-bottom 5%
 
 .page__our-menu footer 
   background url('img/content/our-menu-list/andersen-jensen-637701-unsplash_2000px.png') no-repeat bottom / cover

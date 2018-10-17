@@ -1,15 +1,26 @@
-.page__cont .page__hero
+.page__cont .hero
   background url('img/content/contact/rob-bye-141857-unsplash_1920px.png') no-repeat center / cover
 
 .cont-conn
   padding 104px 0 101px
+  @media (orientation portrait) and (max-width 1024px)
+    max-width 700px
+    margin 0 auto
 
 .cont-conn__row
   display flex
+  @media (orientation portrait) and (max-width 1024px)
+    flex-wrap wrap
+
+.cont-conn__col:not(:last-child)
+  margin-bottom 10%
 
 .cont-conn__desc
   flex-basis 400px
   padding-right 55px
+  @media (orientation portrait) and (max-width 1024px)
+    flex-basis 100%
+    padding-right 0
 
 .cont-conn__title
   margin-bottom 30px
@@ -30,11 +41,17 @@
   vertical-align 8px
   color blackColor
 
+.cont-form__container
+  @media (orientation portrait) and (max-width 1024px)
+    flex-basis 100%
+
 .cont-form
   position relative
   z-index $z-index1
 
   flex-basis 770px
+  @media (orientation portrait) and (max-width 1024px)
+    flex-basis 100%
 
 .cont-form__nb
   position absolute
@@ -97,6 +114,8 @@
   justify-content space-between
 
   padding 40px 100px
+  @media (orientation portrait) and (max-width 768px)
+    padding 5% 0
 
 .cont-info__col
   flex-basis 200px

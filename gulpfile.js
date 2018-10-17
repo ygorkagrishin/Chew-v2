@@ -54,7 +54,7 @@ const rename = require('gulp-rename');
 const del = require('del');
 
 // Подключаем конфигурационный файл
-const conf = require('./settings.json');
+const conf = require('./paths.json');
 
 // Подключаем пути
 const paths = conf.paths;
@@ -159,9 +159,9 @@ gulp.task('fonts:copy', () => {
 gulp.task('img:copy', () => {
   return gulp.src(paths.images.src + '/**/**/*.{png,jpg}')
   .pipe(newer(paths.images.dest))
-  .pipe(imagemin({
+  /*.pipe(imagemin({
     optimizationLevel: 5
-  }))
+  }))*/
   .pipe(gulp.dest(paths.images.dest));
 });
 

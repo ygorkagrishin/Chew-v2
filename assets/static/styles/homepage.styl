@@ -1,7 +1,7 @@
-.page__homepage .page__hero
+.page__homepage .hero
   background url('img/content/homepage/annie-spratt-464747-unsplash_2000px.png') no-repeat center / cover
-
-.page__homepage .page__heading
+ 
+.page__homepage .heading
   max-width 100%
   margin-bottom 22px
 
@@ -12,8 +12,10 @@
 
 .homepage section:not(:last-child)
   margin-bottom 150px
+  @media (orientation portrait) and (max-width 768px)
+    margin-bottom 15%
 
-.homepage-about .page__heading
+.homepage-about .heading
   margin-bottom 22px 
 
 .homepage-about__row
@@ -22,6 +24,8 @@
 .homepage-about__about
   flex-basis 670px
   padding-right 100px
+  @media (orientation portrait) and (max-width 1024px)
+    flex-basis 100%
 
 .homepage-about p:not(:last-child)
   margin-bottom 24px
@@ -37,6 +41,8 @@
 .homepage-about__pic-container
   position relative
   flex-basis 500px
+  @media (orientation portrait) and (max-width 1024px)
+    display none
 
 .homepage-about__pic-container::before
   content ''
@@ -110,10 +116,18 @@
 
 .homepage-menu__col
   flex-basis 570px
+  @media (orientation portrait) and (max-width 1024px)
+    flex-basis 49%
+  @media (orientation portrait) and (max-width 768px)
+    flex-basis 100%
 
 .homepage-menu__col:not(:nth-last-child(-n+2))
-  @media (min-width 1024px)
+  @media (orientation portrait) and (min-width 1024px),
+  (orientation landscape) and (min-width 1024px)
     margin-bottom 30px
+
+.homepage-menu__col:not(:last-child)
+  margin-bottom 30px
 
 .homepage-dish
   display flex
@@ -174,7 +188,7 @@
 .homepage-dish__composition
   margin-top 14px
 
-.homepage-reserv .page__heading
+.homepage-reserv .heading
   margin-bottom 32px
 
 .homepage-reserv .reserv
@@ -182,12 +196,18 @@
 
 .homepage-blog__row
   display flex
+  @media (orientation portrait) and (max-width 768px)
+    flex-wrap wrap
 
 .homepage-blog__col
   flex 1
+  @media (orientation portrait) and (max-width 768px)
+    flex 1 0 100%
 
 .homepage-blog__col:not(:last-child)
   margin-right 30px
+  @media (orientation portrait) and (max-width 768px)
+    margin 0 0 5%
 
 .homepage-post__img-container
   position relative
@@ -199,6 +219,8 @@
   background-color greyColor
 
   overflow hidden
+  @media (orientation portrait) and (max-width 768px)
+    padding-top 300px
 
 .homepage-post__img-container img 
   position absolute
@@ -206,6 +228,8 @@
   left 0
   
   width 100%
+  @media (orientation portrait) and (max-width 768px)
+    top -55%
 
 .homepage-post__date
   font-size 12px
@@ -251,6 +275,8 @@
 
   display inline-block
   font 14px / 1 italicFont
+  @media (orientation portrait) and (max-width 768px)
+    top 0
 
 .homepage__view svg 
   width 18px !important

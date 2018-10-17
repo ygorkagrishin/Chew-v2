@@ -328,7 +328,7 @@ h6 {
   padding-left: 3px;
   font-size: 10px;
 }
-.page__hero {
+.hero {
   position: relative;
   z-index: 1;
   display: -webkit-box;
@@ -345,8 +345,8 @@ h6 {
   padding: 30px 0;
   background-color: rgba(0,0,0,0.7);
 }
-.page__hero::after,
-.our-menu-item__hero::after,
+.hero::after,
+.our-menu-hero::after,
 .about-food-section::after,
 .footer::after {
   content: '';
@@ -358,7 +358,12 @@ h6 {
   height: 100%;
   background-color: rgba(0,0,0,0.3);
 }
-.page__hero > .bug-fix-ie {
+@media (orientation: portrait) and (max-width: 1024px) {
+  .hero {
+    padding: 3% 0;
+  }
+}
+.hero > .bug-fix-ie {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -372,39 +377,44 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.page__caption,
-.our-menu-item__title,
-.about-food-section .page__title {
+.hero__title,
+.our-menu-title,
+.about-food-section .heading__title {
   font-size: 72px;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
 }
-.page__caption span,
-.our-menu-item__title span,
-.about-food-section .page__title span,
-.our-menu-item__subtitle,
-.about-food-section .page__subtitle {
+.hero__title span,
+.our-menu-title span,
+.about-food-section .heading__title span,
+.our-menu-subtitle,
+.about-food-section .heading__subtitle {
   display: inline-block;
   margin-bottom: -6px;
   font: 120px/1 "great-vibes-regular", sans-serif, arial;
   text-transform: lowercase;
   color: #efba39;
 }
-.page__inf {
+.hero__inf {
   padding: 0 50px;
 }
-.page__inf_align_center {
+.hero__inf_align_center {
   text-align: center;
 }
-.page__phone {
+@media (orientation: portrait) and (max-width: 1024px) {
+  .hero__inf_align_center {
+    padding: 0 3%;
+  }
+}
+.hero__tel {
   margin-bottom: 12px;
   letter-spacing: 0.6px;
   font: 14px/1 "antonio-regular", sans-serif, arial;
   text-transform: uppercase;
   color: #fff;
 }
-.page__phone span {
+.hero__tel span {
   display: inline-block;
   margin-left: 6px;
   color: #efba39;
@@ -458,6 +468,11 @@ h6 {
           box-shadow: inset 0 0 0 1px #fff;
   border-radius: 25px;
 }
+@media (orientation: portrait) and (max-width: 1024px) {
+  .btn-scroll {
+    bottom: 4%;
+  }
+}
 .btn-scroll:before {
   content: '';
   top: 8px;
@@ -476,34 +491,37 @@ h6 {
 .page__main {
   padding: 150px 0;
 }
-.page__heading {
+@media (orientation: portrait) and (max-width: 768px) {
+  .page__main {
+    padding: 15% 0;
+  }
+}
+.heading {
   max-width: 770px;
   margin: 0 auto;
   text-align: center;
 }
-.page__subtitle {
+.heading__subtitle {
   display: inline-block;
   margin-bottom: 50px;
   font: 14px/1 "antonio-regular", sans-serif, arial;
   text-transform: uppercase;
   color: #000;
 }
-.page__title {
-  font-size: 48px;
-  line-height: 1;
+.heading__title {
   text-transform: uppercase;
   color: #000;
 }
-.page__title + p {
+.heading__title + p {
   margin-top: 18px;
 }
-.page__our-menu .page__hero {
+.page__menu .hero {
   background: url("img/content/our-menu-list/andersen-jensen-637701-unsplash_2000px.png") no-repeat top/cover;
 }
-.our-menu .page__heading {
+.our-menu .heading {
   margin-bottom: 45px;
 }
-.our-menu-item__hero {
+.our-menu-hero {
   position: relative;
   z-index: 1;
   margin-bottom: 52px;
@@ -511,10 +529,12 @@ h6 {
   text-align: center;
   background-color: #797979;
 }
-.our-menu__item:not(:last-child) {
-  margin-bottom: 45px;
+@media (orientation: portrait) and (max-width: 1024px) {
+  .our-menu-hero {
+    padding: 15% 0;
+  }
 }
-.our-menu-item__cont {
+.our-menu-cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,41 +544,68 @@ h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.our-menu-item__dish {
+.our-menu-dish {
   -ms-flex-preferred-size: 570px;
       flex-basis: 570px;
 }
-.our-menu-item__dish:not(:nth-last-child(-n+2)) {
+@media (orientation: portrait) and (max-width: 1024px) {
+  .our-menu-dish {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .our-menu-dish {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+.our-menu-dish:not(:nth-last-child(-n+2)) {
   margin-bottom: 40px;
 }
-.our-menu-item__name-and-price {
+@media (orientation: portrait) and (max-width: 768px) {
+  .our-menu-dish:not(:nth-last-child(-n+2)) {
+    margin-bottom: 0;
+  }
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .our-menu-dish:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.our-menu-name-and-price {
   margin-bottom: 8px;
   font: 18px/1 "antonio-regular", sans-serif, arial;
 }
-.our-menu-item__name-and-price::after {
+.our-menu-name-and-price::after {
   content: '';
   display: table;
   clear: both;
 }
-.our-menu-item__name {
+.our-menu-name {
   float: left;
   color: #000;
 }
-.our-menu-item__price {
+.our-menu-price {
   float: right;
   color: #797979;
+}
+.our-menu-item:not(:last-child) {
+  margin-bottom: 45px;
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .our-menu-item:not(:last-child) {
+    margin-bottom: 5%;
+  }
 }
 .page__our-menu footer {
   background: url("img/content/our-menu-list/andersen-jensen-637701-unsplash_2000px.png") no-repeat bottom/cover;
 }
-.page__team .page__hero {
+.page__team .hero {
   background: #797979 url("img/content/team/joshua-rodriguez-422768-unsplash_1920px.png") no-repeat top center/cover;
 }
-.page__team footer {
+footer {
   background: #797979 url("img/content/team/joshua-rodriguez-422768-unsplash_1920px.png") no-repeat bottom center/cover;
-}
-.page__team footer::after {
-  background-color: rgba(0,0,0,0.8);
 }
 .team__tabs {
   display: -webkit-box;
@@ -606,10 +653,20 @@ h6 {
       flex-basis: 370px;
   text-align: center;
 }
-@media (min-width: 1024px) {
-  .team__col:nth-child(-n+3) {
-    margin-bottom: 30px;
+@media (orientation: portrait) and (max-width: 1024px) {
+  .team__col {
+    -ms-flex-preferred-size: 310px;
+        flex-basis: 310px;
   }
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .team__col {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+}
+.team__col:nth-child(-n+3) {
+  margin-bottom: 30px;
 }
 .team__member {
   border: 1px solid #797979;
@@ -679,7 +736,7 @@ h6 {
 .team__forward:hover svg {
   fill: #000;
 }
-.page__reserv .page__hero {
+.page__reserv .hero {
   background: url("img/content/reservation/florencia-viadana_2000px.png") no-repeat center/cover;
 }
 .reserv__row {
@@ -692,6 +749,20 @@ h6 {
   padding: 0 70px;
   background: url("img/content/reservation/david-clarke_1200px.png") no-repeat center/cover;
 }
+@media (orientation: portrait) and (max-width: 1024px) {
+  .reserv__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .reserv__row {
+    padding: 5% 70px 10%;
+  }
+}
 .reserv__row::after {
   content: '';
   position: absolute;
@@ -702,11 +773,28 @@ h6 {
   height: 100%;
   background-color: rgba(0,0,0,0.7);
 }
+@media (orientation: portrait) and (max-width: 1024px) {
+  .reserv__col {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    max-width: 70%;
+  }
+}
 .reserv__form-container {
   padding-right: 70px;
 }
+@media (orientation: portrait) and (max-width: 1024px) {
+  .reserv__form-container {
+    padding-right: 0;
+  }
+}
 .reserv__form {
-  margin-top: 64px;
+  padding-top: 64px;
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .reserv__form {
+    padding-top: 0;
+  }
 }
 .reserv-form__nb {
   margin-bottom: 22px;
@@ -755,7 +843,17 @@ h6 {
   font-size: 12px;
   background-color: #fff;
 }
-.reserv__map {
+@media (orientation: portrait) and (max-width: 1024px) {
+  .reserv__location {
+    text-align: center;
+  }
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .reserv__location {
+    display: none;
+  }
+}
+.reserv__location img {
   width: 500px;
   height: 420px;
   -webkit-transform: translateY(70px);
@@ -768,21 +866,43 @@ h6 {
 .page__reserv footer {
   background: url("img/content/reservation/florencia-viadana_2000px.png") no-repeat bottom/cover;
 }
-.page__cont .page__hero {
+.page__cont .hero {
   background: url("img/content/contact/rob-bye-141857-unsplash_1920px.png") no-repeat center/cover;
 }
 .cont-conn {
   padding: 104px 0 101px;
+}
+@media (orientation: portrait) and (max-width: 1024px) {
+  .cont-conn {
+    max-width: 700px;
+    margin: 0 auto;
+  }
 }
 .cont-conn__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
+@media (orientation: portrait) and (max-width: 1024px) {
+  .cont-conn__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.cont-conn__col:not(:last-child) {
+  margin-bottom: 10%;
+}
 .cont-conn__desc {
   -ms-flex-preferred-size: 400px;
       flex-basis: 400px;
   padding-right: 55px;
+}
+@media (orientation: portrait) and (max-width: 1024px) {
+  .cont-conn__desc {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding-right: 0;
+  }
 }
 .cont-conn__title {
   margin-bottom: 30px;
@@ -801,11 +921,23 @@ h6 {
   vertical-align: 8px;
   color: #000;
 }
+@media (orientation: portrait) and (max-width: 1024px) {
+  .cont-form__container {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
 .cont-form {
   position: relative;
   z-index: 1;
   -ms-flex-preferred-size: 770px;
       flex-basis: 770px;
+}
+@media (orientation: portrait) and (max-width: 1024px) {
+  .cont-form {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 .cont-form__nb {
   position: absolute;
@@ -872,6 +1004,11 @@ textarea {
           justify-content: space-between;
   padding: 40px 100px;
 }
+@media (orientation: portrait) and (max-width: 768px) {
+  .cont-info__row {
+    padding: 5% 0;
+  }
+}
 .cont-info__col {
   -ms-flex-preferred-size: 200px;
       flex-basis: 200px;
@@ -913,10 +1050,10 @@ textarea {
 .page__cont footer {
   background: url("img/content/contact/rob-bye-141857-unsplash_1920px.png") no-repeat bottom/cover;
 }
-.page__homepage .page__hero {
+.page__homepage .hero {
   background: url("img/content/homepage/annie-spratt-464747-unsplash_2000px.png") no-repeat center/cover;
 }
-.page__homepage .page__heading {
+.page__homepage .heading {
   max-width: 100%;
   margin-bottom: 22px;
   text-align: left;
@@ -927,7 +1064,12 @@ textarea {
 .homepage section:not(:last-child) {
   margin-bottom: 150px;
 }
-.homepage-about .page__heading {
+@media (orientation: portrait) and (max-width: 768px) {
+  .homepage section:not(:last-child) {
+    margin-bottom: 15%;
+  }
+}
+.homepage-about .heading {
   margin-bottom: 22px;
 }
 .homepage-about__row {
@@ -939,6 +1081,12 @@ textarea {
   -ms-flex-preferred-size: 670px;
       flex-basis: 670px;
   padding-right: 100px;
+}
+@media (orientation: portrait) and (max-width: 1024px) {
+  .homepage-about__about {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 .homepage-about p:not(:last-child) {
   margin-bottom: 24px;
@@ -954,6 +1102,11 @@ textarea {
   position: relative;
   -ms-flex-preferred-size: 500px;
       flex-basis: 500px;
+}
+@media (orientation: portrait) and (max-width: 1024px) {
+  .homepage-about__pic-container {
+    display: none;
+  }
 }
 .homepage-about__pic-container::before,
 .homepage-about__pic-container::after {
@@ -1026,10 +1179,25 @@ textarea {
   -ms-flex-preferred-size: 570px;
       flex-basis: 570px;
 }
-@media (min-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px) {
+  .homepage-menu__col {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+  }
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .homepage-menu__col {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+@media (orientation: portrait) and (min-width: 1024px), (orientation: landscape) and (min-width: 1024px) {
   .homepage-menu__col:not(:nth-last-child(-n+2)) {
     margin-bottom: 30px;
   }
+}
+.homepage-menu__col:not(:last-child) {
+  margin-bottom: 30px;
 }
 .homepage-dish {
   display: -webkit-box;
@@ -1087,7 +1255,7 @@ textarea {
 .homepage-dish__composition {
   margin-top: 14px;
 }
-.homepage-reserv .page__heading {
+.homepage-reserv .heading {
   margin-bottom: 32px;
 }
 .homepage-reserv .reserv {
@@ -1098,13 +1266,31 @@ textarea {
   display: -ms-flexbox;
   display: flex;
 }
+@media (orientation: portrait) and (max-width: 768px) {
+  .homepage-blog__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .homepage-blog__col {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
+@media (orientation: portrait) and (max-width: 768px) {
+  .homepage-blog__col {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+}
 .homepage-blog__col:not(:last-child) {
   margin-right: 30px;
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .homepage-blog__col:not(:last-child) {
+    margin: 0 0 5%;
+  }
 }
 .homepage-post__img-container {
   position: relative;
@@ -1114,11 +1300,21 @@ textarea {
   background-color: #797979;
   overflow: hidden;
 }
+@media (orientation: portrait) and (max-width: 768px) {
+  .homepage-post__img-container {
+    padding-top: 300px;
+  }
+}
 .homepage-post__img-container img {
   position: absolute;
   top: -25%;
   left: 0;
   width: 100%;
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .homepage-post__img-container img {
+    top: -55%;
+  }
 }
 .homepage-post__date {
   font-size: 12px;
@@ -1160,6 +1356,11 @@ textarea {
   display: inline-block;
   font: 14px/1 'lora-italic', sans-serif, arial;
 }
+@media (orientation: portrait) and (max-width: 768px) {
+  .homepage__view {
+    top: 0;
+  }
+}
 .homepage__view svg {
   width: 18px !important;
   height: 18px !important;
@@ -1176,7 +1377,7 @@ textarea {
 .page__homepage footer {
   background: url("img/content/homepage/annie-spratt-464747-unsplash_2000px.png") no-repeat bottom/cover;
 }
-.page-about .page__hero {
+.page-about .hero {
   background: url("img/content/about/simon-rae-471376-unsplash_2000px.png") no-repeat center/cover;
 }
 .page-about .page__main {
@@ -1185,13 +1386,24 @@ textarea {
 .page-about-main section:not(:last-child) {
   margin-bottom: 150px;
 }
-.page-about-main .page__heading {
+@media (orientation: portrait) and (max-width: 768px) {
+  .page-about-main section:not(:last-child) {
+    margin-bottom: 15%;
+  }
+}
+.page-about-main .heading {
   padding-bottom: 50px;
 }
 .about-us-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media (orientation: portrait) and (max-width: 1024px) {
+  .about-us-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 .about-us-col:not(.about-us-grid) {
   position: relative;
@@ -1241,7 +1453,7 @@ textarea {
   padding: 140px 0;
   text-align: center;
 }
-.about-food-section .page__heading {
+.about-food-section .heading {
   padding-bottom: 60px;
 }
 .about-food-section .page__heading p {
@@ -1263,6 +1475,11 @@ header {
           justify-content: space-between;
   padding: 0 46px;
 }
+@media (orientation: portrait) and (max-width: 1024px) {
+  header {
+    padding: 0 3%;
+  }
+}
 .header__logo {
   -webkit-box-flex: 2;
       -ms-flex: 2;
@@ -1279,6 +1496,11 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-right: 42px;
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .nav ul {
+    display: none;
+  }
 }
 .nav li:not(:last-child) {
   margin-right: 42px;
@@ -1307,6 +1529,22 @@ header {
 .footer::after {
   background-color: rgba(0,0,0,0.8);
 }
+@media (orientation: portrait) and (max-width: 1024px) {
+  .footer {
+    padding: 7% 3%;
+  }
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (orientation: portrait) and (max-width: 1024px) {
+  .footer__logo {
+    display: none;
+  }
+}
 .footer__inf {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1322,14 +1560,29 @@ header {
 .footer__inf li p {
   font-size: 12px;
 }
+@media (orientation: portrait) and (max-width: 768px) {
+  .footer__inf li p {
+    font-size: 10px;
+  }
+}
 .footer__inf li:not(:last-child) {
   margin-right: 150px;
+}
+@media (orientation: portrait) and (max-width: 1024px) {
+  .footer__inf li:not(:last-child) {
+    margin-right: auto;
+  }
 }
 .footer__caption {
   margin-bottom: 18px;
   font-size: 12px;
   text-transform: uppercase;
   color: #797979;
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .footer__social {
+    display: none;
+  }
 }
 @-webkit-keyframes scroll {
   0% {

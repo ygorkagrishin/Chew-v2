@@ -9,8 +9,16 @@
   background-color rgba(blackColor,.7)
 
   &::after
-    @extend .page__hero::after
+    @extend .hero::after
     background-color rgba(blackColor,.8)
+  @media (orientation portrait) and (max-width 1024px)
+    padding 7% 3%
+  @media (orientation portrait) and (max-width 768px)
+    flex-wrap wrap
+  
+.footer__logo
+  @media (orientation portrait) and (max-width 1024px)
+    display none
 
 .footer__inf
   display flex
@@ -23,8 +31,12 @@
   color whiteColor
   p
     font-size 12px
+    @media (orientation portrait) and (max-width 768px)
+      font-size 10px
   &:not(:last-child)
     margin-right 150px
+    @media (orientation portrait) and (max-width 1024px)
+      margin-right auto
 
 .footer__caption
   margin-bottom 18px
@@ -33,3 +45,6 @@
   text-transform uppercase
   color baseColorFont
 
+.footer__social
+  @media (orientation portrait) and (max-width 768px)    
+    display none

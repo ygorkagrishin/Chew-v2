@@ -4,7 +4,7 @@ block title
   title Chew menu
 
 block content 
-  .page__our-menu
+  .page__menu
     +hero('taste', 'our menus')
 
     main
@@ -13,7 +13,7 @@ block content
 
           +contentHeader('Menu set', 'Explore our fantastic menus', contentHeaderText)
 
-          .our-menu__items
+          .our-menu-items
             - const arrayObjects = [breakFast, lunch, dinner]
 
             each obj in arrayObjects

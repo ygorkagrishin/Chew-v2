@@ -1,11 +1,8 @@
-.page__team
-  .page__hero
+.page__team .hero
     background greyColor url('img/content/team/joshua-rodriguez-422768-unsplash_1920px.png') no-repeat top center / cover
 
   footer 
     background greyColor url('img/content/team/joshua-rodriguez-422768-unsplash_1920px.png') no-repeat bottom center / cover
-    &::after
-      background-color rgba(blackColor,.8)
 
 .team__tabs
   display flex
@@ -46,10 +43,17 @@
 .team__col
   flex-basis 370px
   text-align center
+  @media (orientation portrait) and (max-width 1024px)
+    flex-basis 310px
+  @media (orientation portrait) and (max-width 768px)
+    flex-basis 48%
 
+
+/* 
+  В следующий раз оставляй комментарии, что ты этим хотел добиться!!!
+ */
 .team__col:nth-child(-n+3)
-  @media (min-width 1024px)
-    margin-bottom 30px
+  margin-bottom 30px
 
 .team__member
   border 1px solid greyColor

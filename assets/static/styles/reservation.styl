@@ -1,4 +1,4 @@
-.page__reserv .page__hero
+.page__reserv .hero
   background url('img/content/reservation/florencia-viadana_2000px.png') no-repeat center / cover
 
 .reserv__row
@@ -6,11 +6,17 @@
   z-index $z-index1
 
   display flex
+
   margin-top 39px
   padding 0 70px
 
   background url('img/content/reservation/david-clarke_1200px.png') no-repeat center / cover
-
+  @media (orientation portrait) and (max-width 1024px)
+    flex-wrap wrap
+    justify-content center
+  @media (orientation portrait) and (max-width 768px)
+    padding 5% 70px 10%
+ 
 .reserv__row::after
   content ''
 
@@ -24,11 +30,20 @@
 
   background-color rgba(blackColor,.7)
 
+.reserv__col 
+  @media (orientation portrait) and (max-width 1024px)
+    flex-basis auto
+    max-width 70%
+
 .reserv__form-container
   padding-right 70px
+  @media (orientation portrait) and (max-width 1024px)
+    padding-right 0
 
 .reserv__form
-  margin-top 64px
+  padding-top 64px
+  @media (orientation portrait) and (max-width 768px)
+    padding-top 0
 
 .reserv-form__nb
   margin-bottom 22px
@@ -77,7 +92,13 @@
 
   background-color whiteColor 
 
-.reserv__map
+.reserv__location
+  @media (orientation portrait) and (max-width 1024px)
+    text-align center
+  @media (orientation portrait) and (max-width 768px) 
+    display none
+
+.reserv__location img
   width 500px
   height 420px
 

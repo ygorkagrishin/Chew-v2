@@ -10,23 +10,23 @@ mixin social(array)
 
 //- Page hero mixin
 mixin hero(subtitle, title, scroll)
-  .page__hero
+  .hero
     include ../modules/_header
 
     .bug-fix-ie
-      h2.page__caption 
+      h2.hero__title 
         span= subtitle 
         <br> 
         = title
 
     if (scroll)
-      .page__inf
-        p.page__phone quick reservation: <span>+212 342 67382</span>
+      .hero__inf
+        p.her__tel quick reservation: <span>+212 342 67382</span>
         +social(social)
       button(type='button').btn-scroll#js-scroll-down
     else
-      .page__inf.page__inf_align_center
-        p.page__phone quick reservation: <span>+212 342 67382</span>
+      .hero__inf.hero__inf_align_center
+        p.hero__tel quick reservation: <span>+212 342 67382</span>
         +social(social)
 
     //- .page__inf.page__inf_align_center
@@ -34,9 +34,9 @@ mixin hero(subtitle, title, scroll)
     //-   +social(social)
 
 mixin contentHeader(subtitle, title, text)
-  .page__heading
-    span.page__subtitle= subtitle
-    h3.page__title= title
+  .heading
+    span.heading__subtitle= subtitle
+    h3.heading__title= title
 
     if (text)
       p= text
