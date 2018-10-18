@@ -1,15 +1,31 @@
 body
-  font 14px / 24px baseFont 
-  color baseColorFont
+  font-family baseFont
+  color baseColorFont 
+  @media (orientation portrait) and (min-width 620px),
+  (orientation landscape) and (min-width 960px)
+    font-size 14px
+    line-height 24px
+  @media (orientation portrait) and (max-width 620px),
+  (orientation landscape) and (max-width 960px)
+    font-size 12px
+    line-height 22px 
 
 .container
   width 98%
   max-width 1200px
   margin 0 auto
-  
-  padding 0 15px
+  @media (orientation portrait) and (min-width 620px),
+  (orientation landscape) and (min-width 960px)
+    padding 0 15px
   
 for $n in (1..6)
   h{$n}
-    font 48px / 1 titleFont 
+    font-family titleFont
+    line-height 1 
     color baseColorTitleFont
+    @media (orientation portrait) and (min-width 620px),
+    (orientation landscape) and (min-width 960px)
+      font-size 48px
+    @media (orientation portrait) and (max-width 620px),
+    (orientation landscape) and (max-width 960px)
+      font-size 38px

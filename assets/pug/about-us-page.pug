@@ -25,7 +25,7 @@ block content
                     img(src='img/content/team/nathan-dumlao-486999-unsplash_500px.png', alt='about us pic')
                   .about-us-cell
                     img(src='img/content/team/sage-kirk-485982-unsplash_500px.png', alt='about us pic')
-                .about-us-col.about-us-col-size-md.about-us-col-tablet-full
+                .about-us-col.about-us-col-size-md.about-us-col-tablet-lg
                   img(src='img/content/team/rawpixel-660724-unsplash_500px.png', alt='about us pic')
         //- who are we end
 
@@ -33,7 +33,10 @@ block content
         section
           .about-food-section
             .container
-              +contentHeader('know', 'your food', textHeaderAboutFoodSection)
+              .about-food-hero
+                h3.about-food-title.
+                  <span>know</span>your food
+                p= textAboutFoodSection
 
               a(href="our-menu-page.html").about-food-our-menu.btn.btn_color_transparent Explore our menu
         //- about our food section end

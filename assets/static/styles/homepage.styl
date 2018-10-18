@@ -1,6 +1,16 @@
 .page__homepage .hero
   background url('img/content/homepage/annie-spratt-464747-unsplash_2000px.png') no-repeat center / cover
- 
+
+.page__homepage .hero__title
+  @media (orientation: portrait) and (max-width: 375px) 
+    font-size 3.44em
+
+.page__homepage .hero__tel
+  @media (orientation portrait) and (max-width 480px)
+    max-width 35%
+    span 
+      margin 6px 0 0 0
+
 .page__homepage .heading
   max-width 100%
   margin-bottom 22px
@@ -26,6 +36,8 @@
   padding-right 100px
   @media (orientation portrait) and (max-width 1024px)
     flex-basis 100%
+  @media (orientation portrait) and (max-width 480px)
+    padding-right 0
 
 .homepage-about p:not(:last-child)
   margin-bottom 24px
@@ -145,6 +157,9 @@
   background-color greyColor
 
   overflow hidden
+  @media (orientation portrait) and (max-width 480px)
+    flex-basis 150px
+    padding-top 100px
 
 .homepage-dish__img-container img 
   position absolute
@@ -156,11 +171,15 @@
 .homepage-dish__desc
   padding 0 30px
   flex 1
+  @media (orientation portrait) and (max-width 480px)
+    padding 0 3%
 
 .homepage-dish__name-and-price
   position relative
   
   padding 30px 0 10px
+  @media (orientation portrait) and (max-width 480px)
+    padding 3% 0 5%
 
 .homepage-dish__name-and-price::after
   content ''
@@ -180,13 +199,19 @@
   margin-bottom 8px
 
   font-size 18px
-
+  @media (orientation portrait) and (max-width 480px)
+    font-size 16px
+  @media (orientation portrait) and (max-width 345px)
+    font-size 14px
+  
 .homepage-dish__price
   font 14px / 1 baseFont2
   text-transform uppercase
 
 .homepage-dish__composition
   margin-top 14px
+  @media (orientation portrait) and (max-width 480px)
+    margin-top 1%
 
 .homepage-reserv .heading
   margin-bottom 32px
@@ -207,7 +232,7 @@
 .homepage-blog__col:not(:last-child)
   margin-right 30px
   @media (orientation portrait) and (max-width 768px)
-    margin 0 0 5%
+    margin 0 0 10%
 
 .homepage-post__img-container
   position relative
@@ -221,6 +246,8 @@
   overflow hidden
   @media (orientation portrait) and (max-width 768px)
     padding-top 300px
+  @media (orientation portrait) and (max-width 480px)
+    padding-top 260px
 
 .homepage-post__img-container img 
   position absolute
@@ -274,7 +301,8 @@
   z-index $z-index3
 
   display inline-block
-  font 14px / 1 italicFont
+  font-family italicFont
+  line-height 1
   @media (orientation portrait) and (max-width 768px)
     top 0
 

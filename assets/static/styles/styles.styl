@@ -11,16 +11,21 @@
 
   display inline-block
 
-  font 38px / 1 logoFont
-  font-size 38px
-  line-height 1
+  font 2.71em / 1 logoFont
   text-transform uppercase
   color whiteColor
   span 
     display block
     padding-left 3px
-
-    font-size 10px
+    font-size .26em
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 960px)
+    margin-bottom -16px
+  @media (orientation portrait) and (max-width 345px)
+    margin-bottom -4px
+    font-size 2.11em
+    span 
+      display none
 
 .hero
   position relative
@@ -57,7 +62,8 @@
   justify-content center
 
 .hero__title
-  font-size 72px
+  // font-size 72px
+  font-size 5.14em
   text-align center
   text-transform uppercase
   color whiteColor
@@ -65,12 +71,16 @@
     display inline-block
     margin-bottom -6px
 
-    font 120px / 1 greatFont
+    font 1.66em / 1 greatFont
     text-transform lowercase
     color yellowColor
+  @media (orientation portrait) and (max-width 375px)
+    font-size 4.44em
 
 .hero__inf
   padding 0 50px
+  @media (orientation portrait) and (max-width 1024px)
+    padding 0 3%
 
 .hero__inf_align_center
   text-align center
@@ -169,15 +179,20 @@
 
 .heading__subtitle
   display inline-block
-  margin-bottom 50px
 
-  font 14px / 1 baseFont2
+  font-family baseFont2
+  line-height 1
   text-transform uppercase
   color blackColor
 
 .heading__title
+  margin-top 50px
+
   text-transform uppercase
   color blackColor
+  @media (orientation portrait) and (max-width 620px),
+  (orientation landscape) and (max-width 960px)
+    margin-top 32px
 
 .heading__title + p
   margin-top 18px

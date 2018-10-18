@@ -6,6 +6,8 @@
   @media (orientation portrait) and (max-width 1024px)
     max-width 700px
     margin 0 auto
+  @media (orientation portrait) and (max-width 768px)
+    padding 15% 0
 
 .cont-conn__row
   display flex
@@ -60,6 +62,8 @@
   
   font 14px / 1 italicFont
   color greyColor
+  @media (orientation portrait) and (max-width 480px)
+    display none
 
 .cont-form__rows
   margin-bottom 25px
@@ -75,9 +79,15 @@
 
 .cont-form__col_size_md:nth-child(odd)
   padding-right 15px
+  @media (orientation portrait) and (max-width 620px),
+  (orientation landscape) and (max-width 960px)
+    padding-right 1%
 
 .cont-form__col_size_md:nth-child(even)
   padding-left 15px
+  @media (orientation portrait) and (max-width 620px),
+  (orientation landscape) and (max-width 960px)
+    padding-left 1%
 
 .cont-form__col_size_lg
   flex-basis 100%
@@ -105,6 +115,10 @@
   padding 0 37px
 
   line-height 44px
+
+.visually-mobile-none
+  @media (orientation portrait) and (max-width 480px)
+    display none
 
 .cont-info
   background-color blackColor 

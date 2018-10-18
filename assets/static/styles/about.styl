@@ -27,13 +27,22 @@
   overflow hidden
 
 .about-us-col:not(:last-child)
-  margin-right 5px
+  @media (orientation portrait) and (min-width 480px)
+    margin-right 5px
+  @media (orientation portrait) and (max-width 480px)
+    margin-bottom 5px
 
 .about-us-col-size-md
   flex-basis 240px
+  @media (orientation portrait) and (max-width 480px)
+    flex-basis 100%
 
 .about-us-col-size-lg
   flex-basis 435px
+  @media (orientation portrait) and (max-width 768px)
+    flex-basis 470px
+  @media (orientation portrait) and (max-width 480px)
+    flex-basis 100%
 
 .about-us-cell
   position relative
@@ -43,6 +52,8 @@
 
   background-color greyColor
   overflow hidden
+  @media (orientation portrait) and (max-width 480px)
+    padding-top 400px
 
 .about-us-cell:not(:last-child)
   margin-bottom 5px
@@ -55,6 +66,14 @@
   z-index -1
 
   width 100%
+
+.about-us-col-tablet-lg
+  @media (orientation portrait) and (max-width 768px)
+    @extend .about-us-col-size-lg
+
+.about-us-col:nth-child(-n+2) 
+  @media (orientation portrait) and (max-width 768px)
+    margin-bottom 5px
 
 .about-food-section
   position relative
@@ -69,19 +88,34 @@
 .about-food-section
   padding 140px 0
   text-align center
+  @media (orientation portrait) and (max-width 620px),
+  (orientation landscape) and (max-width 960px)
+    padding 15% 0
 
-.about-food-section .heading
+.about-food-hero
+  @extend .heading
   padding-bottom 60px
 
-.about-food-section .heading__subtitle
-  @extend .hero__title span 
-
-.about-food-section .heading__title
+.about-food-title
   @extend .hero__title
+  margin-bottom 50px
+  @media (orientation portrait) and (max-width 620px),
+  (orientation landscape) and (max-width 960px)
+    margin-bottom 5%
+  @media (orientation portrait) and (max-width 375px)
+    @extend .hero__title  
 
-.about-food-section .page__heading p
+.about-food-title span
+  @extend .hero__title span 
+  width 100%
+
+.about-food-hero p
   font 18px / 30px italicFont
   opacity .7
+  @media (orientation portrait) and (max-width 620px),
+  (orientation landscape) and (max-width 960px)
+    font-size 14px
+    line-height 26px
 
 .page-about footer 
   background url('img/content/about/simon-rae-471376-unsplash_2000px.png') no-repeat bottom / cover

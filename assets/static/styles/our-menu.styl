@@ -16,15 +16,25 @@
   background-color greyColor
   @media (orientation portrait) and (max-width 1024px)
     padding 15% 0
+  @media (orientation portrait) and (max-width 620px),
+  (orientation landscape) and (max-width 960px)
+    padding 22% 0
+  @media (orientation portrait) and (max-width 375px)
+    margin-bottom 10%
+    padding 32% 0
 
 .our-menu-hero::after
   @extend .hero::after
 
-.our-menu-subtitle 
-  @extend .hero__title span 
-
 .our-menu-title
   @extend .hero__title
+  @media (orientation portrait) and (max-width 375px)
+    font-size 3.44em !important
+
+.our-menu-subtitle 
+  @extend .hero__title span
+  width 100%
+  font-size 1.44em !important 
 
 .our-menu-cont
   display flex
@@ -51,6 +61,10 @@
   margin-bottom 8px
 
   font 18px / 1 baseFont2
+  @media (orientation portrait) and (max-width 375px)
+    margin-bottom 2%
+
+    font-size 14px
 
 .our-menu-name-and-price::after
   content ''

@@ -261,38 +261,120 @@ svg {
   overflow: hidden;
 }
 body {
-  font: 14px/24px "lora-regular", sans-serif, arial;
+  font-family: "lora-regular", sans-serif, arial;
   color: #797979;
+}
+@media (orientation: portrait) and (min-width: 620px), (orientation: landscape) and (min-width: 960px) {
+  body {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  body {
+    font-size: 12px;
+    line-height: 22px;
+  }
 }
 .container {
   width: 98%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+}
+@media (orientation: portrait) and (min-width: 620px), (orientation: landscape) and (min-width: 960px) {
+  .container {
+    padding: 0 15px;
+  }
 }
 h1 {
-  font: 48px/1 "antonio-regular", sans-serif, arial;
+  font-family: "antonio-regular", sans-serif, arial;
+  line-height: 1;
   color: #000;
+}
+@media (orientation: portrait) and (min-width: 620px), (orientation: landscape) and (min-width: 960px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  h1 {
+    font-size: 38px;
+  }
 }
 h2 {
-  font: 48px/1 "antonio-regular", sans-serif, arial;
+  font-family: "antonio-regular", sans-serif, arial;
+  line-height: 1;
   color: #000;
+}
+@media (orientation: portrait) and (min-width: 620px), (orientation: landscape) and (min-width: 960px) {
+  h2 {
+    font-size: 48px;
+  }
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  h2 {
+    font-size: 38px;
+  }
 }
 h3 {
-  font: 48px/1 "antonio-regular", sans-serif, arial;
+  font-family: "antonio-regular", sans-serif, arial;
+  line-height: 1;
   color: #000;
+}
+@media (orientation: portrait) and (min-width: 620px), (orientation: landscape) and (min-width: 960px) {
+  h3 {
+    font-size: 48px;
+  }
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  h3 {
+    font-size: 38px;
+  }
 }
 h4 {
-  font: 48px/1 "antonio-regular", sans-serif, arial;
+  font-family: "antonio-regular", sans-serif, arial;
+  line-height: 1;
   color: #000;
+}
+@media (orientation: portrait) and (min-width: 620px), (orientation: landscape) and (min-width: 960px) {
+  h4 {
+    font-size: 48px;
+  }
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  h4 {
+    font-size: 38px;
+  }
 }
 h5 {
-  font: 48px/1 "antonio-regular", sans-serif, arial;
+  font-family: "antonio-regular", sans-serif, arial;
+  line-height: 1;
   color: #000;
 }
+@media (orientation: portrait) and (min-width: 620px), (orientation: landscape) and (min-width: 960px) {
+  h5 {
+    font-size: 48px;
+  }
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  h5 {
+    font-size: 38px;
+  }
+}
 h6 {
-  font: 48px/1 "antonio-regular", sans-serif, arial;
+  font-family: "antonio-regular", sans-serif, arial;
+  line-height: 1;
   color: #000;
+}
+@media (orientation: portrait) and (min-width: 620px), (orientation: landscape) and (min-width: 960px) {
+  h6 {
+    font-size: 48px;
+  }
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  h6 {
+    font-size: 38px;
+  }
 }
 .btn {
   display: inline-block;
@@ -317,16 +399,28 @@ h6 {
 }
 .logo {
   display: inline-block;
-  font: 38px/1 "antonio-regular", sans-serif, arial;
-  font-size: 38px;
-  line-height: 1;
+  font: 2.71em/1 "antonio-regular", sans-serif, arial;
   text-transform: uppercase;
   color: #fff;
 }
 .logo span {
   display: block;
   padding-left: 3px;
-  font-size: 10px;
+  font-size: 0.26em;
+}
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
+  .logo {
+    margin-bottom: -16px;
+  }
+}
+@media (orientation: portrait) and (max-width: 345px) {
+  .logo {
+    margin-bottom: -4px;
+    font-size: 2.11em;
+  }
+  .logo span {
+    display: none;
+  }
 }
 .hero {
   position: relative;
@@ -379,25 +473,36 @@ h6 {
 }
 .hero__title,
 .our-menu-title,
-.about-food-section .heading__title {
-  font-size: 72px;
+.about-food-title {
+  font-size: 5.14em;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
 }
 .hero__title span,
 .our-menu-title span,
-.about-food-section .heading__title span,
-.our-menu-subtitle,
-.about-food-section .heading__subtitle {
+.about-food-title span,
+.our-menu-subtitle {
   display: inline-block;
   margin-bottom: -6px;
-  font: 120px/1 "great-vibes-regular", sans-serif, arial;
+  font: 1.66em/1 "great-vibes-regular", sans-serif, arial;
   text-transform: lowercase;
   color: #efba39;
 }
+@media (orientation: portrait) and (max-width: 375px) {
+  .hero__title,
+  .our-menu-title,
+  .about-food-title {
+    font-size: 4.44em;
+  }
+}
 .hero__inf {
   padding: 0 50px;
+}
+@media (orientation: portrait) and (max-width: 1024px) {
+  .hero__inf {
+    padding: 0 3%;
+  }
 }
 .hero__inf_align_center {
   text-align: center;
@@ -496,21 +601,28 @@ h6 {
     padding: 15% 0;
   }
 }
-.heading {
+.heading,
+.about-food-hero {
   max-width: 770px;
   margin: 0 auto;
   text-align: center;
 }
 .heading__subtitle {
   display: inline-block;
-  margin-bottom: 50px;
-  font: 14px/1 "antonio-regular", sans-serif, arial;
+  font-family: "antonio-regular", sans-serif, arial;
+  line-height: 1;
   text-transform: uppercase;
   color: #000;
 }
 .heading__title {
+  margin-top: 50px;
   text-transform: uppercase;
   color: #000;
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  .heading__title {
+    margin-top: 32px;
+  }
 }
 .heading__title + p {
   margin-top: 18px;
@@ -533,6 +645,26 @@ h6 {
   .our-menu-hero {
     padding: 15% 0;
   }
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  .our-menu-hero {
+    padding: 22% 0;
+  }
+}
+@media (orientation: portrait) and (max-width: 375px) {
+  .our-menu-hero {
+    margin-bottom: 10%;
+    padding: 32% 0;
+  }
+}
+@media (orientation: portrait) and (max-width: 375px) {
+  .our-menu-title {
+    font-size: 3.44em !important;
+  }
+}
+.our-menu-subtitle {
+  width: 100%;
+  font-size: 1.44em !important;
 }
 .our-menu-cont {
   display: -webkit-box;
@@ -576,6 +708,12 @@ h6 {
 .our-menu-name-and-price {
   margin-bottom: 8px;
   font: 18px/1 "antonio-regular", sans-serif, arial;
+}
+@media (orientation: portrait) and (max-width: 375px) {
+  .our-menu-name-and-price {
+    margin-bottom: 2%;
+    font-size: 14px;
+  }
 }
 .our-menu-name-and-price::after {
   content: '';
@@ -665,8 +803,21 @@ footer {
         flex-basis: 48%;
   }
 }
-.team__col:nth-child(-n+3) {
-  margin-bottom: 30px;
+@media (orientation: portrait) and (max-width: 620px) {
+  .team__col {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+@media (orientation: portrait) and (min-width: 620px) {
+  .team__col:nth-child(-n+3) {
+    margin-bottom: 30px;
+  }
+}
+@media (orientation: portrait) and (max-width: 620px) {
+  .team__col:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 .team__member {
   border: 1px solid #797979;
@@ -695,6 +846,11 @@ footer {
   margin-bottom: 5px;
   font: 18px/1 "antonio-regular", sans-serif, arial;
   color: #000;
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  .team-member__name {
+    font-size: 20px;
+  }
 }
 .team-member__pos {
   font-size: 12px;
@@ -763,6 +919,11 @@ footer {
     padding: 5% 70px 10%;
   }
 }
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  .reserv__row {
+    padding: 5% 10px 10%;
+  }
+}
 .reserv__row::after {
   content: '';
   position: absolute;
@@ -775,9 +936,14 @@ footer {
 }
 @media (orientation: portrait) and (max-width: 1024px) {
   .reserv__col {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    max-width: 70%;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  .reserv__col {
+    -ms-flex-preferred-size: 95%;
+        flex-basis: 95%;
   }
 }
 .reserv__form-container {
@@ -800,6 +966,11 @@ footer {
   margin-bottom: 22px;
   padding-right: 50px;
   color: #fff;
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  .reserv-form__nb {
+    padding-right: 5%;
+  }
 }
 .reserv-form__nb span {
   color: #efba39;
@@ -878,6 +1049,11 @@ footer {
     margin: 0 auto;
   }
 }
+@media (orientation: portrait) and (max-width: 768px) {
+  .cont-conn {
+    padding: 15% 0;
+  }
+}
 .cont-conn__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -946,6 +1122,11 @@ footer {
   font: 14px/1 'lora-italic', sans-serif, arial;
   color: #797979;
 }
+@media (orientation: portrait) and (max-width: 480px) {
+  .cont-form__nb {
+    display: none;
+  }
+}
 .cont-form__rows {
   margin-bottom: 25px;
 }
@@ -964,8 +1145,18 @@ footer {
 .cont-form__col_size_md:nth-child(odd) {
   padding-right: 15px;
 }
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  .cont-form__col_size_md:nth-child(odd) {
+    padding-right: 1%;
+  }
+}
 .cont-form__col_size_md:nth-child(even) {
   padding-left: 15px;
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  .cont-form__col_size_md:nth-child(even) {
+    padding-left: 1%;
+  }
 }
 .cont-form__col_size_lg {
   -ms-flex-preferred-size: 100%;
@@ -991,6 +1182,11 @@ textarea {
 .cont-form__submit {
   padding: 0 37px;
   line-height: 44px;
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .visually-mobile-none {
+    display: none;
+  }
 }
 .cont-info {
   background-color: #000;
@@ -1053,6 +1249,19 @@ textarea {
 .page__homepage .hero {
   background: url("img/content/homepage/annie-spratt-464747-unsplash_2000px.png") no-repeat center/cover;
 }
+@media (orientation: portrait) and (max-width: 375px) {
+  .page__homepage .hero__title {
+    font-size: 3.44em;
+  }
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .page__homepage .hero__tel {
+    max-width: 35%;
+  }
+  .page__homepage .hero__tel span {
+    margin: 6px 0 0 0;
+  }
+}
 .page__homepage .heading {
   max-width: 100%;
   margin-bottom: 22px;
@@ -1086,6 +1295,11 @@ textarea {
   .homepage-about__about {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .homepage-about__about {
+    padding-right: 0;
   }
 }
 .homepage-about p:not(:last-child) {
@@ -1217,6 +1431,13 @@ textarea {
   background-color: #797979;
   overflow: hidden;
 }
+@media (orientation: portrait) and (max-width: 480px) {
+  .homepage-dish__img-container {
+    -ms-flex-preferred-size: 150px;
+        flex-basis: 150px;
+    padding-top: 100px;
+  }
+}
 .homepage-dish__img-container img {
   position: absolute;
   top: 0;
@@ -1229,9 +1450,19 @@ textarea {
       -ms-flex: 1;
           flex: 1;
 }
+@media (orientation: portrait) and (max-width: 480px) {
+  .homepage-dish__desc {
+    padding: 0 3%;
+  }
+}
 .homepage-dish__name-and-price {
   position: relative;
   padding: 30px 0 10px;
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .homepage-dish__name-and-price {
+    padding: 3% 0 5%;
+  }
 }
 .homepage-dish__name-and-price::after {
   content: '';
@@ -1248,12 +1479,27 @@ textarea {
   margin-bottom: 8px;
   font-size: 18px;
 }
+@media (orientation: portrait) and (max-width: 480px) {
+  .homepage-dish__name {
+    font-size: 16px;
+  }
+}
+@media (orientation: portrait) and (max-width: 345px) {
+  .homepage-dish__name {
+    font-size: 14px;
+  }
+}
 .homepage-dish__price {
   font: 14px/1 "antonio-regular", sans-serif, arial;
   text-transform: uppercase;
 }
 .homepage-dish__composition {
   margin-top: 14px;
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .homepage-dish__composition {
+    margin-top: 1%;
+  }
 }
 .homepage-reserv .heading {
   margin-bottom: 32px;
@@ -1289,7 +1535,7 @@ textarea {
 }
 @media (orientation: portrait) and (max-width: 768px) {
   .homepage-blog__col:not(:last-child) {
-    margin: 0 0 5%;
+    margin: 0 0 10%;
   }
 }
 .homepage-post__img-container {
@@ -1303,6 +1549,11 @@ textarea {
 @media (orientation: portrait) and (max-width: 768px) {
   .homepage-post__img-container {
     padding-top: 300px;
+  }
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .homepage-post__img-container {
+    padding-top: 260px;
   }
 }
 .homepage-post__img-container img {
@@ -1354,7 +1605,8 @@ textarea {
   right: 9px;
   z-index: 111;
   display: inline-block;
-  font: 14px/1 'lora-italic', sans-serif, arial;
+  font-family: 'lora-italic', sans-serif, arial;
+  line-height: 1;
 }
 @media (orientation: portrait) and (max-width: 768px) {
   .homepage__view {
@@ -1412,16 +1664,44 @@ textarea {
   background-color: #797979;
   overflow: hidden;
 }
-.about-us-col:not(:last-child) {
-  margin-right: 5px;
+@media (orientation: portrait) and (min-width: 480px) {
+  .about-us-col:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .about-us-col:not(:last-child) {
+    margin-bottom: 5px;
+  }
 }
 .about-us-col-size-md {
   -ms-flex-preferred-size: 240px;
       flex-basis: 240px;
 }
-.about-us-col-size-lg {
+@media (orientation: portrait) and (max-width: 480px) {
+  .about-us-col-size-md {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+.about-us-col-size-lg,
+.about-us-col-tablet-lg {
   -ms-flex-preferred-size: 435px;
       flex-basis: 435px;
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .about-us-col-size-lg,
+  .about-us-col-tablet-lg {
+    -ms-flex-preferred-size: 470px;
+        flex-basis: 470px;
+  }
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .about-us-col-size-lg,
+  .about-us-col-tablet-lg {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 .about-us-cell {
   position: relative;
@@ -1429,6 +1709,11 @@ textarea {
   padding-top: 175px;
   background-color: #797979;
   overflow: hidden;
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .about-us-cell {
+    padding-top: 400px;
+  }
 }
 .about-us-cell:not(:last-child) {
   margin-bottom: 5px;
@@ -1440,6 +1725,11 @@ textarea {
   left: 0;
   z-index: -1;
   width: 100%;
+}
+@media (orientation: portrait) and (max-width: 768px) {
+  .about-us-col:nth-child(-n+2) {
+    margin-bottom: 5px;
+  }
 }
 .about-food-section {
   position: relative;
@@ -1453,12 +1743,34 @@ textarea {
   padding: 140px 0;
   text-align: center;
 }
-.about-food-section .heading {
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  .about-food-section {
+    padding: 15% 0;
+  }
+}
+.about-food-hero {
   padding-bottom: 60px;
 }
-.about-food-section .page__heading p {
+.about-food-title {
+  margin-bottom: 50px;
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  .about-food-title {
+    margin-bottom: 5%;
+  }
+}
+.about-food-title span {
+  width: 100%;
+}
+.about-food-hero p {
   font: 18px/30px 'lora-italic', sans-serif, arial;
   opacity: 0.7;
+}
+@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
+  .about-food-hero p {
+    font-size: 14px;
+    line-height: 26px;
+  }
 }
 .page-about footer {
   background: url("img/content/about/simon-rae-471376-unsplash_2000px.png") no-repeat bottom/cover;
@@ -1551,11 +1863,24 @@ header {
   display: flex;
   padding: 0 18px;
 }
+@media (orientation: portrait) and (max-width: 480px) {
+  .footer__inf {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+  }
+}
 .footer__inf li {
   -ms-flex-preferred-size: 150px;
       flex-basis: 150px;
   font-size: 12px;
   color: #fff;
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .footer__inf li {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
 }
 .footer__inf li p {
   font-size: 12px;
@@ -1571,6 +1896,11 @@ header {
 @media (orientation: portrait) and (max-width: 1024px) {
   .footer__inf li:not(:last-child) {
     margin-right: auto;
+  }
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .footer__inf li:nth-child(-n+2) {
+    margin-bottom: 5%;
   }
 }
 .footer__caption {

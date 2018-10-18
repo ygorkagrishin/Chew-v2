@@ -4,8 +4,9 @@ mixin buildMenuItem(obj)
     - const headerItem = obj.header
 
     .our-menu-hero(style=`background: url(${headerItem.img}) no-repeat center / cover`)
-      span.our-menu-subtitle= headerItem.subtitle
-      h3.our-menu-title= headerItem.title
+      h3.our-menu-title
+        span.our-menu-subtitle= headerItem.subtitle
+        = headerItem.title
     
     .our-menu-cont
       - const itemDishes = obj.dishes  
