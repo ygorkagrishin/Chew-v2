@@ -45,11 +45,11 @@
   text-align center
   @media (orientation portrait) and (max-width 1024px)
     flex-basis 310px
-  @media (orientation portrait) and (max-width 768px)
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 1024px)
     flex-basis 48%
   @media (orientation portrait) and (max-width 620px)
     flex-basis 100%
-
 
 /* 
   В следующий раз оставляй комментарии, что ты этим хотел добиться!!!
@@ -63,7 +63,8 @@
   Больной ублюдок
 */
 .team__col:nth-child(-n+3)
-  @media (orientation portrait) and (min-width 620px)
+  @media (orientation portrait) and (min-width 620px),
+  (orientation landscape) and (min-width 320px)
     margin-bottom 30px
 
 .team__col:not(:last-child) 
@@ -81,6 +82,8 @@
 
   background-color greyColor
   overflow hidden
+  @media (orientation landscape) and (max-width 720px)
+    padding-top 220px
 
 .team-member__ava
   position absolute

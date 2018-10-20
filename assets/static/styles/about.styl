@@ -14,7 +14,8 @@
 
 .about-us-row
   display flex
-  @media (orientation portrait) and (max-width 1024px)
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
     flex-wrap wrap
 
 .about-us-col:not(.about-us-grid)
@@ -25,24 +26,8 @@
 
   background-color greyColor
   overflow hidden
-
-.about-us-col:not(:last-child)
-  @media (orientation portrait) and (min-width 480px)
-    margin-right 5px
-  @media (orientation portrait) and (max-width 480px)
-    margin-bottom 5px
-
-.about-us-col-size-md
-  flex-basis 240px
-  @media (orientation portrait) and (max-width 480px)
-    flex-basis 100%
-
-.about-us-col-size-lg
-  flex-basis 435px
-  @media (orientation portrait) and (max-width 768px)
-    flex-basis 470px
-  @media (orientation portrait) and (max-width 480px)
-    flex-basis 100%
+  @media (orientation landscape) and (max-width 620px)
+    padding-top 270px
 
 .about-us-cell
   position relative
@@ -57,6 +42,8 @@
 
 .about-us-cell:not(:last-child)
   margin-bottom 5px
+  @media (orientation portrait) and (max-width 480px)
+    margin-bottom 1%
 
 .about-us-col img,
 .about-us-cell img 
@@ -67,13 +54,40 @@
 
   width 100%
 
+.about-us-col-size-md
+  flex-basis 40%
+  @media (orientation portrait) and (max-width 480px)
+    flex-basis 100%
+
+.about-us-col-size-lg
+  flex-basis 59%
+  @media (orientation portrait) and (max-width 480px)
+    flex-basis 100%
+
 .about-us-col-tablet-lg
-  @media (orientation portrait) and (max-width 768px)
+  @media (orientation landscape) and (max-width 1024px),
+  (orientation portrait) and (max-width 960px)
     @extend .about-us-col-size-lg
 
-.about-us-col:nth-child(-n+2) 
-  @media (orientation portrait) and (max-width 768px)
-    margin-bottom 5px
+.about-us-col:not(:last-child)
+  @media (orientation landscape) and (min-width 1024px),
+  (orientation portrait) and (min-width 1024px)
+    margin-right 5px
+  @media (orientation landscape) and (max-width 1024px),
+  (orientation portrait) and (max-width 1024px)
+    margin-right 0
+  @media (orientation portrait) and (max-width 480px)
+    margin-bottom 1%
+
+.about-us-col:nth-child(odd)
+  @media (orientation landscape) and (max-width 1024px),
+  (orientation portrait) and (max-width 1024px) and (min-width 480px)
+    margin-right 1%
+
+.about-us-col:nth-child(-n+2)
+  @media (orientation landscape) and (max-width 1024px),
+  (orientation portrait) and (max-width 1024px) and (min-width 480px)
+    margin-bottom 1%
 
 .about-food-section
   position relative

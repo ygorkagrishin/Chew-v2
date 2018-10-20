@@ -383,6 +383,7 @@ h6 {
   font: 15px/39px "antonio-regular", sans-serif, arial;
   letter-spacing: 0.3px;
   text-transform: uppercase;
+  white-space: nowrap;
   color: #fff;
   border-radius: 25px;
 }
@@ -413,7 +414,7 @@ h6 {
     margin-bottom: -16px;
   }
 }
-@media (orientation: portrait) and (max-width: 345px) {
+@media (orientation: portrait) and (max-width: 345px), (orientation: landscape) and (max-width: 960px) {
   .logo {
     margin-bottom: -4px;
     font-size: 2.11em;
@@ -452,7 +453,7 @@ h6 {
   height: 100%;
   background-color: rgba(0,0,0,0.3);
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .hero {
     padding: 3% 0;
   }
@@ -489,7 +490,7 @@ h6 {
   text-transform: lowercase;
   color: #efba39;
 }
-@media (orientation: portrait) and (max-width: 375px) {
+@media (orientation: portrait) and (max-width: 375px), (orientation: landscape) and (max-width: 960px) {
   .hero__title,
   .our-menu-title,
   .about-food-title {
@@ -499,7 +500,7 @@ h6 {
 .hero__inf {
   padding: 0 50px;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .hero__inf {
     padding: 0 3%;
   }
@@ -507,7 +508,7 @@ h6 {
 .hero__inf_align_center {
   text-align: center;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .hero__inf_align_center {
     padding: 0 3%;
   }
@@ -596,7 +597,7 @@ h6 {
 .page__main {
   padding: 150px 0;
 }
-@media (orientation: portrait) and (max-width: 768px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 1024px) {
   .page__main {
     padding: 15% 0;
   }
@@ -657,6 +658,11 @@ h6 {
     padding: 32% 0;
   }
 }
+@media (orientation: landscape) and (max-width: 960px) {
+  .our-menu-hero {
+    margin-bottom: 5%;
+  }
+}
 @media (orientation: portrait) and (max-width: 375px) {
   .our-menu-title {
     font-size: 3.44em !important;
@@ -680,7 +686,7 @@ h6 {
   -ms-flex-preferred-size: 570px;
       flex-basis: 570px;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .our-menu-dish {
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
@@ -700,6 +706,11 @@ h6 {
     margin-bottom: 0;
   }
 }
+@media (orientation: landscape) and (max-width: 960px) {
+  .our-menu-dish:not(:nth-last-child(-n+2)) {
+    margin-bottom: 5%;
+  }
+}
 @media (orientation: portrait) and (max-width: 768px) {
   .our-menu-dish:not(:last-child) {
     margin-bottom: 30px;
@@ -709,7 +720,7 @@ h6 {
   margin-bottom: 8px;
   font: 18px/1 "antonio-regular", sans-serif, arial;
 }
-@media (orientation: portrait) and (max-width: 375px) {
+@media (orientation: portrait) and (max-width: 375px), (orientation: landscape) and (max-width: 720px) {
   .our-menu-name-and-price {
     margin-bottom: 2%;
     font-size: 14px;
@@ -797,7 +808,7 @@ footer {
         flex-basis: 310px;
   }
 }
-@media (orientation: portrait) and (max-width: 768px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 1024px) {
   .team__col {
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
@@ -809,7 +820,7 @@ footer {
         flex-basis: 100%;
   }
 }
-@media (orientation: portrait) and (min-width: 620px) {
+@media (orientation: portrait) and (min-width: 620px), (orientation: landscape) and (min-width: 320px) {
   .team__col:nth-child(-n+3) {
     margin-bottom: 30px;
   }
@@ -828,6 +839,11 @@ footer {
   padding-top: 300px;
   background-color: #797979;
   overflow: hidden;
+}
+@media (orientation: landscape) and (max-width: 720px) {
+  .team-member__ava-container {
+    padding-top: 220px;
+  }
 }
 .team-member__ava {
   position: absolute;
@@ -905,7 +921,7 @@ footer {
   padding: 0 70px;
   background: url("img/content/reservation/david-clarke_1200px.png") no-repeat center/cover;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .reserv__row {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -934,7 +950,7 @@ footer {
   height: 100%;
   background-color: rgba(0,0,0,0.7);
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .reserv__col {
     -ms-flex-preferred-size: 70%;
         flex-basis: 70%;
@@ -949,7 +965,7 @@ footer {
 .reserv__form-container {
   padding-right: 70px;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .reserv__form-container {
     padding-right: 0;
   }
@@ -957,7 +973,7 @@ footer {
 .reserv__form {
   padding-top: 64px;
 }
-@media (orientation: portrait) and (max-width: 768px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 960px) {
   .reserv__form {
     padding-top: 0;
   }
@@ -1014,12 +1030,12 @@ footer {
   font-size: 12px;
   background-color: #fff;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .reserv__location {
     text-align: center;
   }
 }
-@media (orientation: portrait) and (max-width: 768px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 960px) {
   .reserv__location {
     display: none;
   }
@@ -1049,7 +1065,7 @@ footer {
     margin: 0 auto;
   }
 }
-@media (orientation: portrait) and (max-width: 768px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 1024px) {
   .cont-conn {
     padding: 15% 0;
   }
@@ -1059,21 +1075,23 @@ footer {
   display: -ms-flexbox;
   display: flex;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .cont-conn__row {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
-.cont-conn__col:not(:last-child) {
-  margin-bottom: 10%;
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
+  .cont-conn__col:not(:last-child) {
+    margin-bottom: 10%;
+  }
 }
 .cont-conn__desc {
   -ms-flex-preferred-size: 400px;
       flex-basis: 400px;
   padding-right: 55px;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .cont-conn__desc {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -1097,19 +1115,13 @@ footer {
   vertical-align: 8px;
   color: #000;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
-  .cont-form__container {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-}
 .cont-form {
   position: relative;
   z-index: 1;
   -ms-flex-preferred-size: 770px;
       flex-basis: 770px;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .cont-form {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -1122,7 +1134,7 @@ footer {
   font: 14px/1 'lora-italic', sans-serif, arial;
   color: #797979;
 }
-@media (orientation: portrait) and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 480px), (orientation: landscape) and (max-width: 720px) {
   .cont-form__nb {
     display: none;
   }
@@ -1134,28 +1146,21 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .cont-form__row:not(:last-child) {
   margin-bottom: 30px;
 }
 .cont-form__col_size_md {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 370px;
+      flex-basis: 370px;
 }
-.cont-form__col_size_md:nth-child(odd) {
-  padding-right: 15px;
-}
-@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
-  .cont-form__col_size_md:nth-child(odd) {
-    padding-right: 1%;
-  }
-}
-.cont-form__col_size_md:nth-child(even) {
-  padding-left: 15px;
-}
-@media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
-  .cont-form__col_size_md:nth-child(even) {
-    padding-left: 1%;
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
+  .cont-form__col_size_md {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
   }
 }
 .cont-form__col_size_lg {
@@ -1183,7 +1188,7 @@ textarea {
   padding: 0 37px;
   line-height: 44px;
 }
-@media (orientation: portrait) and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 480px), (orientation: landscape) and (max-width: 720px) {
   .visually-mobile-none {
     display: none;
   }
@@ -1254,7 +1259,7 @@ textarea {
     font-size: 3.44em;
   }
 }
-@media (orientation: portrait) and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 480px), (orientation: landscape) and (max-width: 620px) {
   .page__homepage .hero__tel {
     max-width: 35%;
   }
@@ -1273,7 +1278,7 @@ textarea {
 .homepage section:not(:last-child) {
   margin-bottom: 150px;
 }
-@media (orientation: portrait) and (max-width: 768px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 960px) {
   .homepage section:not(:last-child) {
     margin-bottom: 15%;
   }
@@ -1291,13 +1296,13 @@ textarea {
       flex-basis: 670px;
   padding-right: 100px;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .homepage-about__about {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
 }
-@media (orientation: portrait) and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 480px), (orientation: landscape) and (max-width: 720px) {
   .homepage-about__about {
     padding-right: 0;
   }
@@ -1317,7 +1322,7 @@ textarea {
   -ms-flex-preferred-size: 500px;
       flex-basis: 500px;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .homepage-about__pic-container {
     display: none;
   }
@@ -1393,13 +1398,13 @@ textarea {
   -ms-flex-preferred-size: 570px;
       flex-basis: 570px;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .homepage-menu__col {
     -ms-flex-preferred-size: 49%;
         flex-basis: 49%;
   }
 }
-@media (orientation: portrait) and (max-width: 768px) {
+@media (orientation: portrait) and (max-width: 480px), (orientation: landscape) and (max-width: 620px) {
   .homepage-menu__col {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -1412,6 +1417,16 @@ textarea {
 }
 .homepage-menu__col:not(:last-child) {
   margin-bottom: 30px;
+}
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 1024px) {
+  .homepage-menu__col:not(:last-child) {
+    margin-bottom: 2%;
+  }
+}
+@media (orientation: portrait) and (max-width: 480px), (orientation: landscape) and (max-width: 480px) {
+  .homepage-menu__col:not(:last-child) {
+    margin-bottom: 5%;
+  }
 }
 .homepage-dish {
   display: -webkit-box;
@@ -1431,11 +1446,11 @@ textarea {
   background-color: #797979;
   overflow: hidden;
 }
-@media (orientation: portrait) and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 960px) {
   .homepage-dish__img-container {
     -ms-flex-preferred-size: 150px;
         flex-basis: 150px;
-    padding-top: 100px;
+    padding-top: 110px;
   }
 }
 .homepage-dish__img-container img {
@@ -1450,7 +1465,7 @@ textarea {
       -ms-flex: 1;
           flex: 1;
 }
-@media (orientation: portrait) and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 960px) {
   .homepage-dish__desc {
     padding: 0 3%;
   }
@@ -1459,7 +1474,7 @@ textarea {
   position: relative;
   padding: 30px 0 10px;
 }
-@media (orientation: portrait) and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 960px) {
   .homepage-dish__name-and-price {
     padding: 3% 0 5%;
   }
@@ -1479,12 +1494,13 @@ textarea {
   margin-bottom: 8px;
   font-size: 18px;
 }
-@media (orientation: portrait) and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 960px) {
   .homepage-dish__name {
+    margin-bottom: 2%;
     font-size: 16px;
   }
 }
-@media (orientation: portrait) and (max-width: 345px) {
+@media (orientation: portrait) and (max-width: 345px), (orientation: landscape) and (max-width: 720px) {
   .homepage-dish__name {
     font-size: 14px;
   }
@@ -1496,13 +1512,10 @@ textarea {
 .homepage-dish__composition {
   margin-top: 14px;
 }
-@media (orientation: portrait) and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 960px) {
   .homepage-dish__composition {
     margin-top: 1%;
   }
-}
-.homepage-reserv .heading {
-  margin-bottom: 32px;
 }
 .homepage-reserv .reserv {
   margin: 0;
@@ -1512,7 +1525,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
 }
-@media (orientation: portrait) and (max-width: 768px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 960px) {
   .homepage-blog__row {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1523,7 +1536,7 @@ textarea {
       -ms-flex: 1;
           flex: 1;
 }
-@media (orientation: portrait) and (max-width: 768px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 960px) {
   .homepage-blog__col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
@@ -1538,6 +1551,16 @@ textarea {
     margin: 0 0 10%;
   }
 }
+@media (orientation: landscape) and (max-width: 960px) {
+  .homepage-blog__col:not(:last-child) {
+    margin: 0 0 5%;
+  }
+}
+@media (orientation: landscape) and (max-width: 720px) {
+  .homepage-blog__col:not(:last-child) {
+    margin: 0 0 10%;
+  }
+}
 .homepage-post__img-container {
   position: relative;
   z-index: 1;
@@ -1546,12 +1569,12 @@ textarea {
   background-color: #797979;
   overflow: hidden;
 }
-@media (orientation: portrait) and (max-width: 768px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 960px) {
   .homepage-post__img-container {
     padding-top: 300px;
   }
 }
-@media (orientation: portrait) and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 480px), (orientation: landscape) and (max-width: 720px) {
   .homepage-post__img-container {
     padding-top: 260px;
   }
@@ -1651,7 +1674,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .about-us-row {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1664,43 +1687,9 @@ textarea {
   background-color: #797979;
   overflow: hidden;
 }
-@media (orientation: portrait) and (min-width: 480px) {
-  .about-us-col:not(:last-child) {
-    margin-right: 5px;
-  }
-}
-@media (orientation: portrait) and (max-width: 480px) {
-  .about-us-col:not(:last-child) {
-    margin-bottom: 5px;
-  }
-}
-.about-us-col-size-md {
-  -ms-flex-preferred-size: 240px;
-      flex-basis: 240px;
-}
-@media (orientation: portrait) and (max-width: 480px) {
-  .about-us-col-size-md {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-}
-.about-us-col-size-lg,
-.about-us-col-tablet-lg {
-  -ms-flex-preferred-size: 435px;
-      flex-basis: 435px;
-}
-@media (orientation: portrait) and (max-width: 768px) {
-  .about-us-col-size-lg,
-  .about-us-col-tablet-lg {
-    -ms-flex-preferred-size: 470px;
-        flex-basis: 470px;
-  }
-}
-@media (orientation: portrait) and (max-width: 480px) {
-  .about-us-col-size-lg,
-  .about-us-col-tablet-lg {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+@media (orientation: landscape) and (max-width: 620px) {
+  .about-us-col:not(.about-us-grid) {
+    padding-top: 270px;
   }
 }
 .about-us-cell {
@@ -1718,6 +1707,11 @@ textarea {
 .about-us-cell:not(:last-child) {
   margin-bottom: 5px;
 }
+@media (orientation: portrait) and (max-width: 480px) {
+  .about-us-cell:not(:last-child) {
+    margin-bottom: 1%;
+  }
+}
 .about-us-col img,
 .about-us-cell img {
   position: absolute;
@@ -1726,9 +1720,51 @@ textarea {
   z-index: -1;
   width: 100%;
 }
-@media (orientation: portrait) and (max-width: 768px) {
+.about-us-col-size-md {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .about-us-col-size-md {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+.about-us-col-size-lg,
+.about-us-col-tablet-lg {
+  -ms-flex-preferred-size: 59%;
+      flex-basis: 59%;
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .about-us-col-size-lg,
+  .about-us-col-tablet-lg {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+@media (orientation: landscape) and (min-width: 1024px), (orientation: portrait) and (min-width: 1024px) {
+  .about-us-col:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+@media (orientation: landscape) and (max-width: 1024px), (orientation: portrait) and (max-width: 1024px) {
+  .about-us-col:not(:last-child) {
+    margin-right: 0;
+  }
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  .about-us-col:not(:last-child) {
+    margin-bottom: 1%;
+  }
+}
+@media (orientation: landscape) and (max-width: 1024px), (orientation: portrait) and (max-width: 1024px) and (min-width: 480px) {
+  .about-us-col:nth-child(odd) {
+    margin-right: 1%;
+  }
+}
+@media (orientation: landscape) and (max-width: 1024px), (orientation: portrait) and (max-width: 1024px) and (min-width: 480px) {
   .about-us-col:nth-child(-n+2) {
-    margin-bottom: 5px;
+    margin-bottom: 1%;
   }
 }
 .about-food-section {
@@ -1787,7 +1823,7 @@ header {
           justify-content: space-between;
   padding: 0 46px;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   header {
     padding: 0 3%;
   }
@@ -1809,7 +1845,7 @@ header {
           justify-content: space-between;
   margin-right: 42px;
 }
-@media (orientation: portrait) and (max-width: 768px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 960px) {
   .nav ul {
     display: none;
   }
@@ -1841,18 +1877,12 @@ header {
 .footer::after {
   background-color: rgba(0,0,0,0.8);
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .footer {
     padding: 7% 3%;
   }
 }
-@media (orientation: portrait) and (max-width: 768px) {
-  .footer {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .footer__logo {
     display: none;
   }
@@ -1861,9 +1891,12 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 18px;
 }
-@media (orientation: portrait) and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 480px), (orientation: landscape) and (max-width: 720px) {
   .footer__inf {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1876,7 +1909,7 @@ header {
   font-size: 12px;
   color: #fff;
 }
-@media (orientation: portrait) and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 480px), (orientation: landscape) and (max-width: 720px) {
   .footer__inf li {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
@@ -1890,15 +1923,7 @@ header {
     font-size: 10px;
   }
 }
-.footer__inf li:not(:last-child) {
-  margin-right: 150px;
-}
-@media (orientation: portrait) and (max-width: 1024px) {
-  .footer__inf li:not(:last-child) {
-    margin-right: auto;
-  }
-}
-@media (orientation: portrait) and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 480px), (orientation: landscape) and (max-width: 720px) {
   .footer__inf li:nth-child(-n+2) {
     margin-bottom: 5%;
   }
@@ -1909,7 +1934,7 @@ header {
   text-transform: uppercase;
   color: #797979;
 }
-@media (orientation: portrait) and (max-width: 768px) {
+@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 1024px) {
   .footer__social {
     display: none;
   }

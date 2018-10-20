@@ -6,21 +6,26 @@
   @media (orientation portrait) and (max-width 1024px)
     max-width 700px
     margin 0 auto
-  @media (orientation portrait) and (max-width 768px)
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 1024px)
     padding 15% 0
 
 .cont-conn__row
   display flex
-  @media (orientation portrait) and (max-width 1024px)
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
     flex-wrap wrap
 
 .cont-conn__col:not(:last-child)
-  margin-bottom 10%
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
+    margin-bottom 10%
 
 .cont-conn__desc
   flex-basis 400px
   padding-right 55px
-  @media (orientation portrait) and (max-width 1024px)
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
     flex-basis 100%
     padding-right 0
 
@@ -43,16 +48,13 @@
   vertical-align 8px
   color blackColor
 
-.cont-form__container
-  @media (orientation portrait) and (max-width 1024px)
-    flex-basis 100%
-
 .cont-form
   position relative
   z-index $z-index1
 
   flex-basis 770px
-  @media (orientation portrait) and (max-width 1024px)
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
     flex-basis 100%
 
 .cont-form__nb
@@ -62,7 +64,8 @@
   
   font 14px / 1 italicFont
   color greyColor
-  @media (orientation portrait) and (max-width 480px)
+  @media (orientation portrait) and (max-width 480px),
+  (orientation landscape) and (max-width 720px)
     display none
 
 .cont-form__rows
@@ -70,24 +73,16 @@
 
 .cont-form__row
   display flex
+  justify-content space-between
 
 .cont-form__row:not(:last-child)
   margin-bottom 30px
 
 .cont-form__col_size_md
-  flex-basis 50%
-
-.cont-form__col_size_md:nth-child(odd)
-  padding-right 15px
-  @media (orientation portrait) and (max-width 620px),
-  (orientation landscape) and (max-width 960px)
-    padding-right 1%
-
-.cont-form__col_size_md:nth-child(even)
-  padding-left 15px
-  @media (orientation portrait) and (max-width 620px),
-  (orientation landscape) and (max-width 960px)
-    padding-left 1%
+  flex-basis 370px
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
+    flex-basis 49%
 
 .cont-form__col_size_lg
   flex-basis 100%
@@ -117,7 +112,8 @@
   line-height 44px
 
 .visually-mobile-none
-  @media (orientation portrait) and (max-width 480px)
+  @media (orientation portrait) and (max-width 480px),
+  (orientation landscape) and (max-width 720px)
     display none
 
 .cont-info

@@ -11,7 +11,8 @@
   padding 0 70px
 
   background url('img/content/reservation/david-clarke_1200px.png') no-repeat center / cover
-  @media (orientation portrait) and (max-width 1024px)
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
     flex-wrap wrap
     justify-content center
   @media (orientation portrait) and (max-width 768px)
@@ -34,7 +35,8 @@
   background-color rgba(blackColor,.7)
 
 .reserv__col 
-  @media (orientation portrait) and (max-width 1024px)
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
     flex-basis 70%
   @media (orientation portrait) and (max-width 620px),
   (orientation landscape) and (max-width 960px)
@@ -42,12 +44,14 @@
 
 .reserv__form-container
   padding-right 70px
-  @media (orientation portrait) and (max-width 1024px)
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
     padding-right 0
 
 .reserv__form
   padding-top 64px
-  @media (orientation portrait) and (max-width 768px)
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 960px)
     padding-top 0
 
 .reserv-form__nb
@@ -101,9 +105,11 @@
   background-color whiteColor 
 
 .reserv__location
-  @media (orientation portrait) and (max-width 1024px)
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
     text-align center
-  @media (orientation portrait) and (max-width 768px) 
+  @media (orientation portrait) and (max-width 768px) ,
+  (orientation landscape) and (max-width 960px)
     display none
 
 .reserv__location img

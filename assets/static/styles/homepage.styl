@@ -6,7 +6,8 @@
     font-size 3.44em
 
 .page__homepage .hero__tel
-  @media (orientation portrait) and (max-width 480px)
+  @media (orientation portrait) and (max-width 480px),
+  (orientation landscape) and (max-width 620px)
     max-width 35%
     span 
       margin 6px 0 0 0
@@ -22,7 +23,8 @@
 
 .homepage section:not(:last-child)
   margin-bottom 150px
-  @media (orientation portrait) and (max-width 768px)
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 960px)
     margin-bottom 15%
 
 .homepage-about .heading
@@ -34,9 +36,11 @@
 .homepage-about__about
   flex-basis 670px
   padding-right 100px
-  @media (orientation portrait) and (max-width 1024px)
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
     flex-basis 100%
-  @media (orientation portrait) and (max-width 480px)
+  @media (orientation portrait) and (max-width 480px),
+  (orientation landscape) and (max-width 720px)
     padding-right 0
 
 .homepage-about p:not(:last-child)
@@ -53,7 +57,8 @@
 .homepage-about__pic-container
   position relative
   flex-basis 500px
-  @media (orientation portrait) and (max-width 1024px)
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
     display none
 
 .homepage-about__pic-container::before
@@ -128,9 +133,11 @@
 
 .homepage-menu__col
   flex-basis 570px
-  @media (orientation portrait) and (max-width 1024px)
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
     flex-basis 49%
-  @media (orientation portrait) and (max-width 768px)
+  @media (orientation portrait) and (max-width 480px),
+  (orientation landscape) and (max-width 620px)
     flex-basis 100%
 
 .homepage-menu__col:not(:nth-last-child(-n+2))
@@ -140,7 +147,13 @@
 
 .homepage-menu__col:not(:last-child)
   margin-bottom 30px
-
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 1024px)
+    margin-bottom 2%
+  @media (orientation portrait) and (max-width 480px),
+  (orientation landscape) and (max-width 480px)
+    margin-bottom 5%
+  
 .homepage-dish
   display flex
   border 1px solid rgba(greyColor,.3)
@@ -157,9 +170,10 @@
   background-color greyColor
 
   overflow hidden
-  @media (orientation portrait) and (max-width 480px)
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 960px)
     flex-basis 150px
-    padding-top 100px
+    padding-top 110px
 
 .homepage-dish__img-container img 
   position absolute
@@ -171,14 +185,16 @@
 .homepage-dish__desc
   padding 0 30px
   flex 1
-  @media (orientation portrait) and (max-width 480px)
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 960px)
     padding 0 3%
 
 .homepage-dish__name-and-price
   position relative
   
   padding 30px 0 10px
-  @media (orientation portrait) and (max-width 480px)
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 960px)
     padding 3% 0 5%
 
 .homepage-dish__name-and-price::after
@@ -199,9 +215,12 @@
   margin-bottom 8px
 
   font-size 18px
-  @media (orientation portrait) and (max-width 480px)
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 960px)
+    margin-bottom 2%
     font-size 16px
-  @media (orientation portrait) and (max-width 345px)
+  @media (orientation portrait) and (max-width 345px),
+  (orientation landscape) and (max-width 720px)
     font-size 14px
   
 .homepage-dish__price
@@ -210,28 +229,32 @@
 
 .homepage-dish__composition
   margin-top 14px
-  @media (orientation portrait) and (max-width 480px)
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 960px)
     margin-top 1%
-
-.homepage-reserv .heading
-  margin-bottom 32px
 
 .homepage-reserv .reserv
   margin 0
 
 .homepage-blog__row
   display flex
-  @media (orientation portrait) and (max-width 768px)
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 960px)
     flex-wrap wrap
 
 .homepage-blog__col
   flex 1
-  @media (orientation portrait) and (max-width 768px)
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 960px)
     flex 1 0 100%
 
 .homepage-blog__col:not(:last-child)
   margin-right 30px
   @media (orientation portrait) and (max-width 768px)
+    margin 0 0 10%
+  @media (orientation landscape) and (max-width 960px)
+    margin 0 0 5%
+  @media (orientation landscape) and (max-width 720px)
     margin 0 0 10%
 
 .homepage-post__img-container
@@ -244,9 +267,11 @@
   background-color greyColor
 
   overflow hidden
-  @media (orientation portrait) and (max-width 768px)
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 960px)
     padding-top 300px
-  @media (orientation portrait) and (max-width 480px)
+  @media (orientation portrait) and (max-width 480px),
+  (orientation landscape) and (max-width 720px)
     padding-top 260px
 
 .homepage-post__img-container img 
