@@ -12,16 +12,28 @@
     <div class="js-page-wrapper">
       <div class="page__menu">
         <div class="hero">
-          <header><a class="logo header__logo" href="homepage-page.html">chew <span>restaurant</span></a>
+          <header><a class="logo header__logo" href="homepage.html">chew <span>restaurant</span></a>
             <nav class="nav header__nav">
-              <ul>
-                <li><a href="homepage-page.html">Home </a></li>
-                <li><a href="about-us-page.html">About</a></li>
-                <li><a href="our-menu-page.html">Menus </a></li>
-                <li><a href="reservation-opentable-page.html">Reservation</a></li>
-                <li><a href="team-page-all.html">Team </a></li>
-                <li><a href="contact-page.html">Contact</a></li>
-              </ul>
+              <button type="button" data-open="collapse" data-target="#nav-bar-content">
+                <svg>
+                  <use xlink:href="sprite-svg.svg#menu"></use>
+                </svg>
+              </button>
+              <div class="navbar collapse" id="nav-bar-content">
+                <ul>
+                  <li><a href="homepage.html">Home </a></li>
+                  <li><a href="about-us-page.html">About</a></li>
+                  <li><a href="our-menu-page.html">Menus </a></li>
+                  <li><a href="reservation-opentable-page.html">Reservation</a></li>
+                  <li><a href="team-page-all.html">Team </a></li>
+                  <li><a href="contact-page.html">Contact</a></li>
+                </ul>
+              </div>
+              <button type="button" data-close="collapse" data-target="#nav-bar-content">
+                <svg>
+                  <use xlink:href="sprite-svg.svg#close"></use>
+                </svg>
+              </button>
             </nav>
             <div class="header__btn-container"><a class="header__btn header__btn_color_transparent btn btn_color_transparent" href="reservation-opentable-page.html">make a reservation</a></div>
           </header>

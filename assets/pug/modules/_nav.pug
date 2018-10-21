@@ -1,20 +1,29 @@
 nav.nav.header__nav
-  ul
-    li
-      a(href="homepage-page.html") Home 
+  button(type="button", data-open="collapse", data-target="#nav-bar-content")
+    svg
+      use(xlink:href="sprite-svg.svg#menu")
 
-    li
-      a(href="about-us-page.html") About
+  .navbar.collapse#nav-bar-content
+    ul
+      li
+        a(href="homepage.html") Home 
 
-    li
-      a(href="our-menu-page.html") Menus 
+      li
+        a(href="about-us-page.html") About
 
-    li
-      a(href="reservation-opentable-page.html") Reservation
+      li
+        a(href="our-menu-page.html") Menus 
 
-    li
-      a(href="team-page-all.html") Team 
+      li
+        a(href="reservation-opentable-page.html") Reservation
 
-    li
-      a(href="contact-page.html") Contact
+      li
+        a(href="team-page-all.html") Team 
+
+      li
+        a(href="contact-page.html") Contact
+
+  button(type="button", data-close="collapse", data-target="#nav-bar-content")
+    svg
+      use(xlink:href="sprite-svg.svg#close")
   

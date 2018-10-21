@@ -124,7 +124,7 @@ gulp.task('js:copy', () => {
 gulp.task('js:build', () => {
   return gulp.src([
     paths.scripts.src + '/test.js',
-    paths.scripts.src + '/map-api.js',
+    paths.scripts.src + '/mobile-menu.js',
     paths.scripts.src + '/scroll-page-down.js'
   ])
   .pipe(plumber({

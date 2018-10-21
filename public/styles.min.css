@@ -277,7 +277,7 @@ body {
   }
 }
 .container {
-  width: 98%;
+  width: 95%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -406,8 +406,9 @@ h6 {
 }
 .logo span {
   display: block;
-  padding-left: 3px;
+  padding-left: 0.3em;
   font-size: 0.26em;
+  letter-spacing: 0.3em;
 }
 @media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .logo {
@@ -416,11 +417,8 @@ h6 {
 }
 @media (orientation: portrait) and (max-width: 345px), (orientation: landscape) and (max-width: 960px) {
   .logo {
-    margin-bottom: -4px;
+    margin-bottom: -8px;
     font-size: 2.11em;
-  }
-  .logo span {
-    display: none;
   }
 }
 .hero {
@@ -1048,7 +1046,7 @@ footer {
 }
 .reserv-form__btn-submit {
   padding: 0 36px;
-  line-height: 44px;
+  line-height: 43px;
 }
 .page__reserv footer {
   background: url("img/content/reservation/florencia-viadana_2000px.png") no-repeat bottom/cover;
@@ -1186,7 +1184,7 @@ textarea {
 }
 .cont-form__submit {
   padding: 0 37px;
-  line-height: 44px;
+  line-height: 43px;
 }
 @media (orientation: portrait) and (max-width: 480px), (orientation: landscape) and (max-width: 720px) {
   .visually-mobile-none {
@@ -1315,7 +1313,7 @@ textarea {
 }
 .homepage-about .btn_color_orange {
   padding: 0 51px;
-  line-height: 45px;
+  line-height: 43px;
 }
 .homepage-about__pic-container {
   position: relative;
@@ -1709,7 +1707,7 @@ textarea {
 }
 @media (orientation: portrait) and (max-width: 480px) {
   .about-us-cell:not(:last-child) {
-    margin-bottom: 1%;
+    margin-bottom: 2%;
   }
 }
 .about-us-col img,
@@ -1754,7 +1752,7 @@ textarea {
 }
 @media (orientation: portrait) and (max-width: 480px) {
   .about-us-col:not(:last-child) {
-    margin-bottom: 1%;
+    margin-bottom: 2%;
   }
 }
 @media (orientation: landscape) and (max-width: 1024px), (orientation: portrait) and (max-width: 1024px) and (min-width: 480px) {
@@ -1833,6 +1831,29 @@ header {
       -ms-flex: 2;
           flex: 2;
 }
+.nav button[data-open] {
+  display: none;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  fill: #fff;
+}
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
+  .nav button[data-open] {
+    display: inline-block;
+  }
+}
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 111111777;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+  }
+}
 .nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1845,13 +1866,25 @@ header {
           justify-content: space-between;
   margin-right: 42px;
 }
-@media (orientation: portrait) and (max-width: 768px), (orientation: landscape) and (max-width: 960px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .nav ul {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: inherit;
+    margin: 0;
   }
 }
 .nav li:not(:last-child) {
   margin-right: 42px;
+}
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
+  .nav li:not(:last-child) {
+    margin: 0;
+  }
 }
 .nav a {
   font: 14px/1 "antonio-regular", sans-serif, arial;
@@ -1861,6 +1894,23 @@ header {
 }
 .nav a:hover {
   color: #efba39;
+}
+.navbar + button[data-close] {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  z-index: 111111111;
+  width: 40px;
+  height: 40px;
+  fill: #fff;
+}
+.navbar.collapse + button[data-close] {
+  display: none;
+}
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
+  .navbar.collapse {
+    display: none;
+  }
 }
 .footer {
   position: relative;
