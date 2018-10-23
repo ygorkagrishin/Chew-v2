@@ -1,32 +1,33 @@
 document.querySelector('.nav > button[data-open]').addEventListener('click', function (e) {
   e.preventDefault();
 
-  const TOGGLE = this;
+  const TRIGGER = this;
 
-  const DATA_VALUE = TOGGLE.hasAttribute('data-target') ? 
-  TOGGLE.getAttribute('data-target') : false;
+  const DATA_VALUE = TRIGGER.hasAttribute('data-target') ?
+  TRIGGER.getAttribute('data-target') : false;
 
   const TARGET = document.querySelector(DATA_VALUE);
 
-  if (!TARGET) return false;
+  if (!TARGET) return;
 
   if (TARGET.classList.contains('collapse')) {
-    TARGET.classList.remove('collapse');
+    return TARGET.classList.remove('collapse');
   };
-
 });
 
 document.querySelector('.nav > button[data-close]').addEventListener('click', function (e) {
-  const TOGGLE = this;
+  e.preventDefault();
 
-  const DATA_VALUE = TOGGLE.hasAttribute('data-target') ? 
-  TOGGLE.getAttribute('data-target') : false;
+  const TRIGGER = this;
+
+  const DATA_VALUE = TRIGGER.hasAttribute('data-target') ? 
+  TRIGGER.getAttribute('data-target') : false;
 
   const TARGET = document.querySelector(DATA_VALUE);
 
-  if (!TARGET) return false;
+  if (!TARGET) return;
 
   if (!TARGET.classList.contains('collapse')) {
-    TARGET.classList.add('collapse');
+    return TARGET.classList.add('collapse');
   };
 });

@@ -1,9 +1,9 @@
 nav.nav.header__nav
-  button(type="button", data-open="collapse", data-target="#nav-bar-content")
+  button(type="button", data-open="collapse", data-target="#navbar")
     svg
       use(xlink:href="sprite-svg.svg#menu")
 
-  .navbar.collapse#nav-bar-content
+  #navbar.collapse
     ul
       li
         a(href="homepage.html") Home 
@@ -23,7 +23,7 @@ nav.nav.header__nav
       li
         a(href="contact-page.html") Contact
 
-  button(type="button", data-close="collapse", data-target="#nav-bar-content")
+  button(type="button", data-close="collapse", data-target="#navbar")
     svg
       use(xlink:href="sprite-svg.svg#close")
   

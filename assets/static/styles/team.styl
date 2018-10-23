@@ -4,43 +4,20 @@
   footer 
     background greyColor url('img/content/team/joshua-rodriguez-422768-unsplash_1920px.png') no-repeat bottom center / cover
 
-.team__tabs
+.team-tabs
   display flex
   justify-content center
 
   padding 20px 0 44px 0
 
-.team__tab
-  position relative
-  z-index $z-index1
-
-  &_state_active
-    color blackColor
-    &::after
-      content ''
-
-      position absolute
-      bottom 5px
-      left 0
-      z-index -1
-
-      display block
-      width 100%
-      height 5px
-
-      background-color yellowColor
-
-  &:not(:last-child)
-    margin-right 28px
-
-.team__row
+.team-row
   display flex
   flex-wrap wrap
   justify-content space-between
 
   margin-bottom 50px
 
-.team__col
+.team-col
   flex-basis 370px
   text-align center
   @media (orientation portrait) and (max-width 1024px)
@@ -62,19 +39,19 @@
 /* 
   Больной ублюдок
 */
-.team__col:nth-child(-n+3)
+.team-col:nth-child(-n+3)
   @media (orientation portrait) and (min-width 620px),
   (orientation landscape) and (min-width 320px)
     margin-bottom 30px
 
-.team__col:not(:last-child) 
+.team-col:not(:last-child) 
   @media (orientation portrait) and (max-width 620px)
-    margin-bottom 30px
+    margin-bottom 3%
 
-.team__member
+.team-member
   border 1px solid greyColor
 
-.team-member__ava-container
+.team-member-ava-container
   position relative
   z-index $z-index1
 
@@ -85,7 +62,7 @@
   @media (orientation landscape) and (max-width 720px)
     padding-top 220px
 
-.team-member__ava
+.team-member-ava
   position absolute
   top -25%
   left 0
@@ -93,13 +70,13 @@
 
   width 100%
 
-.team-member__cont
+.team-member-cont
   padding 30px 0
 
-.team-member__desc
+.team-member-desc
   margin-bottom 12px
 
-.team-member__name
+.team-member-name
   margin-bottom 5px
 
   font 18px / 1 baseFont2
@@ -108,21 +85,21 @@
   (orientation landscape) and (max-width 960px)
     font-size 20px
 
-.team-member__pos
+.team-member-pos
   font-size 12px  
 
-.team__paginator
+.team-paginator
   width 175px
   margin 0 auto
 
   text-align center
 
-.team__paginator::after
+.team-paginator::after
   content ''
   display table
   clear both
 
-.team__paginator a
+.team-paginator a
   float left
   width 40px
   height 40px
@@ -134,7 +111,7 @@
   border 1px solid greyColor 
   border-radius 50%
 
-.team__paginator .active
+.team-paginator .active
   color blackColor
 
   background-color yellowColor
@@ -144,11 +121,11 @@
 .team__paginator a:not(:last-child)
   margin-right 5px
 
-.team__back svg,
-.team__forward svg 
+.team-back svg,
+.team-forward svg 
   width 14px !important
   fill greyColor
 
-.team__back:hover svg,
-.team__forward:hover svg
+.team-back:hover svg,
+.team-forward:hover svg
   fill blackColor

@@ -14,13 +14,13 @@ block content
       .cont
         //- Section connect
         section
-          .cont__conn.cont-conn
+          .cont-connect-sect
             .container
-              .cont-conn__row
-                .cont-conn__col.cont-conn__desc
-                  h3.cont-conn__title Drop us a line 
+              .cont-connect-row
+                .cont-connect-col.cont-connect-desc
+                  h3.cont-connect-title Drop us a line 
 
-                  .cont-conn__text
+                  .cont-connect-text
                     p.
                       Pellentesque a massa risus. Cras convallis finibus porta. 
                       Integer in ligula leo. Cras quis consequat nisl, at malesuada sapien. 
@@ -29,65 +29,63 @@ block content
                       Cum sociis natoque penatibus et magnis dis parturient montes, 
                       nascetur ridiculus mus. Pellentesque non laoreet risus, 
                       id elementum purus.
-                  .cont-conn__social
+                  .cont-connect-social
                     span Follow us via:
                     +social(social)
-                form(action="").cont-conn__col.cont-conn__form.cont-form#contact-connect-form
-                  p.cont-form__nb *Note: We respect your privacy. Your email will be kept secretly.
+                form(action="").cont-connect-col.cont-form#cont-connect-form
+                  p.cont-form-nb *Note: We respect your privacy. Your email will be kept secretly.
 
                   //- contact form rows
-                  .cont-form__rows
-                    .cont-form__row
-                      .cont-form__col.cont-form__col_size_md
+                  .cont-form-rows
+                    .cont-form-row
+                      .cont-form-col.cont-form-col-size-md
                         label(for="cont-conect-user-name") Your name*
                         input(type="text", name="user-name", placeholder="Enter your name")#cont-conect-user-name
-                      .cont-form__col.cont-form__col_size_md
+                      .cont-form-col.cont-form-col-size-md
                         label(for="cont-conect-user-email") Your email*
                         input(type="text", name="user-email", placeholder="Enter your email")#cont-conect-user-email
-                    .cont-form__row
-                      .cont-form__col.cont-form__col_size_lg
+                    .cont-form-row
+                      .cont-form-col.cont-form-col-size-lg
                         label(for="cont-conect-user-message") Your message*
                         textarea(name="user-message", rows="8", placeholder="Your message goes here")#cont-conect-user-message
                   //- contact form rows end
 
-                  .cont-form__btn-container 
-                    button(type="submit").cont-form__submit.btn.btn_color_orange Send us
+                  .cont-form-btn-container 
+                    button(type="submit").cont-form-submit.btn.btn_color_orange Send us
         //- Section connect end
 
         //- Section info us
         section.visually-mobile-none
           h3.visually-hidden Information about us
 
-          .cont__info.cont-info
+          .cont-info
             .container
-              .cont-info__row
+              .cont-info-row
                 //- По какой то неведомой причине box-sizing узла .cont-info__pic игнорируется
                 //- и потому обертываем его в обычный div. Возможно данная особеность как то связанна с flexbox
                 
-                .cont-info__col
+                .cont-info-col
                   div
-                    .cont-info__pic
+                    .cont-info-pic
                       svg
                         use(xlink:href='sprite-svg.svg#pin')
                   p.
                     16/8 W 19th St, Chelsea <br>
                     Manhattan, NY 10001
-                .cont-info__col
+                .cont-info-col
                   div
-                    .cont-info__pic
+                    .cont-info-pic
                       svg
                         use(xlink:href='sprite-svg.svg#call')
                   p.
                     212-342-67382
-                .cont-info__col
+                .cont-info-col
                   div
-                    .cont-info__pic
+                    .cont-info-pic
                       svg
                         use(xlink:href='sprite-svg.svg#mail')
                   p.
                     reservation@chew.com info@chew.com
         //- Section info us end
-
-        //- #map
 
     include modules/_footer

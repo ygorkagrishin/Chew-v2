@@ -12,28 +12,28 @@ block content
         .container
           +contentHeader('meet our staff', 'we love our customers')
           
-          ul.team__tabs
-            li.team__tab
+          ul.tabs.team-tabs
+            li.tabs__tab
               a(href="team-page-all.html") All
 
-            li.team__tab
+            li.tabs__tab
               a(href="team-page-chef.html") Chef
             
-            li.team__tab.team__tab_state_active
+            li.tabs__tab
               a(href="javascript:void(0);") Waiter
 
-            li.team__tab
+            li.tabs__tab.tabs__tab_state_active
               a(href="team-page-manager.html") Manager
 
           //- team members
-          .team__row 
+          .team-row 
             if (waiters.length > 0 && Array.isArray(waiters))
               each waiter in waiters
-                .team__col
+                .team-col
                   +memberOfTheTeam(waiter.avatar, waiter.name, waiter.position, waiter.social)
             else
               - var waiter = waiters
-              .team__col 
+              .team-col 
                 +memberOfTheTeam(waiter.avatar, waiter.name, waiter.position, waiter.social)
           //- team members end
 

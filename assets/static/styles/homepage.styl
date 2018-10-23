@@ -1,39 +1,36 @@
-.page__homepage .hero
+.page__home .hero
   background url('img/content/homepage/annie-spratt-464747-unsplash_2000px.png') no-repeat center / cover
 
-.page__homepage .hero__title
+.page__home .hero__title
   @media (orientation: portrait) and (max-width: 375px) 
     font-size 3.44em
 
-.page__homepage .hero__tel
+.page__home .hero__tel
   @media (orientation portrait) and (max-width 480px),
   (orientation landscape) and (max-width 620px)
     max-width 35%
     span 
       margin 6px 0 0 0
 
-.page__homepage .heading
+.page__home .heading
   max-width 100%
   margin-bottom 22px
 
   text-align left
 
-.homepage .container
-  position relative
-
-.homepage section:not(:last-child)
+.home section:not(:last-child)
   margin-bottom 150px
   @media (orientation portrait) and (max-width 768px),
   (orientation landscape) and (max-width 960px)
     margin-bottom 15%
 
-.homepage-about .heading
+.home-about-sect .heading
   margin-bottom 22px 
 
-.homepage-about__row
+.home-about-row
   display flex
 
-.homepage-about__about
+.home-about
   flex-basis 670px
   padding-right 100px
   @media (orientation portrait) and (max-width 1024px),
@@ -43,25 +40,23 @@
   (orientation landscape) and (max-width 720px)
     padding-right 0
 
-.homepage-about p:not(:last-child)
+.home-about p:not(:last-child)
   margin-bottom 24px
 
-.homepage-about__text-container
+.home-about-text
   margin-bottom 33px
 
-.homepage-about .btn_color_orange
+.home-about .btn_color_orange
   padding 0 51px
 
-  line-height 43px
-
-.homepage-about__pic-container
+.home-about-pic-container
   position relative
   flex-basis 500px
   @media (orientation portrait) and (max-width 1024px),
   (orientation landscape) and (max-width 1024px)
     display none
 
-.homepage-about__pic-container::before
+.home-about-pic-container::before
   content ''
 
   position absolute
@@ -74,12 +69,12 @@
 
   border 2px solid rgba(greyColor,.3)
 
-.homepage-about__pic-container::after
-  @extend .homepage-about__pic-container::before
+.home-about-pic-container::after
+  @extend .home-about-pic-container::before
   bottom -23px
   left 23px
 
-.homepage-about__pic-wrap
+.home-about-pic-wrap
   position relative
   z-index $z-index1
 
@@ -88,7 +83,7 @@
 
   overflow hidden
 
-.homepage-about__pic-container img
+.home-about-pic-container img
   position absolute
   top 0
   left 0
@@ -96,42 +91,15 @@
 
   width 100%
 
-.homepage-menu__tabs
-  display flex
+.home-menu-tabs
   margin-bottom 40px
 
-.homepage-menu__tabs a
-  position relative
-  z-index $z-index
-  
-  display inline-block
-
-.homepage-menu__tabs li:not(:last-child)
-  margin-right 26px
-
-.homepage-menu__tabs a.homepage-menu__tab-link_is_active
-  color blackColor
-
-.homepage-menu__tabs a.homepage-menu__tab-link_is_active::after
-  content ''
-
-  position absolute
-  bottom 5px
-  left 0
-  z-index -1
-
-  display block
-  width 100%
-  height 5px
-
-  background-color yellowColor
-
-.homepage-menu__row
+.home-menu-row
   display flex
   flex-wrap wrap
   justify-content space-between
 
-.homepage-menu__col
+.home-menu-col
   flex-basis 570px
   @media (orientation portrait) and (max-width 1024px),
   (orientation landscape) and (max-width 1024px)
@@ -140,12 +108,12 @@
   (orientation landscape) and (max-width 620px)
     flex-basis 100%
 
-.homepage-menu__col:not(:nth-last-child(-n+2))
+.home-menu-col:not(:nth-last-child(-n+2))
   @media (orientation portrait) and (min-width 1024px),
   (orientation landscape) and (min-width 1024px)
     margin-bottom 30px
 
-.homepage-menu__col:not(:last-child)
+.home-menu-col:not(:last-child)
   margin-bottom 30px
   @media (orientation portrait) and (max-width 768px),
   (orientation landscape) and (max-width 1024px)
@@ -154,14 +122,14 @@
   (orientation landscape) and (max-width 480px)
     margin-bottom 5%
   
-.homepage-dish
+.home-dish
   display flex
   border 1px solid rgba(greyColor,.3)
 
-.homepage-dish:hover
+.home-dish:hover
   box-shadow -10px 10px 35px rgba(greyColor,.5)
 
-.homepage-dish__img-container
+.home-dish-img-container
   position relative
 
   flex-basis 200px
@@ -175,21 +143,21 @@
     flex-basis 150px
     padding-top 110px
 
-.homepage-dish__img-container img 
+.home-dish-img-container img 
   position absolute
   top 0
   left 0
 
   width 100%
 
-.homepage-dish__desc
+.home-dish-desc
   padding 0 30px
   flex 1
   @media (orientation portrait) and (max-width 768px),
   (orientation landscape) and (max-width 960px)
     padding 0 3%
 
-.homepage-dish__name-and-price
+.home-dish-name-and-price
   position relative
   
   padding 30px 0 10px
@@ -197,7 +165,7 @@
   (orientation landscape) and (max-width 960px)
     padding 3% 0 5%
 
-.homepage-dish__name-and-price::after
+.home-dish-name-and-price::after
   content ''
 
   position absolute
@@ -211,7 +179,7 @@
 
   background-color yellowColor
 
-.homepage-dish__name
+.home-dish-name
   margin-bottom 8px
 
   font-size 18px
@@ -223,32 +191,32 @@
   (orientation landscape) and (max-width 720px)
     font-size 14px
   
-.homepage-dish__price
+.home-dish-price
   font 14px / 1 baseFont2
   text-transform uppercase
 
-.homepage-dish__composition
+.home-dish-comp
   margin-top 14px
   @media (orientation portrait) and (max-width 768px),
   (orientation landscape) and (max-width 960px)
     margin-top 1%
 
-.homepage-reserv .reserv
+.home-res-sect .reserv
   margin 0
 
-.homepage-blog__row
+.home-blog-row
   display flex
   @media (orientation portrait) and (max-width 768px),
   (orientation landscape) and (max-width 960px)
     flex-wrap wrap
 
-.homepage-blog__col
+.home-blog-col
   flex 1
   @media (orientation portrait) and (max-width 768px),
   (orientation landscape) and (max-width 960px)
     flex 1 0 100%
 
-.homepage-blog__col:not(:last-child)
+.home-blog-col:not(:last-child)
   margin-right 30px
   @media (orientation portrait) and (max-width 768px)
     margin 0 0 10%
@@ -257,7 +225,7 @@
   @media (orientation landscape) and (max-width 720px)
     margin 0 0 10%
 
-.homepage-post__img-container
+.home-post-img-container
   position relative
   z-index $z-index1
 
@@ -274,7 +242,7 @@
   (orientation landscape) and (max-width 720px)
     padding-top 260px
 
-.homepage-post__img-container img 
+.home-post-img-container img 
   position absolute
   top -25%
   left 0
@@ -283,20 +251,20 @@
   @media (orientation portrait) and (max-width 768px)
     top -55%
 
-.homepage-post__date
+.home-post-date
   font-size 12px
   line-height 1
 
-.homepage-post__name
+.home-post-name
   margin 9px 0 25px
 
   font-size 18px
   line-height 1
 
-.homepage-post__desc
+.home-post-desc
   margin-bottom 25px
 
-.homepage-post__continue
+.home-post-continue
   display inline-block
 
   font 14px / 1 baseFont2
@@ -304,7 +272,7 @@
   text-transform uppercase
   color rgba(blackColor,.7)
 
-.homepage-post__continue svg 
+.home-post-continue svg 
   width 18px !important
   height 18px !important
   margin-left 2px
@@ -313,13 +281,13 @@
 
   fill rgba(blackColor,.7)
 
-.homepage-post__continue:hover
+.home-post-continue:hover
   color blackColor 
 
-.homepage-post__continue:hover svg 
+.home-post-continue:hover svg 
   fill blackColor
 
-.homepage__view
+.home-view
   position absolute 
   top 4px
   right 9px
@@ -331,7 +299,7 @@
   @media (orientation portrait) and (max-width 768px)
     top 0
 
-.homepage__view svg 
+.home-view svg 
   width 18px !important
   height 18px !important
   vertical-align -5px
@@ -339,11 +307,11 @@
 
   fill greyColor
 
-.homepage__view:hover
+.home-view:hover
   color blackColor
 
-.homepage__view:hover svg 
+.home-view:hover svg 
   fill blackColor
 
-.page__homepage footer
+.page__home footer
   background url('img/content/homepage/annie-spratt-464747-unsplash_2000px.png') no-repeat bottom / cover

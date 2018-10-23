@@ -12,40 +12,40 @@ block content
         .container
           +contentHeader('meet our staff', 'we love our customers')
           
-          ul.team__tabs
-            li.team__tab.team__tab_state_active
+          ul.tabs.team-tabs
+            li.tabs__tab.tabs__tab_state_active
               a(href="javascript:void(0);") All
 
-            li.team__tab
+            li.tabs__tab
               a(href="team-page-chef.html") Chef
             
-            li.team__tab
+            li.tabs__tab
               a(href="team-page-waiter.html") Waiter
 
-            li.team__tab
+            li.tabs__tab
               a(href="team-page-manager.html") Manager
 
           //- team members
-          .team__row
+          .team-row
             if (membersPage.length > 0 && Array.isArray(membersPage))
               each member in membersPage
-                .team__col 
+                .team-col 
                   +memberOfTheTeam(member.avatar, member.name, member.position, member.social)
             else
               - var member = membersPage
-              .team__col  
+              .team-col  
                 +memberOfTheTeam(member.avatar, member.name, member.position, member.social)
           //- team members end
 
-          .team__paginator 
-            a(href="javascript:void(0);").team__back
+          .team-paginator 
+            a(href="javascript:void(0);").team-back
               svg
                 use(xlink:href="sprite-svg.svg#arrow-round-back")
             a(href="javascript:void(0);").active.
               1 
             a(href="team-page-all-second.html").
               2
-            a(href="team-page-all-second.html").team__forward
+            a(href="team-page-all-second.html").team-forward
               svg
                 use(xlink:href="sprite-svg.svg#arrow-round-forward")
 

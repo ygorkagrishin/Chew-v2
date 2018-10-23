@@ -3,7 +3,7 @@
   height 40px
   padding 0 30px
 
-  font 15px / 39px baseFont2
+  font 15px / 41px baseFont2
   letter-spacing .3px
   text-transform uppercase
   white-space nowrap
@@ -11,12 +11,20 @@
   color whiteColor
 
   border-radius 25px
+  @media (-webkit-min-device-pixel-ratio 2),
+  (min-resolution 192dpi)
+    line-height 37px
   &_color_transparent
     background-color transparent
     border 2px solid whiteColor
   &_color_orange
+    line-height 42px
+
     background-color orangeColor
+    @media (-webkit-min-device-pixel-ratio 2),
+    (min-resolution 192dpi)
+      line-height 40px
   &_color_yellow
     color blackColor
 
-    background-color yellowColor
+    background-color yellowColor 

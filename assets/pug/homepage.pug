@@ -4,20 +4,20 @@ block title
   title chew homepage
 
 block content
-  .page__homepage
+  .page__home
     +hero('welcome to', 'chew restaurant', true)
 
     main  
-      .page__main.homepage
+      .page__main.home
         //- Section homepage about
         section
-          .homepage__about.homepage-about
+          .home-about-sect
             .container
-              .homepage-about__row
-                .homepage-about__col.homepage-about__about
+              .home-about-row
+                .home-about-col.home-about
                   +contentHeader('about us', 'where all dreams came true')
 
-                  .homepage-about__text-container
+                  .home-about-text
                     p.
                       Morbi mattis, lorem sit amet gravida eleifend, 
                       nisl felis tincidunt dui, nec porta turpis ligula eu nisl. 
@@ -32,41 +32,45 @@ block content
                       Nullam ex massa, euismod vel metus non, pellentesque tincidunt neque. 
                       Mauris suscipit ut purus id congue. Etiam ornare condimentum massa et scelerisque.
                   a(href="about-us-page.html").btn.btn_color_orange Learn More
-                .homepage-about__col.homepage-about__pic-container
-                  .homepage-about__pic-wrap
+                .home-about-col.home-about-pic-container
+                  .home-about-pic-wrap
                     img(src="img/content/homepage/cayla1-150730-unsplash_700px.png", alt="dish")            
         //- Section homepage about end
         
         //- Section homepage menu
         section 
-          .homepage__menu.homepage-menu
+          .home-menu-sect
             .container
               +contentHeader('Featured menus', 'discover our popular dishes')
-              
-              ul.homepage-menu__tabs
-                li
-                  a(href='javascript:void(0);').homepage-menu__tab-link_is_active All
-                li
-                  a(href='javascript:void(0);') Breakfast 
-                li
-                  a(href='javascript:void(0);') Lunch 
-                li
-                  a(href='javascript:void(0);') Dinner 
-                li
-                  a(href='javascript:void(0);') Drinks
 
-              .homepage-menu__row
+              ul.tabs.home-menu-tabs
+                li.tabs__tab.tabs__tab_state_active
+                  a(href="javascript:void(0);") All
+                
+                li.tabs__tab
+                  a(href="javascript:void(0);") Breakfast 
+
+                li.tabs__tab
+                  a(href="team-page-chef.html") Lunch
+                
+                li.tabs__tab
+                  a(href="team-page-waiter.html") Dinner
+
+                li.tabs__tab
+                  a(href="team-page-manager.html") Drinks
+
+              .home-menu-row
                 each dish in menu
-                  .homepage-menu__col 
+                  .home-menu-col 
                     +dish(dish.img, dish.name, dish.composition, dish.price)
-              a(href="our-menu-page.html").homepage__view View all menus
+              a(href="our-menu-page.html").home-view View all menus
                 svg
                   use(xlink:href="sprite-svg.svg#arrow-round-forward")
         //- Section homepage menu end
 
         //- Section homepage reservation
         section
-          .homepage__reserv.homepage-reserv
+          .home-res-sect
             .container
               +contentHeader('Reservation', 'Book a table')
 
@@ -75,15 +79,15 @@ block content
 
         //- Section homepage blog 
         section
-          .homepage__blog.homepage-blog
+          .home-blog-sect
             .container
               +contentHeader('From our blog', 'Get our latest news')
 
-              .homepage-blog__row
+              .home-blog-row
                 each post in posts
-                  .homepage-blog__col
+                  .home-blog-col
                     +post(post.src, post.name, post.text, post.date)      
-              a(href="javascript:void(0);").homepage__view View all blog posts
+              a(href="javascript:void(0);").home-view View all blog posts
                 svg
                   use(xlink:href="sprite-svg.svg#arrow-round-forward")
         //- Section homepage blog end

@@ -10,16 +10,16 @@
   </head>
   <body class="page"> 
     <div class="js-page-wrapper">
-      <div class="page__reserv">
+      <div class="page__res">
         <div class="hero">
           <header><a class="logo header__logo" href="homepage.html">chew <span>restaurant</span></a>
             <nav class="nav header__nav">
-              <button type="button" data-open="collapse" data-target="#nav-bar-content">
+              <button type="button" data-open="collapse" data-target="#navbar">
                 <svg>
                   <use xlink:href="sprite-svg.svg#menu"></use>
                 </svg>
               </button>
-              <div class="navbar collapse" id="nav-bar-content">
+              <div class="collapse" id="navbar">
                 <ul>
                   <li><a href="homepage.html">Home </a></li>
                   <li><a href="about-us-page.html">About</a></li>
@@ -29,7 +29,7 @@
                   <li><a href="contact-page.html">Contact</a></li>
                 </ul>
               </div>
-              <button type="button" data-close="collapse" data-target="#nav-bar-content">
+              <button type="button" data-close="collapse" data-target="#navbar">
                 <svg>
                   <use xlink:href="sprite-svg.svg#close"></use>
                 </svg>
@@ -68,38 +68,38 @@
                 <div class="heading"><span class="heading__subtitle">Powered by open table</span>
                   <h3 class="heading__title">Booking a table</h3>
                 </div>
-                <div class="reserv reserv__row">
-                  <div class="reserv__col reserv__form-container">
-                    <form class="reserv__form reserv-form" id="reserv-reservation-table-form">
-                      <p class="reserv-form__nb">
+                <div class="res res-row">
+                  <div class="res-col res-form-container">
+                    <form class="res-form" id="reserv-reservation-table-form">
+                      <p class="res-form-nb">
                         Welcome to Chew Restaurant! 
                         Please use the form below to book a table online. This is powered by <span>OpenTable.</span>
                         
                       </p>
-                      <div class="reserv-form__rows">
-                        <div class="reserv-form__row">
-                          <div class="reserv-form__col reserv-form__col_size_md">
+                      <div class="res-form-rows">
+                        <div class="res-form-row">
+                          <div class="res-form-col res-form-col-size-md">
                             <label for="reserv-form-date">Date</label>
                             <input type="text" name="date" placeholder="Jul 14th, 2018" id="reserv-form-date"/>
                           </div>
-                          <div class="reserv-form__col reserv-form__col_size_md">
+                          <div class="res-form-col res-form-col-size-md">
                             <label for="reserv-form-time">Time</label>
                             <input type="text" name="time" placeholder="4:30PM" id="reserv-form-time"/>
                           </div>
                         </div>
-                        <div class="reserv-form__row">
-                          <div class="reserv-form__col reserv-form__col_size_lg">
+                        <div class="res-form-row">
+                          <div class="res-form-col res-form-col-size-lg">
                             <label for="reserv-form-guest">I want to book a table for</label>
                             <input type="text" name="guest" placeholder="-- Chose the number of guest --" id="reserv-form-guest"/>
                           </div>
                         </div>
                       </div>
-                      <div class="reserv-form__btn-container">
-                        <button class="reserv-form__btn-submit btn btn_color_orange" type="submit">Book now</button>
+                      <div class="res-form-btn-container">
+                        <button class="res-form-btn-submit btn btn_color_orange" type="submit">Book now</button>
                       </div>
                     </form>
                   </div>
-                  <div class="reserv__col reserv__location"><img class="reserv__map" src="img/general/locate.png" alt="location"/></div>
+                  <div class="res-col res-loc"><img class="res-map" src="img/general/locate.png" alt="location"/></div>
                 </div>
               </div>
             </section>

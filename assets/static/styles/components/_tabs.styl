@@ -1,0 +1,36 @@
+.tabs
+  display flex
+
+  padding 20px 0 44px 0
+
+.tabs__tab
+  position relative
+  z-index $z-index1
+
+  &_state_active
+    color blackColor
+    &::after
+      content ''
+
+      position absolute
+      bottom 5px
+      left 0
+      z-index -1
+
+      display block
+      width 100%
+      height 5px
+
+      background-color yellowColor
+
+  &:not(:last-child)
+    margin-right 26px
+    @media (orientation portrait) and (max-width 620px),
+    (orientation landscape) and (max-width 960px)
+      margin-right 5%
+
+  a
+    @media (orientation portrait) and (max-width 620px),
+    (orientation landscape) and (max-width 960px)
+        font-size 14px
+        line-height 24px 

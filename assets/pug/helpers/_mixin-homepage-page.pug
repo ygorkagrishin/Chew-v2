@@ -1,23 +1,23 @@
 mixin dish(img, name, composition, price)
-  .homepage-menu__dish.homepage-dish  
-    .homepage-dish__img-container
+  .home-dish  
+    .home-dish-img-container
       img(src= img, alt='dish')
-    .homepage-dish__desc
-      .homepage-dish__name-and-price
-        h4.homepage-dish__name= name
-        span.homepage-dish__price= price
-      p.homepage-dish__composition= composition
+    .home-dish-desc
+      .home-dish-name-and-price
+        h4.home-dish-name= name
+        span.home-dish-price= price
+      p.home-dish-comp= composition
 
 mixin post(src, name, text, date)
-  .homepage-blog__row
-    .homepage-blog__col
-      .homepage-blog__post.homepage-post
-        .homepage-post__img-container
+  .home-blog-row
+    .home-blog-col
+      .home-post
+        .home-post-img-container
           img(src= src, alt="post pic")
-        .homepage-post__desc
-          span.homepage-post__date= date
-          h4.homepage-post__name= name
+        .home-post-desc
+          span.home-post-date= date
+          h4.home-post-name= name
           p= text
-        a(href="javascript:void(0);").homepage-post__continue Continue reading
+        a(href="javascript:void(0);").home-post-continue Continue reading
           svg
             use(xlink:href="sprite-svg.svg#arrow-round-forward")

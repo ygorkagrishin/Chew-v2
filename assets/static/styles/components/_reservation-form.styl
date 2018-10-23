@@ -1,0 +1,119 @@
+.res-row
+  position relative
+  z-index $z-index1
+
+  display flex
+
+  margin-top 39px
+  padding 0 70px
+
+  background url('img/content/reservation/david-clarke_1200px.png') no-repeat center / cover
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
+    flex-wrap wrap
+    justify-content center
+  @media (orientation portrait) and (max-width 768px)
+    padding 5% 70px 10%
+  @media (orientation portrait) and (max-width 620px),
+  (orientation landscape) and (max-width 960px)
+    padding 5% 10px 10%
+ 
+.res-row::after
+  content ''
+
+  position absolute
+  top 0
+  left 0
+  z-index -1
+
+  width 100%
+  height 100%
+
+  background-color rgba(blackColor,.7)
+
+.res-col 
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
+    flex-basis 70%
+  @media (orientation portrait) and (max-width 620px),
+  (orientation landscape) and (max-width 960px)
+    flex-basis 95%
+
+.res-form-container
+  padding-right 70px
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
+    padding-right 0
+
+.res-form
+  padding-top 64px
+  @media (orientation portrait) and (max-width 768px),
+  (orientation landscape) and (max-width 960px)
+    padding-top 0
+
+.res-form-nb
+  margin-bottom 22px
+  padding-right 50px
+
+  color whiteColor
+  @media (orientation portrait) and (max-width 620px),
+  (orientation landscape) and (max-width 960px)
+    padding-right 5%
+
+.res-form-nb span 
+  color yellowColor
+
+.res-form-rows
+  margin-bottom 30px
+
+.res-form-row
+  display flex
+
+.res-form-row:not(:last-child)
+  margin-bottom 31px
+
+.res-form-col-size-md
+  flex-basis 50%
+
+.res-form-col-size-md:nth-child(odd)
+  padding-right 5px
+
+.res-form-col-size-md:nth-child(even)
+  padding-left 5px
+
+.res-form-col-size-lg
+  flex-basis 100%
+
+.res-form label
+  display block
+  margin-bottom 8px
+
+  font 14px / 1 baseFont2
+  letter-spacing .7px
+  text-transform uppercase
+  color whiteColor
+
+.res-form input
+  width 100%
+  padding 8px 20px 
+
+  font-size 12px
+
+  background-color whiteColor 
+
+.res-loc
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
+    text-align center
+  @media (orientation portrait) and (max-width 768px) ,
+  (orientation landscape) and (max-width 960px)
+    display none
+
+.res-loc img
+  width 500px
+  height 420px
+
+  transform translateY(70px)
+
+.res-form-btn-submit
+  padding 0 36px

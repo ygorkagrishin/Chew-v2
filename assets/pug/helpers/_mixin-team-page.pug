@@ -1,10 +1,10 @@
 //- members of the team in team pages
 mixin memberOfTheTeam(avatar, name, position, social)
-  figure.team__member.team-member
-    .team-member__ava-container
-      img(src= avatar, alt="avatar").team-member__ava
-    figcaption.team-member__cont
-      .team-member__desc
-        h3.team-member__name= name
-        p.team-member__pos= position
+  figure.team-member
+    .team-member-ava-container
+      img(src= avatar, alt="avatar").team-member-ava
+    figcaption.team-member-cont
+      .team-member-desc
+        h3.team-member-name= name
+        p.team-member-pos= position
       +social(social)

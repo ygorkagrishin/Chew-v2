@@ -5,6 +5,8 @@
 @import 'layout/_layout.styl'
 
 @import 'components/_buttons.styl'
+@import 'components/_tabs.styl'
+@import 'components/_reservation-form.styl'
 
 .logo
   subTitleFont = "lora-regular"
@@ -16,19 +18,16 @@
   color whiteColor
   span 
     display block
-    padding-left .3em
+    padding-left 2px
     
     font-size .26em
-    letter-spacing .3em
-  @media (orientation portrait) and (max-width 1024px),
-  (orientation landscape) and (max-width 960px)
-    margin-bottom -16px
+    letter-spacing .29em
+    @media (-webkit-min-device-pixel-ratio 2),
+    (min-resolution 192dpi) 
+      letter-spacing .24em
   @media (orientation portrait) and (max-width 345px),
   (orientation landscape) and (max-width 960px)
-    margin-bottom -8px
     font-size 2.11em
-    // span 
-    //   display none
 
 .hero
   position relative
