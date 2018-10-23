@@ -11,6 +11,7 @@ document.querySelector('.nav > button[data-open]').addEventListener('click', fun
   if (!TARGET) return;
 
   if (TARGET.classList.contains('collapse')) {
+    document.body.classList.add('mobile-menu-active');
     return TARGET.classList.remove('collapse');
   };
 });
@@ -28,6 +29,13 @@ document.querySelector('.nav > button[data-close]').addEventListener('click', fu
   if (!TARGET) return;
 
   if (!TARGET.classList.contains('collapse')) {
+    document.body.classList.remove('mobile-menu-active');
     return TARGET.classList.add('collapse');
+  };
+});
+
+document.querySelector('#navbar').addEventListener('touchmove', function (e) {
+  if (!this.classList.contains('collapse')) {
+    return e.preventDefault();
   };
 });

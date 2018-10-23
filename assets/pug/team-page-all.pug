@@ -37,15 +37,15 @@ block content
                 +memberOfTheTeam(member.avatar, member.name, member.position, member.social)
           //- team members end
 
-          .team-paginator 
-            a(href="javascript:void(0);").team-back
+          .paginator.team-paginator
+            a(href="javascript:void(0);").paginator-arrow-back
               svg
                 use(xlink:href="sprite-svg.svg#arrow-round-back")
             a(href="javascript:void(0);").active.
-              1 
+              1
             a(href="team-page-all-second.html").
               2
-            a(href="team-page-all-second.html").team-forward
+            a(href="team-page-all-second.html").paginator-arrow-forward
               svg
                 use(xlink:href="sprite-svg.svg#arrow-round-forward")
 

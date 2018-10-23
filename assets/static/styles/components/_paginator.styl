@@ -1,0 +1,41 @@
+.paginator
+  width 175px
+  margin 0 auto
+
+  text-align center
+
+.paginator::after
+  content ''
+  display table
+  clear both
+
+.paginator a
+  float left
+  width 40px
+  height 40px
+
+  font 14px / 1 baseFont2
+  text-align center
+  line-height 40px
+
+  border 1px solid greyColor 
+  border-radius 50%
+
+.paginator .active
+  color blackColor
+
+  background-color yellowColor
+  
+  border-color yellowColor
+
+.paginator a:not(:last-child)
+  margin-right 5px
+
+.paginator-arrow-back svg,
+.paginator-arrow-forward svg 
+  width 14px !important
+  fill greyColor
+
+.paginator-arrow-back:hover svg,
+.paginator-arrow-forward:hover svg
+  fill blackColor

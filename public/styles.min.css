@@ -454,6 +454,43 @@ h6 {
     line-height: 24px;
   }
 }
+.paginator {
+  width: 175px;
+  margin: 0 auto;
+  text-align: center;
+}
+.paginator::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.paginator a {
+  float: left;
+  width: 40px;
+  height: 40px;
+  font: 14px/1 "antonio-regular", sans-serif, arial;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #797979;
+  border-radius: 50%;
+}
+.paginator .active {
+  color: #000;
+  background-color: #efba39;
+  border-color: #efba39;
+}
+.paginator a:not(:last-child) {
+  margin-right: 5px;
+}
+.paginator-arrow-back svg,
+.paginator-arrow-forward svg {
+  width: 14px !important;
+  fill: #797979;
+}
+.paginator-arrow-back:hover svg,
+.paginator-arrow-forward:hover svg {
+  fill: #000;
+}
 .res-row {
   position: relative;
   z-index: 1;
@@ -1041,43 +1078,6 @@ footer {
 .team-member-pos {
   font-size: 12px;
 }
-.team-paginator {
-  width: 175px;
-  margin: 0 auto;
-  text-align: center;
-}
-.team-paginator::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.team-paginator a {
-  float: left;
-  width: 40px;
-  height: 40px;
-  font: 14px/1 "antonio-regular", sans-serif, arial;
-  text-align: center;
-  line-height: 40px;
-  border: 1px solid #797979;
-  border-radius: 50%;
-}
-.team-paginator .active {
-  color: #000;
-  background-color: #efba39;
-  border-color: #efba39;
-}
-.team__paginator a:not(:last-child) {
-  margin-right: 5px;
-}
-.team-back svg,
-.team-forward svg {
-  width: 14px !important;
-  fill: #797979;
-}
-.team-back:hover svg,
-.team-forward:hover svg {
-  fill: #000;
-}
 .page__res .hero {
   background: url("img/content/reservation/florencia-viadana_2000px.png") no-repeat center/cover;
 }
@@ -1424,10 +1424,6 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   border: 1px solid rgba(121,121,121,0.3);
-}
-.home-dish:hover {
-  -webkit-box-shadow: -10px 10px 35px rgba(121,121,121,0.5);
-          box-shadow: -10px 10px 35px rgba(121,121,121,0.5);
 }
 .home-dish-img-container {
   position: relative;
@@ -1914,6 +1910,9 @@ header {
   #navbar.collapse {
     display: none;
   }
+}
+.mobile-menu-active {
+  overflow: hidden;
 }
 .footer {
   position: relative;
