@@ -12,6 +12,10 @@
       "src": "assets/static/js",
       "dest": "public/"
     },
+    "php": {
+      "src": "assets/static",
+      "dest": "public/"
+    },
     "fonts": {
       "src": "assets/static/fonts",
       "dest": "public/fonts/"

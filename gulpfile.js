@@ -124,8 +124,10 @@ gulp.task('js:copy', () => {
 gulp.task('js:build', () => {
   return gulp.src([
     paths.scripts.src + '/test.js',
+    paths.scripts.src + '/app.js',
     paths.scripts.src + '/mobile-menu.js',
-    paths.scripts.src + '/scroll-page-down.js'
+    paths.scripts.src + '/scroll-page-down.js',
+    paths.scripts.src + '/forms.js'
   ])
   .pipe(plumber({
     errorHandler: err => {
@@ -146,6 +148,13 @@ gulp.task('js:build', () => {
   .pipe(concat('common.min.js'))
   .pipe(gulpif(isDevelopment, sourcemaps.write('.')))
   .pipe(gulp.dest(paths.scripts.dest));
+});
+
+// Копируем пхп файл
+gulp.task('php:copy', function () {
+  return gulp.src(paths.php.src + '/*.php')
+  .pipe(newer(paths.php.dest))
+  .pipe(gulp.dest(paths.php.dest));
 });
 
 // Копируем шрифты
@@ -208,7 +217,7 @@ gulp.task('serve', () => {
 });
 
 gulp.task('build', 
-  gulp.series('del', 'fonts:copy', 'img:copy', 'svg:sprite', 'css:copy', 'js:copy', 'html:build', 'css:build', 'js:build'));
+  gulp.series('del', 'fonts:copy', 'img:copy', 'svg:sprite', 'css:copy', 'js:copy', 'php:copy', 'html:build', 'css:build', 'js:build'));
 
 // Собираем проект
 gulp.task('default', gulp.series('build', gulp.parallel('watch', 'serve')));

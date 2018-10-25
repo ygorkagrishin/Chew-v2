@@ -45,6 +45,7 @@
     "gulp-uglify": "^3.0.1"
   },
   "dependencies": {
+    "gsap": "^2.0.2",
     "jquery": "^3.3.1",
     "normalize.css": "^8.0.0",
     "npm": "^6.3.0"

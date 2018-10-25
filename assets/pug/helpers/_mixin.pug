@@ -14,13 +14,13 @@ mixin hero(subtitle, title, scroll)
     include ../modules/_header
 
     .bug-fix-ie
-      h2.hero__title 
+      h2.hero__title.js-animation-fade-out
         span= subtitle 
         <br> 
         = title
 
     if (scroll)
-      .hero__inf
+      .hero__inf.js-animation-fade-out.js-animation-translate-y-up
         p.hero__tel quick reservation: <span>+212 342 67382</span>
         +social(social)
       button(type='button').btn-scroll#js-scroll-down
@@ -46,7 +46,7 @@ mixin reservationForm(formId, action)
   .res.res-row
     //- Form
     .res-col.res-form-container
-      form(action= action, id= formId).res-form
+      form(action='action.php', method='get', id= formId).res-form
         p.res-form-nb.
           Welcome to Chew Restaurant! 
           Please use the form below to book a table online. This is powered by <span>OpenTable.</span>
