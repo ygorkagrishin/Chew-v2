@@ -14,13 +14,13 @@ mixin hero(subtitle, title, scroll)
     include ../modules/_header
 
     .bug-fix-ie
-      h2.hero__title.js-animation-fade-out
+      h2.hero__title
         span= subtitle 
         <br> 
         = title
 
     if (scroll)
-      .hero__inf.js-animation-fade-out.js-animation-translate-y-up
+      .hero__inf
         p.hero__tel quick reservation: <span>+212 342 67382</span>
         +social(social)
       button(type='button').btn-scroll#js-scroll-down
