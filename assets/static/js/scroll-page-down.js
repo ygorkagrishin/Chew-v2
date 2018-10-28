@@ -11,7 +11,7 @@ return trigger !== (undefined || null) ? trigger.addEventListener('click', funct
   const scrolled = viewPort.pageYOffset;  
   const scrollTo = viewPortHeight - scrolled;
     
-  const wrapper = document.body.querySelector('.js-page-wrapper');
+  const wrapper = document.body.querySelector('#js-scroll-content');
     
   const duration = 700;
     

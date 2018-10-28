@@ -10,24 +10,25 @@ mixin social(array)
 
 //- Page hero mixin
 mixin hero(subtitle, title, scroll)
-  .hero
-    include ../modules/_header
+  section
+    .hero
+      include ../modules/_header
 
-    .bug-fix-ie
-      h2.hero__title
-        span= subtitle 
-        <br> 
-        = title
+      .bug-fix-ie
+        h2.hero__title
+          span= subtitle 
+          <br> 
+          = title
 
-    if (scroll)
-      .hero__inf
-        p.hero__tel quick reservation: <span>+212 342 67382</span>
-        +social(social)
-      button(type='button').btn-scroll#js-scroll-down
-    else
-      .hero__inf.hero__inf_align_center
-        p.hero__tel quick reservation: <span>+212 342 67382</span>
-        +social(social)
+      if (scroll)
+        .hero__inf
+          p.hero__tel quick reservation: <span>+212 342 67382</span>
+          +social(social)
+        button(type='button').btn-scroll#js-scroll-down
+      else
+        .hero__inf.hero__inf_align_center
+          p.hero__tel quick reservation: <span>+212 342 67382</span>
+          +social(social)
 
     //- .page__inf.page__inf_align_center
     //-   p.page__phone quick reservation: <span>+212 342 67382</span>

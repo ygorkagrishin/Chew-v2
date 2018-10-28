@@ -670,7 +670,7 @@ h6 {
 }
 .hero::after,
 .our-menu-hero::after,
-.about-food-section::after,
+.about-food-sect::after,
 .footer::after {
   content: '';
   position: absolute;
@@ -1152,14 +1152,14 @@ footer {
   vertical-align: 8px;
   color: #000;
 }
-.cont-form {
+.cont-connect-form {
   position: relative;
   z-index: 1;
   -ms-flex-preferred-size: 770px;
       flex-basis: 770px;
 }
 @media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
-  .cont-form {
+  .cont-connect-form {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1204,21 +1204,21 @@ footer {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
-.cont-form label {
+.cont-form-col label {
   display: block;
   margin-bottom: 12px;
   font: 14px/1 "antonio-regular", sans-serif, arial;
   text-transform: uppercase;
   color: #000;
 }
-.cont-form input,
+.cont-form-col input,
 textarea {
   width: 100%;
   padding: 6px 18px;
   font-size: 12px;
   border: 1px solid #797979;
 }
-.cont-form textarea {
+.cont-form-col textarea {
   padding-bottom: 0;
 }
 .cont-form-submit {
@@ -1760,20 +1760,20 @@ textarea {
     margin-bottom: 1%;
   }
 }
-.about-food-section {
+.about-food-sect {
   position: relative;
   z-index: 1;
   background: url("img/content/about/toa-heftiba-296458-unsplash_2000px.png") no-repeat center/cover;
 }
-.about-food-section::after {
+.about-food-sect::after {
   background-color: rgba(0,0,0,0.7);
 }
-.about-food-section {
+.about-food-sect {
   padding: 140px 0;
   text-align: center;
 }
 @media (orientation: portrait) and (max-width: 620px), (orientation: landscape) and (max-width: 960px) {
-  .about-food-section {
+  .about-food-sect {
     padding: 15% 0;
   }
 }

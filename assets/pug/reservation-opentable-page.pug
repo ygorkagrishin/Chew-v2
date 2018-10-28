@@ -8,13 +8,12 @@ block content
     +hero('make', 'reservation')
 
     main
-      .page__main
+      .page__main.res-table
         section
-          h3.visually-hidden Reservation
-          
-          .container
-            +contentHeader('Powered by open table', 'Booking a table')
+          .res-table-sect
+            .container
+              +contentHeader('Powered by open table', 'Booking a table')
 
-            +reservationForm('reserv-reservation-table-form')
+              +reservationForm('reserv-reservation-table-form')
     
     include modules/_footer
