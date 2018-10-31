@@ -123,13 +123,11 @@ gulp.task('js:copy', () => {
 // Собираем скрипты
 gulp.task('js:build', () => {
   return gulp.src([
-    paths.scripts.src + '/test.js',
-    paths.scripts.src + '/tweens.js',
-    paths.scripts.src + '/timelines.js',
     paths.scripts.src + '/app.js',
     paths.scripts.src + '/mobile-menu.js',
     paths.scripts.src + '/scroll-page-down.js',
-    paths.scripts.src + '/forms.js'
+    paths.scripts.src + '/forms.js',
+    paths.scripts.src + '/test.js'
   ])
   .pipe(plumber({
     errorHandler: err => {

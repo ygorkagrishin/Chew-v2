@@ -1,4 +1,4 @@
-(function () {
+(() => {
 
 const trigger = document.body.querySelector('#js-scroll-down');
 

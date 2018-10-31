@@ -30,10 +30,6 @@ mixin hero(subtitle, title, scroll)
           p.hero__tel quick reservation: <span>+212 342 67382</span>
           +social(social)
 
-    //- .page__inf.page__inf_align_center
-    //-   p.page__phone quick reservation: <span>+212 342 67382</span>
-    //-   +social(social)
-
 mixin contentHeader(subtitle, title, text)
   .heading
     span.heading__subtitle= subtitle
@@ -47,7 +43,7 @@ mixin reservationForm(formId, action)
   .res.res-row
     //- Form
     .res-col.res-form-container
-      form(action='action.php', method='get', id= formId).res-form
+      form(action='action.php', method='post', id= formId).res-form
         p.res-form-nb.
           Welcome to Chew Restaurant! 
           Please use the form below to book a table online. This is powered by <span>OpenTable.</span>
@@ -62,8 +58,8 @@ mixin reservationForm(formId, action)
               input(type="text", name="time", placeholder="4:30PM")#reserv-form-time
           .res-form-row
             .res-form-col.res-form-col-size-lg
-              label(for="reserv-form-guest") I want to book a table for
-              input(type="text", name="guest", placeholder="-- Chose the number of guest --")#reserv-form-guest
+              label(for="reserv-form-guests") I want to book a table for
+              input(type="text", name="guests", placeholder="-- Chose the number of guest --")#reserv-form-guests
 
         .res-form-btn-container
           button(type="submit").res-form-btn-submit.btn.btn_color_orange Book now

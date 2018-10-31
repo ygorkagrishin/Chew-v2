@@ -1,36 +1,36 @@
 document.querySelector('.nav > button[data-open]').addEventListener('click', function (e) {
   e.preventDefault();
 
-  const TRIGGER = this;
+  const trigger = this;
 
-  const DATA_VALUE = TRIGGER.hasAttribute('data-target') ?
-  TRIGGER.getAttribute('data-target') : false;
+  const dataValue = trigger.hasAttribute('data-target') ?
+  trigger.getAttribute('data-target') : false;
 
-  const TARGET = document.querySelector(DATA_VALUE);
+  const target = document.querySelector(dataValue);
 
-  if (!TARGET) return;
+  if (!target) return;
 
-  if (TARGET.classList.contains('collapse')) {
+  if (target.classList.contains('collapse')) {
     document.body.classList.add('mobile-menu-active');
-    return TARGET.classList.remove('collapse');
+    return target.classList.remove('collapse');
   };
 });
 
 document.querySelector('.nav > button[data-close]').addEventListener('click', function (e) {
   e.preventDefault();
 
-  const TRIGGER = this;
+  const trigger = this;
 
-  const DATA_VALUE = TRIGGER.hasAttribute('data-target') ? 
-  TRIGGER.getAttribute('data-target') : false;
+  const dataValue = trigger.hasAttribute('data-target') ? 
+  trigger.getAttribute('data-target') : false;
 
-  const TARGET = document.querySelector(DATA_VALUE);
+  const target = document.querySelector(dataValue);
 
-  if (!TARGET) return;
+  if (!target) return;
 
-  if (!TARGET.classList.contains('collapse')) {
+  if (!target.classList.contains('collapse')) {
     document.body.classList.remove('mobile-menu-active');
-    return TARGET.classList.add('collapse');
+    return target.classList.add('collapse');
   };
 });
 
