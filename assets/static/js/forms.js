@@ -1,5 +1,9 @@
-// Ожидается одна форма на странице
-document.querySelector('form').addEventListener('submit', function (e) {
+(() => {
+
+// Ожидатся одна форма на странице.
+const form = document.querySelector('form');
+
+return form ? form.addEventListener('submit', function (e) {
   e.preventDefault();
 
   const form = this;
@@ -22,4 +26,6 @@ document.querySelector('form').addEventListener('submit', function (e) {
     if (xhr.readyState != 4) 
       return;
   }
-});
+}) : false;
+
+})();

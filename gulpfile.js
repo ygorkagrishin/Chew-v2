@@ -85,9 +85,9 @@ gulp.task('html:build', () => {
 });
 
 // Копируем файлы css
-gulp.task('css:copy', () => {
+gulp.task('css:libs', () => {
   return gulp.src(files.css)
-  .pipe(gulp.dest(paths.baseDir + '/'));
+  .pipe(gulp.dest(paths.baseDir + '/libs/css/'));
 });
 
 // Собираем стили
@@ -115,9 +115,9 @@ gulp.task('css:build', () => {
 });
 
 // Копируем файлы скриптов
-gulp.task('js:copy', () => {
+gulp.task('js:libs', () => {
   return gulp.src(files.js)
-  .pipe(gulp.dest(paths.baseDir + '/'));
+  .pipe(gulp.dest(paths.baseDir + '/libs/js/'));
 });
 
 // Собираем скрипты
@@ -175,7 +175,7 @@ gulp.task('img:copy', () => {
 });
 
 // Собирааем svg
-gulp.task('svg:sprite', () => {
+gulp.task('svg:build', () => {
   return gulp.src(paths.svg.src + '/*.svg')
   .pipe(newer(paths.svg.dest))
   .pipe(svgmin(function (file) {
@@ -206,7 +206,7 @@ gulp.task('watch', () => {
   gulp.watch(paths.scripts.src + '/*.js', gulp.series('js:build'));
   gulp.watch(paths.fonts.src + '/**/*.{ttf,woff,woff2,eot,svg}', gulp.series('fonts:copy'));
   gulp.watch(paths.images.src + '/**/**/*.{png,jpg}', gulp.series('img:copy'));
-  gulp.watch(paths.svg.src + '/**/*.svg', gulp.series('svg:sprite'));
+  gulp.watch(paths.svg.src + '/**/*.svg', gulp.series('svg:build'));
 });
 
 gulp.task('serve', () => {
@@ -217,7 +217,7 @@ gulp.task('serve', () => {
 });
 
 gulp.task('build', 
-  gulp.series('del', 'fonts:copy', 'img:copy', 'svg:sprite', 'css:copy', 'js:copy', 'php:copy', 'html:build', 'css:build', 'js:build'));
+  gulp.series('del', 'fonts:copy', 'img:copy', 'svg:build', 'css:libs', 'js:libs', 'php:copy', 'html:build', 'css:build', 'js:build'));
 
 // Собираем проект
 gulp.task('default', gulp.series('build', gulp.parallel('watch', 'serve')));
