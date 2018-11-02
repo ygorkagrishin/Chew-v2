@@ -126,7 +126,7 @@ gulp.task('js:build', () => {
     paths.scripts.src + '/app.js',
     paths.scripts.src + '/mobile-menu.js',
     paths.scripts.src + '/scroll-page-down.js',
-    paths.scripts.src + '/forms.js',
+    paths.scripts.src + '/mail.js',
     paths.scripts.src + '/test.js'
   ])
   .pipe(plumber({
