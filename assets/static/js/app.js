@@ -4,7 +4,7 @@ const tweenFadeOut = (
   duration = 1.5,
   fromVars = {opacity: 0},
   toVars = {opacity: 1},
-) => {return TweenMax.fromTo(`${root} ${sel}`, 2, {opacity: 0}, {opacity: 1}) }
+) => { return TweenMax.fromTo(`${root} ${sel}`, 2, {opacity: 0}, {opacity: 1}) }
 
 const tweenGrid = (
   root,

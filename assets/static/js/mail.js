@@ -32,6 +32,8 @@ form.addEventListener('submit', function (e) {
   xhr.open(options.method, options.url, options.asyn);
 
   xhr.onreadystatechange = () => {
+    if (xhr.readyState != 4) return;
+
     if (xhr.status !== 200) {
       console.log('Произошла ошибка: ' + xhr.statusText);
     } else {
