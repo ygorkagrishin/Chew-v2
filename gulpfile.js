@@ -207,6 +207,7 @@ gulp.task('watch', () => {
   gulp.watch(paths.fonts.src + '/**/*.{ttf,woff,woff2,eot,svg}', gulp.series('fonts:copy'));
   gulp.watch(paths.images.src + '/**/**/*.{png,jpg}', gulp.series('img:copy'));
   gulp.watch(paths.svg.src + '/**/*.svg', gulp.series('svg:build'));
+  gulp.watch(paths.php.src + '/*.php', gulp.series('php:copy'));
 });
 
 gulp.task('serve', () => {

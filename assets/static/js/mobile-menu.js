@@ -1,4 +1,4 @@
-document.querySelector('.nav > button[data-open').addEventListener('click', function (e) {
+document.querySelector('.nav > button[data-open]').addEventListener('click', function (e) {
   e.preventDefault();
 
   const trigger = this;
@@ -12,7 +12,7 @@ document.querySelector('.nav > button[data-open').addEventListener('click', func
 
   let id = target.getAttribute('id'); // Получаем строчное значение id.
 
-  new TimelineMax()
+  return new TimelineMax()
     .call(() => {
         if (target.classList.contains('collapse')) {
           document.body.classList.add('mobile-menu-active');
@@ -21,7 +21,8 @@ document.querySelector('.nav > button[data-open').addEventListener('click', func
       }
     )  
     .fromTo(`#${id}`, .7, {opacity: 0}, {opacity: 1})
-    .staggerFromTo(`#${id} a`, .5, {opacity: 0}, {opacity: 1}, .3);
+    .staggerFromTo(`#${id} a`, .5, {opacity: 0}, {opacity: 1}, .3)
+    .fromTo(`#${id} + button[data-close]`, .7, {opacity: 0}, {opacity: 1})
 });
 
 document.querySelector('.nav > button[data-close]').addEventListener('click', function (e) {
@@ -38,7 +39,8 @@ document.querySelector('.nav > button[data-close]').addEventListener('click', fu
 
   let id = target.getAttribute('id'); // Получаем строчное значение id.
 
-  new TimelineMax()
+  return new TimelineMax()
+    .fromTo(`#${id} + button[data-close]`, .7, {opacity: 1}, {opacity: 0})
     .staggerFromTo(`#${id} a`, .5, {opacity: 1}, {opacity: 0}, .3)
     .fromTo(`#${id}`, .7, {opacity: 1}, {opacity: 0})
     .call(() => {

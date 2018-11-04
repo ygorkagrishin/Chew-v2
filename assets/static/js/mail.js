@@ -37,7 +37,7 @@ form.addEventListener('submit', function (e) {
     if (xhr.status !== 200) {
       console.log('Произошла ошибка: ' + xhr.statusText);
     } else {
-      console.log('Заказ оформлен: ' + xhr.responseText);
+      console.log('Форма отправлена: ' + xhr.responseText);
       currentForm.reset();
     }
   }
