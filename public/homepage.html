@@ -7,6 +7,7 @@
     <title>chew homepage</title>
     <link rel="stylesheet" href="libs/css/normalize.css">
     <link rel="stylesheet" href="styles.min.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
     <script src="libs/js/jquery.min.js"></script>
     <script src="libs/js/TweenMax.min.js"></script>
     <script src="libs/js/TimelineMax.min.js"></script>
@@ -15,6 +16,12 @@
     <script src="libs/js/debug.addIndicators.min.js"></script>
   </head>
   <body class="page">
+    <script>
+      window.addEventListener('load', function () {
+        document.querySelector('#preloader').style.display = 'none';
+      });
+    </script>
+    <div id="preloader"><img src="img/general/preloader.gif"></div>
     <div id="js-scroll-content">
       <div class="page__home">
         <section>

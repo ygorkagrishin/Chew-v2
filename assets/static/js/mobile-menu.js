@@ -21,7 +21,7 @@ document.querySelector('.nav > button[data-open]').addEventListener('click', fun
       }
     )  
     .fromTo(`#${id}`, .7, {opacity: 0}, {opacity: 1})
-    .staggerFromTo(`#${id} a`, .5, {opacity: 0}, {opacity: 1}, .3)
+    .staggerFromTo(`#${id} a`, .3, {opacity: 0}, {opacity: 1}, .3)
     .fromTo(`#${id} + button[data-close]`, .7, {opacity: 0}, {opacity: 1})
 });
 
@@ -41,7 +41,7 @@ document.querySelector('.nav > button[data-close]').addEventListener('click', fu
 
   return new TimelineMax()
     .fromTo(`#${id} + button[data-close]`, .7, {opacity: 1}, {opacity: 0})
-    .staggerFromTo(`#${id} a`, .5, {opacity: 1}, {opacity: 0}, .3)
+    .staggerFromTo(`#${id} a`, .3, {opacity: 1}, {opacity: 0}, .3)
     .fromTo(`#${id}`, .7, {opacity: 1}, {opacity: 0})
     .call(() => {
         if (!target.classList.contains('collapse')) {

@@ -30,6 +30,7 @@ html(lang="ru")
     block styles
 
     link(rel="stylesheet", href="styles.min.css")
+    link(rel="shortcut icon", type="image/png" href="favicon.ico")
     
     script(src="libs/js/jquery.min.js")
 
@@ -42,6 +43,13 @@ html(lang="ru")
     //- scroll magic and gsap plugins end
 
   body.page
+    script.
+      window.addEventListener('load', function () {
+        document.querySelector('#preloader').style.display = 'none';
+      });
+    #preloader
+      img(src="img/general/preloader.gif")
+
     #js-scroll-content
       block content
 
