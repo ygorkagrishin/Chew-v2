@@ -5,7 +5,6 @@ block title
 
 block content
   .page__team
-  
     +hero('meet', 'our team')
 
     main
@@ -28,25 +27,25 @@ block content
 
           //- team members
           .team-row
-            if (membersPage.length > 0 && Array.isArray(membersPage))
-              each member in membersPage
-                .team-col 
+            if (membersPage2.length > 0 && Array.isArray(membersPage))
+              each member in membersPage2
+                .team-col
                   +memberOfTheTeam(member.avatar, member.name, member.position, member.social)
             else
-              - var member = membersPage
-              .team-col  
+              - var member = membersPage2
+              .team-col
                 +memberOfTheTeam(member.avatar, member.name, member.position, member.social)
           //- team members end
 
           .paginator.team-paginator
-            a(href="javascript:void(0);").paginator-arrow-back
+            a(href="team-page.html").paginator-arrow-back
               svg
                 use(xlink:href="sprite-svg.svg#arrow-round-back")
-            a(href="javascript:void(0);").active.
+            a(href="team-page.html").
               1
-            a(href="team-page-all-second.html").
+            a(href="javascript:void(0);").active.
               2
-            a(href="team-page-all-second.html").paginator-arrow-forward
+            a(href="javascript:void(0);").paginator-arrow-forward
               svg
                 use(xlink:href="sprite-svg.svg#arrow-round-forward")
 

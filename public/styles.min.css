@@ -630,7 +630,7 @@ h6 {
   padding: 0 36px;
 }
 #preloader {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 100000111111110;
@@ -648,8 +648,8 @@ h6 {
   background: #000;
 }
 #preloader img {
-  width: 48px;
-  height: 48px;
+  width: 3em;
+  height: 3em;
 }
 .logo {
   display: inline-block;
@@ -1001,7 +1001,7 @@ h6 {
   background: url("img/content/our-menu-list/andersen-jensen-637701-unsplash_2000px.png") no-repeat bottom/cover;
 }
 .page__team .hero {
-  background: #797979 url("img/content/team/joshua-rodriguez-422768-unsplash_1920px.png") no-repeat top center/cover;
+  background: url("img/content/team/joshua-rodriguez-422768-unsplash_1920px.png") no-repeat top center/cover;
 }
 footer {
   background: #797979 url("img/content/team/joshua-rodriguez-422768-unsplash_1920px.png") no-repeat bottom center/cover;
@@ -1785,7 +1785,9 @@ textarea {
 .about-food-sect {
   position: relative;
   z-index: 1;
-  background: url("img/content/about/toa-heftiba-296458-unsplash_2000px.png") no-repeat center/cover;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
 }
 .about-food-sect::after {
   background-color: rgba(0,0,0,0.7);

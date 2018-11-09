@@ -1,8 +1,8 @@
 //- members of the team in team pages
-mixin memberOfTheTeam(avatar, name, position, social)
-  figure.team-member
+mixin memberOfTheTeam(src, name, position, social)
+  .team-member
     .team-member-ava-container
-      img(src= avatar, alt="avatar").team-member-ava
+      img(src= src, alt="avatar").team-member-ava
     figcaption.team-member-cont
       .team-member-desc
         h3.team-member-name= name

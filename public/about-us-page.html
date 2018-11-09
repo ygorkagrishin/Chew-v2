@@ -7,7 +7,6 @@
     <title>chew about us</title>
     <link rel="stylesheet" href="libs/css/normalize.css">
     <link rel="stylesheet" href="styles.min.css">
-    <link rel="shortcut icon" type="image/png" href="favicon.ico">
     <script src="libs/js/jquery.min.js"></script>
     <script src="libs/js/TweenMax.min.js"></script>
     <script src="libs/js/TimelineMax.min.js"></script>
@@ -15,11 +14,13 @@
     <script src="libs/js/animation.gsap.min.js"></script>
     <script src="libs/js/debug.addIndicators.min.js"></script>
   </head>
-  <body class="page">
+  <body class="page" style="overflow: hidden">
     <script>
       window.addEventListener('load', function () {
+        document.body.removeAttribute('style');
         document.querySelector('#preloader').style.display = 'none';
       });
+      
     </script>
     <div id="preloader"><img src="img/general/preloader.gif"></div>
     <div id="js-scroll-content">
@@ -39,7 +40,7 @@
                     <li><a href="about-us-page.html">About</a></li>
                     <li><a href="our-menu-page.html">Menus </a></li>
                     <li><a href="reservation-opentable-page.html">Reservation</a></li>
-                    <li><a href="team-page-all.html">Team </a></li>
+                    <li><a href="team-page.html">Team </a></li>
                     <li><a href="contact-page.html">Contact</a></li>
                   </ul>
                 </div>
@@ -85,19 +86,19 @@
                     <p>Vestibulum quis posuere ligula.   Fusce in odio ac diam finibus tempus.   Suspendisse potenti.   Etiam accumsan purus magna, et viverra neque volutpat fermentum.   Vivamus consequat, felis at aliquam elementum,   massa sem dignissim elit sit amet cursus massa tortor eget ante.</p>
                   </div>
                   <div class="about-us-row">
-                    <div class="about-us-col about-us-col-size-md"><img src="img/content/team/jakob-owens-224343-unsplash_500px.png" alt="about us pic"></div>
-                    <div class="about-us-col about-us-col-size-lg"><img src="img/content/team/ryan-holloway-351140-unsplash_500px.png" alt="about us pic"></div>
+                    <div class="about-us-col about-us-col-size-md"><img data-observer data-src="img/content/team/jakob-owens-224343-unsplash_500px.png" alt="about us pic"></div>
+                    <div class="about-us-col about-us-col-size-lg"><img data-observer data-src="img/content/team/ryan-holloway-351140-unsplash_500px.png" alt="about us pic"></div>
                     <div class="about-us-col about-us-col-size-md about-us-grid">
-                      <div class="about-us-cell"><img src="img/content/team/nathan-dumlao-486999-unsplash_500px.png" alt="about us pic"></div>
-                      <div class="about-us-cell"><img src="img/content/team/sage-kirk-485982-unsplash_500px.png" alt="about us pic"></div>
+                      <div class="about-us-cell"><img data-observer data-src="img/content/team/nathan-dumlao-486999-unsplash_500px.png" alt="about us pic"></div>
+                      <div class="about-us-cell"><img data-observer data-src="img/content/team/sage-kirk-485982-unsplash_500px.png" alt="about us pic"></div>
                     </div>
-                    <div class="about-us-col about-us-col-size-md about-us-col-tablet-lg"><img src="img/content/team/rawpixel-660724-unsplash_500px.png" alt="about us pic"></div>
+                    <div class="about-us-col about-us-col-size-md about-us-col-tablet-lg"><img data-observer data-src="img/content/team/rawpixel-660724-unsplash_500px.png" alt="about us pic"></div>
                   </div>
                 </div>
               </div>
             </section>
             <section>
-              <div class="about-food-sect">
+              <div class="about-food-sect" data-observer data-src="img/content/about/toa-heftiba-296458-unsplash_2000px.png">
                 <div class="container">
                   <div class="about-food-hero">
                     <h3 class="about-food-title"><span>know</span>your food</h3>

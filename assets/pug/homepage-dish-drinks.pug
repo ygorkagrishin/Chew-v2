@@ -35,7 +35,7 @@ block content
                   a(href="about-us-page.html").btn.btn_color_orange Learn More
                 .home-about-col.home-about-pic-container
                   .home-about-pic-wrap
-                    img(data-observer, data-src="img/content/homepage/cayla1-150730-unsplash_700px.png", alt="dish")
+                    img(src="img/content/homepage/cayla1-150730-unsplash_700px.png", alt="dish")
         //- Section homepage about end
         
         //- Section homepage menu
@@ -45,8 +45,8 @@ block content
               +contentHeader('Featured menus', 'discover our popular dishes')
 
               ul.tabs.home-menu-tabs
-                li.tabs__tab.tabs__tab_state_active
-                  a(href="javascript:void(0);") All
+                li.tabs__tab
+                  a(href="homepage.html") All
                 
                 li.tabs__tab
                   a(href="homepage-dish-breakfast.html") Breakfast 
@@ -57,8 +57,8 @@ block content
                 li.tabs__tab
                   a(href="homepage-dish-dinner.html") Dinner
 
-                li.tabs__tab
-                  a(href="homepage-dish-drinks.html") Drinks
+                li.tabs__tab.tabs__tab_state_active
+                  a(href="javascript:void(0);") Drinks
 
               .home-menu-row
                 each dish in menu
@@ -93,4 +93,4 @@ block content
                   use(xlink:href="sprite-svg.svg#arrow-round-forward")
         //- Section homepage blog end
 
-    include modules/_footer          
+    include modules/_footer

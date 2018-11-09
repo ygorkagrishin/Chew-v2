@@ -32,11 +32,11 @@ const tweenTabs = (
 
 const tweenPaginator = (
   root = '',
-  duration = 2,
+  duration = 1,
   fromVars = {opacity: 0, y: 35},
   toVars = {opacity: 1, y: 0},
   stagger = .3
-) => { return TweenMax.staggerFromTo(`${root}.paginator > a`, duration, fromVars, toVars, stagger) }
+) => { return TweenMax.fromTo(`${root}.paginator`, duration, fromVars, toVars) }
 
 const timelineHero = (root='.hero') => {
   return new TimelineMax()

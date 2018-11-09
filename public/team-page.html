@@ -7,7 +7,6 @@
     <title>chew team</title>
     <link rel="stylesheet" href="libs/css/normalize.css">
     <link rel="stylesheet" href="styles.min.css">
-    <link rel="shortcut icon" type="image/png" href="favicon.ico">
     <script src="libs/js/jquery.min.js"></script>
     <script src="libs/js/TweenMax.min.js"></script>
     <script src="libs/js/TimelineMax.min.js"></script>
@@ -15,11 +14,13 @@
     <script src="libs/js/animation.gsap.min.js"></script>
     <script src="libs/js/debug.addIndicators.min.js"></script>
   </head>
-  <body class="page">
+  <body class="page" style="overflow: hidden">
     <script>
       window.addEventListener('load', function () {
+        document.body.removeAttribute('style');
         document.querySelector('#preloader').style.display = 'none';
       });
+      
     </script>
     <div id="preloader"><img src="img/general/preloader.gif"></div>
     <div id="js-scroll-content">
@@ -39,7 +40,7 @@
                     <li><a href="about-us-page.html">About</a></li>
                     <li><a href="our-menu-page.html">Menus </a></li>
                     <li><a href="reservation-opentable-page.html">Reservation</a></li>
-                    <li><a href="team-page-all.html">Team </a></li>
+                    <li><a href="team-page.html">Team </a></li>
                     <li><a href="contact-page.html">Contact</a></li>
                   </ul>
                 </div>
@@ -88,12 +89,93 @@
                 <li class="tabs__tab"><a href="team-page-manager.html">Manager</a></li>
               </ul>
               <div class="team-row">
-                <div class="team-col">
-                  <figure class="team-member">
-                    <div class="team-member-ava-container"><img class="team-member-ava" src="img/content/team/sage-kirk-485982-unsplash_500px.png" alt="avatar"/></div>
+                <div class="team-col"> 
+                  <div class="team-member">
+                    <div class="team-member-ava-container"><img class="team-member-ava" src="img/content/team/ryan-holloway-351140-unsplash_500px.png" alt="avatar"/></div>
                     <figcaption class="team-member-cont">
                       <div class="team-member-desc">
-                        <h3 class="team-member-name">Gaby Harris</h3>
+                        <h3 class="team-member-name">Russell Stephens</h3>
+                        <p class="team-member-pos">General manager</p>
+                      </div>
+                      <div class="social">
+                        <ul>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#fb"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#tw"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#inst"></use>
+                              </svg></a></li>
+                        </ul>
+                      </div>
+                    </figcaption>
+                  </div>
+                </div>
+                <div class="team-col"> 
+                  <div class="team-member">
+                    <div class="team-member-ava-container"><img class="team-member-ava" src="img/content/team/jeslyn-chanchaleune-349125-unsplash_500px.png" alt="avatar"/></div>
+                    <figcaption class="team-member-cont">
+                      <div class="team-member-desc">
+                        <h3 class="team-member-name">Robert Jones</h3>
+                        <p class="team-member-pos">Chef</p>
+                      </div>
+                      <div class="social">
+                        <ul>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#fb"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#tw"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#inst"></use>
+                              </svg></a></li>
+                        </ul>
+                      </div>
+                    </figcaption>
+                  </div>
+                </div>
+                <div class="team-col"> 
+                  <div class="team-member">
+                    <div class="team-member-ava-container"><img class="team-member-ava" src="img/content/team/cbx-263152-unsplash_500px.png" alt="avatar"/></div>
+                    <figcaption class="team-member-cont">
+                      <div class="team-member-desc">
+                        <h3 class="team-member-name">Willie Crawford</h3>
+                        <p class="team-member-pos">Waiter</p>
+                      </div>
+                      <div class="social">
+                        <ul>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#fb"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#tw"></use>
+                              </svg></a></li>
+                          <li><a href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="sprite-svg.svg#inst"></use>
+                              </svg></a></li>
+                        </ul>
+                      </div>
+                    </figcaption>
+                  </div>
+                </div>
+                <div class="team-col"> 
+                  <div class="team-member">
+                    <div class="team-member-ava-container"><img class="team-member-ava" src="img/content/team/rawpixel-660724-unsplash_500px.png" alt="avatar"/></div>
+                    <figcaption class="team-member-cont">
+                      <div class="team-member-desc">
+                        <h3 class="team-member-name">Samantha Rogers</h3>
                         <p class="team-member-pos">Manager</p>
                       </div>
                       <div class="social">
@@ -113,15 +195,15 @@
                         </ul>
                       </div>
                     </figcaption>
-                  </figure>
+                  </div>
                 </div>
-                <div class="team-col">
-                  <figure class="team-member">
-                    <div class="team-member-ava-container"><img class="team-member-ava" src="img/content/team/philip-martin-596374-unsplash_500px.png" alt="avatar"/></div>
+                <div class="team-col"> 
+                  <div class="team-member">
+                    <div class="team-member-ava-container"><img class="team-member-ava" src="img/content/team/matheus-ferrero-233592-unsplash_500px.png" alt="avatar"/></div>
                     <figcaption class="team-member-cont">
                       <div class="team-member-desc">
-                        <h3 class="team-member-name">Jack Smith</h3>
-                        <p class="team-member-pos">Cook</p>
+                        <h3 class="team-member-name">Rose Lopez</h3>
+                        <p class="team-member-pos">Waiter</p>
                       </div>
                       <div class="social">
                         <ul>
@@ -140,15 +222,15 @@
                         </ul>
                       </div>
                     </figcaption>
-                  </figure>
+                  </div>
                 </div>
-                <div class="team-col">
-                  <figure class="team-member">
-                    <div class="team-member-ava-container"><img class="team-member-ava" src="img/content/team/jakob-owens-224343-unsplash_500px.png" alt="avatar"/></div>
+                <div class="team-col"> 
+                  <div class="team-member">
+                    <div class="team-member-ava-container"><img class="team-member-ava" src="img/content/team/nathan-dumlao-486999-unsplash_500px.png" alt="avatar"/></div>
                     <figcaption class="team-member-cont">
                       <div class="team-member-desc">
-                        <h3 class="team-member-name">Oliver Brown</h3>
-                        <p class="team-member-pos">Cook</p>
+                        <h3 class="team-member-name">Sam Hanson</h3>
+                        <p class="team-member-pos">Waiter</p>
                       </div>
                       <div class="social">
                         <ul>
@@ -167,40 +249,13 @@
                         </ul>
                       </div>
                     </figcaption>
-                  </figure>
-                </div>
-                <div class="team-col">
-                  <figure class="team-member">
-                    <div class="team-member-ava-container"><img class="team-member-ava" src="img/content/team/ali-yahya-581800-unsplash_500px.png" alt="avatar"/></div>
-                    <figcaption class="team-member-cont">
-                      <div class="team-member-desc">
-                        <h3 class="team-member-name">Mike Miller</h3>
-                        <p class="team-member-pos">Cook</p>
-                      </div>
-                      <div class="social">
-                        <ul>
-                          <li><a href="javascript:void(0);">
-                              <svg>
-                                <use xlink:href="sprite-svg.svg#fb"></use>
-                              </svg></a></li>
-                          <li><a href="javascript:void(0);">
-                              <svg>
-                                <use xlink:href="sprite-svg.svg#tw"></use>
-                              </svg></a></li>
-                          <li><a href="javascript:void(0);">
-                              <svg>
-                                <use xlink:href="sprite-svg.svg#inst"></use>
-                              </svg></a></li>
-                        </ul>
-                      </div>
-                    </figcaption>
-                  </figure>
+                  </div>
                 </div>
               </div>
-              <div class="team-paginator"> <a class="team-back" href="team-page-all.html">
+              <div class="paginator team-paginator"><a class="paginator-arrow-back" href="javascript:void(0);">
                   <svg>
                     <use xlink:href="sprite-svg.svg#arrow-round-back"></use>
-                  </svg></a><a href="team-page-all.html">1 </a><a class="active" href="javascript:void(0);">2</a><a class="team-forward" href="javascript:void(0);">
+                  </svg></a><a class="active" href="javascript:void(0);">1</a><a href="team-page-second.html">2</a><a class="paginator-arrow-forward" href="team-page-second.html">
                   <svg>
                     <use xlink:href="sprite-svg.svg#arrow-round-forward"></use>
                   </svg></a></div>
