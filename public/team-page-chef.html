@@ -8,21 +8,30 @@
     <link rel="stylesheet" href="libs/css/normalize.css">
     <link rel="stylesheet" href="styles.min.css">
     <script src="libs/js/jquery.min.js"></script>
+    <!-- gsap plugins-->
     <script src="libs/js/TweenMax.min.js"></script>
     <script src="libs/js/TimelineMax.min.js"></script>
+    <!-- gsap plugins end-->
+    <!-- scroll magic plugin-->
     <script src="libs/js/ScrollMagic.min.js"></script>
     <script src="libs/js/animation.gsap.min.js"></script>
     <script src="libs/js/debug.addIndicators.min.js"></script>
+    <!-- scroll magic plugin end-->
   </head>
   <body class="page" style="overflow: hidden">
+    <div id="preloader"><img src="img/general/preloader.gif"></div>
     <script>
+      var preloader = document.querySelector('#preloader');
+      
+      // no scroll on touch devices
+      preloader.addEventListener('touchmove', function (e) {return e.preventDefault();});
+      
       window.addEventListener('load', function () {
         document.body.removeAttribute('style');
-        document.querySelector('#preloader').style.display = 'none';
+        preloader.style.display = 'none';
       });
       
     </script>
-    <div id="preloader"><img src="img/general/preloader.gif"></div>
     <div id="js-scroll-content">
       <div class="page__team">
         <section>

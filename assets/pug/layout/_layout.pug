@@ -1,20 +1,6 @@
+
 include ../helpers/_var
 include ../helpers/_mixin
-
-include ../helpers/_var-homepage-page
-include ../helpers/_mixin-homepage-page
-
-include ../helpers/_var-about-us-page
-include ../helpers/_mixin-about-us-page
-
-include ../helpers/_var-our-menu-page
-include ../helpers/_mixin-our-menu-page
-
-include ../helpers/_var-team-page
-include ../helpers/_mixin-team-page
-
-include ../helpers/_var-contact-page
-include ../helpers/_mixin-contact-page
 
 doctype
 
@@ -33,24 +19,33 @@ html(lang="ru")
     
     script(src="libs/js/jquery.min.js")
 
-    //- scroll magic and gsap plugins
+    // gsap plugins
     script(src='libs/js/TweenMax.min.js')
     script(src='libs/js/TimelineMax.min.js')
+    // gsap plugins end
+
+    // scroll magic plugin
     script(src="libs/js/ScrollMagic.min.js")
     script(src="libs/js/animation.gsap.min.js")
+    
     script(src="libs/js/debug.addIndicators.min.js")
-    //- scroll magic and gsap plugins end
+    // scroll magic plugin end
 
   body.page(style="overflow: hidden")
-    
-    script.
-      window.addEventListener('load', function () {
-        document.body.removeAttribute('style');
-        document.querySelector('#preloader').style.display = 'none';
-      });
 
     #preloader
       img(src="img/general/preloader.gif")
+
+    script.
+      var preloader = document.querySelector('#preloader');
+
+      // no scroll on touch devices
+      preloader.addEventListener('touchmove', function (e) {return e.preventDefault();});
+
+      window.addEventListener('load', function () {
+        document.body.removeAttribute('style');
+        preloader.style.display = 'none';
+      });
 
     #js-scroll-content
       block content

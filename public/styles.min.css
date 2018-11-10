@@ -1785,9 +1785,7 @@ textarea {
 .about-food-sect {
   position: relative;
   z-index: 1;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: cover !important;
+  background: url("img/content/about/toa-heftiba-296458-unsplash_2000px.png") no-repeat center/cover;
 }
 .about-food-sect::after {
   background-color: rgba(0,0,0,0.7);

@@ -1,0 +1,20 @@
+//- Build menu section
+mixin buildMenuItem(obj)
+  article.our-menu-item
+    - const headerItem = obj.header
+
+    .our-menu-hero(style=`background: url(${headerItem.img}) no-repeat center / cover`)
+      h3.our-menu-title
+        span.our-menu-subtitle= headerItem.subtitle
+        = headerItem.title
+    
+    .our-menu-cont
+      - const itemDishes = obj.dishes  
+      
+      each dish in itemDishes
+        .our-menu-dish
+          .our-menu-name-and-price
+            .our-menu-name= dish.dish 
+            .our-menu-price= dish.price
+          p.out-menu-comp= dish.composition
+      

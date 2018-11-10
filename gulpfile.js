@@ -201,7 +201,7 @@ gulp.task('svg:build', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch(paths.pug.src + '/**/*.pug', gulp.series('html:build'));
+  gulp.watch(paths.pug.src + '/**/**/*.pug', gulp.series('html:build'));
   gulp.watch(paths.stylus.src + '/**/*.styl', gulp.series('css:build'));
   gulp.watch(paths.scripts.src + '/*.js', gulp.series('js:build'));
   gulp.watch(paths.fonts.src + '/**/*.{ttf,woff,woff2,eot,svg}', gulp.series('fonts:copy'));

@@ -67,7 +67,7 @@ const controller = new ScrollMagic.Controller()
 // NB Первые секции после секции hero устанавливаем в offset = 0
 /************************************************************ */
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
 
 const options = (obj = null, num = -250, bool = false) => {
   return {
