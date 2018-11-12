@@ -31,13 +31,19 @@
 
   background-color rgba(blackColor,.7)
 
-.res-col 
+.res-col
   @media (orientation portrait) and (max-width 1024px),
   (orientation landscape) and (max-width 1024px)
     flex-basis 70%
   @media (orientation portrait) and (max-width 620px),
   (orientation landscape) and (max-width 960px)
     flex-basis 95%
+
+.res-col.bug-fix-ie
+  flex 1
+  @media (orientation portrait) and (max-width 1024px),
+  (orientation landscape) and (max-width 1024px)
+    flex initial
 
 .res-form-container
   padding-right 70px

@@ -124,6 +124,7 @@ gulp.task('js:libs', () => {
 gulp.task('js:build', () => {
   return gulp.src([
     paths.scripts.src + '/app.js',
+    paths.scripts.src + '/customScroll.js',
     paths.scripts.src + '/mobile-menu.js',
     paths.scripts.src + '/scroll-page-down.js',
     paths.scripts.src + '/mail.js',

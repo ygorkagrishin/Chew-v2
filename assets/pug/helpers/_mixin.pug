@@ -46,7 +46,7 @@ mixin contentHeader(subtitle, title, text)
 mixin reservationForm(formId, action)
   .res.res-row
     //- Form
-    .res-col.res-form-container
+    .res-col.res-form-container.bug-fix-ie
       form(action='reserv.php', method='post', id= formId).res-form
         p.res-form-nb.
           Welcome to Chew Restaurant! 
@@ -70,6 +70,6 @@ mixin reservationForm(formId, action)
     //- Form end
 
     //- location
-    .res-col.res-loc
+    .res-col.res-loc.bug-fix-ie
       img(src="img/general/locate.png", alt="location").res-map
     //- location end

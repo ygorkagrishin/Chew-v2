@@ -16,20 +16,6 @@ html(lang="ru")
     block styles
 
     link(rel="stylesheet", href="styles.min.css")
-    
-    script(src="libs/js/jquery.min.js")
-
-    // gsap plugins
-    script(src='libs/js/TweenMax.min.js')
-    script(src='libs/js/TimelineMax.min.js')
-    // gsap plugins end
-
-    // scroll magic plugin
-    script(src="libs/js/ScrollMagic.min.js")
-    script(src="libs/js/animation.gsap.min.js")
-    
-    script(src="libs/js/debug.addIndicators.min.js")
-    // scroll magic plugin end
 
   body.page(style="overflow: hidden")
 
@@ -47,7 +33,29 @@ html(lang="ru")
         preloader.style.display = 'none';
       });
 
-    #js-scroll-content
+    #scroll-content
       block content
+
+    script(src="libs/js/jquery.min.js")
+
+    // begin svguse polyfill
+    script(src="libs/js/svgxuse.min.js")
+    // end svguse polyfill 
+   
+    // gsap plugins
+    script(src='libs/js/TweenMax.min.js')
+    script(src='libs/js/TimelineMax.min.js')
+    // gsap plugins end
+
+    // scroll magic plugin
+    script(src="libs/js/ScrollMagic.min.js")
+    script(src="libs/js/animation.gsap.min.js")
+    
+    script(src="libs/js/debug.addIndicators.min.js")
+    // scroll magic plugin end
+
+    // begin custom scrollbar
+    script(src="libs/js/smooth-scrollbar.js")
+    // end custom scrollbar
 
     script(src="common.min.js")

@@ -87,7 +87,7 @@ new ScrollMagic.Scene(
   )
 .addTo(controller)
 
-/********** Home page about section **********/
+/********** Homepage about section **********/
 new ScrollMagic.Scene( 
   options('.home-about-sect', 0)
 )

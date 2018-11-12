@@ -36,11 +36,14 @@
     ],
     "js": [
       "node_modules/jquery/dist/jquery.min.js",
+      "node_modules/svgxuse/svgxuse.min.js",
       "node_modules/gsap/src/minified/TweenMax.min.js",
       "node_modules/gsap/src/minified/TimelineMax.min.js",
       "node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js",
       "node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js",
-      "node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"
+      "node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js",
+      "node_modules/smooth-scrollbar/dist/smooth-scrollbar.js",
+      "node_modules/smooth-scrollbar/dist/plugins/overscroll.js"
     ]
   }
 }

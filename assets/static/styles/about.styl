@@ -69,6 +69,13 @@
   (orientation portrait) and (max-width 960px)
     @extend .about-us-col-size-lg
 
+.about-us-col-size-md.bug-fix-ie
+  flex-shrink 1
+
+.about-us-col-size-lg.bug-fix-ie,
+.about-us-col-tablet-lg.bug-fix-ie
+  flex-shrink 1
+
 .about-us-col:not(:last-child)
   @media (orientation landscape) and (min-width 1024px),
   (orientation portrait) and (min-width 1024px)
